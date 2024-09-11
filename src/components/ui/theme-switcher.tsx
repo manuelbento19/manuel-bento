@@ -4,9 +4,8 @@ import { Button } from "./button"
 import {MoonIcon,SunIcon} from '@radix-ui/react-icons';
 
 export default function ThemeSwitcher() {
-    const {resolvedTheme,setTheme,theme} = useTheme();
+    const {resolvedTheme,setTheme} = useTheme();
 
-    console.log(theme)
     const switchTheme = () => {
         setTheme(resolvedTheme==="light" ? "dark" : "light")
     }
@@ -14,10 +13,10 @@ export default function ThemeSwitcher() {
     return (
         <Button size="sm" variant="ghost" onClick={switchTheme}>
             {resolvedTheme==="light" ? (
-                <MoonIcon className="size-4 text-gray-700"/>
+                <MoonIcon className="size-4"/>
             ):
             (
-                <SunIcon className="size-4 text-white"/>
+                <SunIcon className="size-4"/>
             )}
         </Button>
     )

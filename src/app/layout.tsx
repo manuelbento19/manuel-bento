@@ -3,6 +3,7 @@ import localFont from 'next/font/local'
 import './globals.css'
 import ThemeProvider from '@/components/providers/theme';
 import { cn } from '@/lib/utils';
+import Header from '@/components/ui/header';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -25,7 +26,10 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
     <html lang='en' suppressHydrationWarning>
       <body className={cn(geistSans.variable,geistMono.variable,'antialiased min-h-screen flex flex-col')}>
         <ThemeProvider>
-          {children}
+          <Header/>
+          <main className='size-full flex-1'>
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>

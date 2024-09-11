@@ -9,6 +9,12 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+		container: {
+			center: true,
+			screens: {
+				"2xl": "48rem"
+			}
+		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
