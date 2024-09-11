@@ -16,8 +16,8 @@ const links = [
     link: '/projects'
   },
   {
-    label: 'blog',
-    link: '/blog'
+    label: 'Articles',
+    link: '/articles'
   },
   {
     label: 'Contact',
