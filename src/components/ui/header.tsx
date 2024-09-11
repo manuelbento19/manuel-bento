@@ -16,14 +16,6 @@ const links = [
     link: '/projects'
   },
   {
-    label: 'Resume',
-    link: '/resume'
-  },
-  {
-    label: 'Education',
-    link: '/education'
-  },
-  {
     label: 'blog',
     link: '/blog'
   },
@@ -37,7 +29,7 @@ export default function Header() {
     <header className='flex items-center justify-between px-4'>
       <div className='container flex items-center justify-between py-7'>
         <h1 className='text-3xl font-bold text-gray-900 dark:text-gray-200'>
-          MB
+          <Link href="/">MB</Link>
         </h1>
         <nav className='flex items-center gap-5 md:gap-10'>
           <ul className='flex items-center gap-5 text-gray-700 dark:text-gray-200'>

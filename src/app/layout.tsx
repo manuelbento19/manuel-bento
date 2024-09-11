@@ -17,7 +17,10 @@ const geistMono = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Manuel Bento',
+  title: {
+    default: 'MB',
+    template: 'MB | %s'
+  },
   description: 'Welcome to my portfolio'
 }
 
