@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
-import ThemeProvider from '@/components/providers/theme';
-import { cn } from '@/lib/utils';
-import Header from '@/components/ui/header';
+import ThemeProvider from '@/components/providers/theme'
+import { cn } from '@/lib/utils'
+import Header from '@/components/ui/header'
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -21,15 +21,21 @@ export const metadata: Metadata = {
   description: 'Welcome to my portfolio'
 }
 
-export default function RootLayout({children}: Readonly<{children: React.ReactNode}>) {
+export default function RootLayout({
+  children
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang='en' suppressHydrationWarning>
-      <body className={cn(geistSans.variable,geistMono.variable,'antialiased min-h-screen flex flex-col')}>
+      <body
+        className={cn(
+          geistSans.variable,
+          geistMono.variable,
+          'flex min-h-screen flex-col antialiased'
+        )}
+      >
         <ThemeProvider>
-          <Header/>
-          <main className='size-full flex-1'>
-            {children}
-          </main>
+          <Header />
+          <main className='size-full flex-1'>{children}</main>
         </ThemeProvider>
       </body>
     </html>
