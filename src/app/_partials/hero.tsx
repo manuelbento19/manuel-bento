@@ -29,7 +29,7 @@ const links = [
 
 export default function Hero() {
   return (
-    <section className='flex w-full flex-col items-center justify-center gap-5 pb-4 pt-10 md:flex-row md:justify-between'>
+    <section className='flex w-full flex-col items-center justify-center gap-5 pb-4 md:flex-row md:justify-between'>
       <div className=''>
         <h1 className='text-4xl font-semibold'>Manuel Bento</h1>
         <h2 className='mt-1 text-xl font-medium'>Software Developer</h2>

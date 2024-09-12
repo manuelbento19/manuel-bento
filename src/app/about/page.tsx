@@ -3,20 +3,19 @@ import Hero from "../_partials/hero";
 
 export const metadata:Metadata = {
   title: "About"
-
 }
 
 export default function About() {
   return (
     <div className='flex w-full px-4'>
-      <div className='container flex flex-col gap-4'>
+      <div className='container flex flex-col pt-32'>
         <Hero />
-        <div className="mt-4 space-y-4">
+        <section className="mt-4 space-y-4">
           <p className="text-xs md:block md:text-sm md:leading-relaxed">Minhas atividades são bastante diversificadas. Trabalho na criação de aplicativos, tanto para web quanto para mobile.</p>
           <p className="text-xs md:block md:text-sm md:leading-relaxed">A cada projeto, procuro usar as melhores práticas e obter um novo aprendizado. Além de escrever código, também participo na análise de requisitos, implementação e manutenção das aplicações (bom, não trato apenas do Frontend kkkk).</p>
           <p className="text-xs md:block md:text-sm md:leading-relaxed">Atualmente, estou focado no meu desenvolvimento pessoal e profissional, sempre buscando aprender novas tecnologias e aprimorar minhas habilidades. Além disso, tenho um grande interesse em ajudar outras pessoas a entrarem no mundo do desenvolvimento de software. Para isso, escrevo artigos compartilhando meu conhecimento, experiências e dicas práticas para quem está começando ou já possui alguma experiência na área.</p>
-        </div>
-        <div className="space-y-2">
+        </section>
+        <section className="space-y-2">
           <h2 className="text-lg font-semibold my-1.5 pb-2 border-0 border-b">Education</h2>
           <div className="space-y-2 divide-y">
             <div>
@@ -25,8 +24,8 @@ export default function About() {
               <span className="text-gray-500 dark:text-gray-200">2017 - 2021</span>
             </div>
           </div>
-        </div>
-        <div className="space-y-2">
+        </section>
+        <section className="space-y-2">
           <h2 className="text-lg font-semibold my-1.5 pb-2 border-0 border-b">Work</h2>
           <div className="space-y-2 divide-y">
             <div>
@@ -58,7 +57,7 @@ export default function About() {
               </ul>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   )
