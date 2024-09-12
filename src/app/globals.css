@@ -66,3 +66,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .box {
+    @apply shadow border backdrop-blur-xl dark:bg-zinc-900 dark:outline-[#1a1a1a];
+  }
+}
