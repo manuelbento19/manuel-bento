@@ -5,6 +5,8 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
+import { Constants } from "@/lib";
+import ProjectCard from "./_partials/card";
 
 export const metadata:Metadata = {
   title: "Projects"
@@ -21,6 +23,7 @@ export default function Projects() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2">
+          {Constants.projects.map((item)=><ProjectCard key={item.title} project={item}/>)}
           <Card>
             <CardHeader className="border rounded p-0 overflow-hidden">
               <Image src={image} alt="myfolio" width={200} height={200} className="rounded object-cover size-full"/>
