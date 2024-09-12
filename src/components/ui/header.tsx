@@ -26,7 +26,7 @@ const links = [
 ]
 export default function Header() {
   return (
-    <header className='flex items-center justify-between px-4 fixed inset-x-0 w-full top-0 backdrop-blur-sm'>
+    <header className='flex items-center justify-between px-4 fixed z-50 inset-x-0 w-full top-0 backdrop-blur-sm'>
       <div className='container flex items-center justify-between py-4'>
         <h1 className='text-3xl font-bold text-gray-900 dark:text-gray-200'>
           <Link href="/">MB</Link>

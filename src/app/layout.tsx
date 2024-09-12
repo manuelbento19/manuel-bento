@@ -33,12 +33,12 @@ export default function RootLayout({
         className={cn(
           geistSans.variable,
           geistMono.variable,
-          'flex min-h-screen flex-col antialiased'
+          'antialiased'
         )}
       >
         <ThemeProvider>
           <Header />
-          <main className='size-full flex-1'>{children}</main>
+          <main className='h-screen flex-1'>{children}</main>
         </ThemeProvider>
       </body>
     </html>
