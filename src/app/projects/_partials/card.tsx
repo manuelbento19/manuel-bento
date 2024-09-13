@@ -1,3 +1,4 @@
+"use client"
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Project } from '@/types'
@@ -5,14 +6,22 @@ import { Icon } from '@iconify/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import {motion as framer} from 'framer-motion';
 
 type Props = {
     project: Project;
 }
 
+const MotionCard = framer.create(Card)
+
 export default function ProjectCard({project}:Props) {
   return (
-    <Card className='flex flex-col'>
+    <MotionCard
+        className='flex flex-col'
+        initial={{ opacity: 0, scale: 0, translateY: 20 }}
+        whileInView={{ opacity: 1,scale: 1,translateY: 0}}
+        viewport={{ once: true }}
+    >
         <CardHeader className="border rounded-md p-1 overflow-hidden max-h-40">
             <Image src={project.wallpalper} alt={project.title} width={500} height={500} loading='lazy' className="rounded object-cover size-full"/>
         </CardHeader>
@@ -41,6 +50,6 @@ export default function ProjectCard({project}:Props) {
                 </Button>
             )}
         </CardFooter>
-    </Card>
+    </MotionCard>
   )
 }

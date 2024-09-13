@@ -1,6 +1,5 @@
 import { Metadata } from "next";
-import { Constants } from "@/lib";
-import ProjectCard from "./_partials/card";
+import ProjectList from "./_partials/list";
 
 export const metadata:Metadata = {
   title: "Projects"
@@ -16,9 +15,7 @@ export default function Projects() {
             Ao longo da minha carreira como desenvolvedor, tenho desenvolvido muitos projetos. Muitos são de código aberto, então sinta-se à vontade para explorar o código e contribuir com suas próprias melhorias.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-2">
-          {Constants.projects.map((item)=><ProjectCard key={item.title} project={item}/>)}
-        </div>
+        <ProjectList/>
       </div>
     </div>
   )
