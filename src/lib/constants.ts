@@ -1,5 +1,4 @@
 import { Project } from "@/types";
-import myFolio from '@/assets/projects/myfolio.png';
 
 export const skills = [
     {
@@ -61,9 +60,12 @@ export const skills = [
 export const projects:Project[] = [
     {
         title: "MyFolio",
-        wallpalper: myFolio,
+        wallpalper: "/projects/myfolio.png",
         description: " MyFolio é um projeto que permite criar portfólios personalizados sem precisar de habilidades de codificação. Com uma interface intuitiva, você pode facilmente montar um site profissional, adicionar seu trabalho e destacar suas habilidades de forma rápida e simples.",
-        url: "https://github.com/manuelbento19/my-folio",
-        techs:["mdi:react","ri:nextjs-fill"]
+        link:{
+            repo: "https://github.com/manuelbento19/my-folio",
+            host: "https://my-folio-wheat.vercel.app/",
+        },
+        techs:["mdi:react","ri:nextjs-fill","mdi:tailwind","simple-icons:zod"]
     }
 ]
