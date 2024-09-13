@@ -11,7 +11,7 @@ export const Article = defineDocumentType(() => ({
     date: { type: 'date', required: true },
   },
   computedFields: {
-    url: { type: 'string', resolve: (post) => `/articles/${post._raw.flattenedPath}` },
+    url: { type: 'string', resolve: (post) => `/${post._raw.flattenedPath}` },
   },
 }))
 
