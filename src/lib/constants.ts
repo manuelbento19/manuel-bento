@@ -1,4 +1,4 @@
-import { Project } from "@/types";
+import { Article, Project } from "@/types";
 
 export const skills = [
     {
@@ -164,5 +164,14 @@ export const projects:Project[] = [
             host: "https://poupanca.vercel.app/"
         },
         techs:["mdi:react","devicon-plain:css3","file-icons:styledcomponents"]
+    }
+]
+
+export const articles:Article[] = [
+    {
+        title: "5 dicas úteis para iniciantes na programação",
+        description: "Este artigo fala sobre estratégias essenciais para iniciantes na programação, oferecendo cinco dicas práticas para facilitar o aprendizado e o desenvolvimento de habilidades na área",
+        tags: ["Development","Growth"],
+        date: "2024-02-19"
     }
 ]
