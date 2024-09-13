@@ -21,8 +21,8 @@ export default function ArticleCard({article}:Props) {
         viewport={{ once: true }}
     >
         <Link href={`/projects/${article.title}`}>
-            <CardHeader className="px-0 py-3 relative flex text-sm before:absolute before:inset-y-0 before:left-0 before:h-4 before:bg-gray-500 before:rounded-sm">
-                <span>14 de Setembro de 2024</span>
+            <CardHeader className="px-0 py-3 relative flex flex-row items-center gap-0 text-sm pl-2 before:absolute before:inset-y-0 before:my-auto before:left-0 before:h-5 before:w-[.2rem] before:bg-zinc-400 before:rounded-sm">
+                <span className='text-xs text-zinc-500 dark:text-zinc-200'>14 de Setembro de 2024</span>
             </CardHeader>
             <CardContent className="px-0 space-y-2">
                 <CardTitle className="text-zinc-800 dark:text-zinc-200">{article.title}</CardTitle>
