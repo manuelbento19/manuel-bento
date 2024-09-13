@@ -11,7 +11,7 @@ export default function About() {
     <div className='flex w-full px-4'>
       <div className='container flex flex-col pt-32 space-y-10'>
         <Hero />
-        <section className="mt-4 space-y-4">
+        <section className="space-y-4">
           <p className="text-xs md:block md:text-sm md:leading-relaxed">Minhas atividades são bastante diversificadas. Trabalho na criação de aplicativos, tanto para web quanto para mobile.</p>
           <p className="text-xs md:block md:text-sm md:leading-relaxed">A cada projeto, procuro usar as melhores práticas e obter um novo aprendizado. Além de escrever código, também participo na análise de requisitos, implementação e manutenção das aplicações (bom, não trato apenas do Frontend kkkk).</p>
           <p className="text-xs md:block md:text-sm md:leading-relaxed">Atualmente, estou focado no meu desenvolvimento pessoal e profissional, sempre buscando aprender novas tecnologias e aprimorar minhas habilidades. Além disso, tenho um grande interesse em ajudar outras pessoas a entrarem no mundo do desenvolvimento de software. Para isso, escrevo artigos compartilhando meu conhecimento, experiências e dicas práticas para quem está começando ou já possui alguma experiência na área.</p>
