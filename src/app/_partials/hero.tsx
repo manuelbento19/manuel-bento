@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
-import image from '@/../public/MyPicture.jpeg'
 import {
   GitHubLogoIcon,
   LinkedInLogoIcon,
@@ -46,9 +45,9 @@ export default function Hero() {
           ))}
         </div>
       </div>
-      <div className='size-64 shrink-0 overflow-hidden rounded-lg border shadow-md grayscale transition duration-500 hover:rotate-0 hover:scale-110 hover:grayscale-0 md:rotate-12'>
+      <div className='max-w-64 w-full h-64 p-0 shrink-0 rounded-lg overflow-hidden grayscale transition duration-500 hover:rotate-0 hover:scale-110 hover:grayscale-0 md:rotate-12'>
         <Image
-          src={image}
+          src="/MyPicture.jpeg"
           alt='My picture'
           width={300}
           height={300}
