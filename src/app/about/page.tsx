@@ -3,7 +3,8 @@ import Hero from "../_partials/hero";
 import Skills from "../_partials/skills";
 
 export const metadata:Metadata = {
-  title: "About"
+  title: "About",
+  description: "Software Developer apaixonado por tecnologia, especializado em Desenvolvimento Frontend."
 }
 
 export default function About() {
