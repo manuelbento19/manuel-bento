@@ -14,4 +14,5 @@ export type Article = {
     date: Date | string;
     description: string;
     tags: string[];
+    url: string;
 }
