@@ -12,15 +12,15 @@ type Props = {
 
 export default function ProjectCard({project}:Props) {
   return (
-    <Card>
-        <CardHeader className="border rounded p-0 overflow-hidden">
-            <Image src={project.wallpalper} alt={project.title} width={200} height={200} className="rounded object-cover size-full"/>
+    <Card className='flex flex-col'>
+        <CardHeader className="border rounded-md p-1 overflow-hidden max-h-40">
+            <Image src={project.wallpalper} alt={project.title} width={500} height={500} loading='lazy' className="rounded object-cover size-full"/>
         </CardHeader>
-        <CardContent className="space-y-3 py-4 px-0">
+        <CardContent className="flex-1 space-y-3 py-4 px-0">
             <CardTitle className="font-medium">{project.title}</CardTitle>
             <CardDescription className="text-pretty text-xs md:text-sm">{project.description}</CardDescription>
         </CardContent>
-        <CardFooter className="p-0 flex items-center justify-between">
+        <CardFooter className="mt-auto p-0 flex items-center justify-between">
             <div className="flex gap-1 items-center divide-x-2">
                 <Button size="sm" variant="link">
                     <Link href={project.link.repo} target="_blank">
