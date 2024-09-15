@@ -4,6 +4,7 @@ import { pt } from 'date-fns/locale'
 import { MdxProvider } from '@/components/providers/mdx'
 import Link from 'next/link'
 import { ArrowLeftIcon } from '@radix-ui/react-icons'
+import Tag from '@/components/ui/tag'
 
 type Params = {
     slug: string
@@ -28,43 +29,24 @@ export default function Page({ params }: { params: { slug: string } }){
     return (
         <div className='flex w-full px-4'>
             <div className='container flex flex-col pt-32 space-y-10'>
-                <div className="xl:relative">
-                    <div className="max-w-2xl mx-auto">
-                    <Link href="/articles" className="items-center justify-center lg:absolute lg:-left-5 lg:-mt-2 lg:mb-0 xl:-top-1.5 xl:left-5 xl:mt-0 mb-8 flex h-10 w-10 rounded-full">
-                        <ArrowLeftIcon className="w-4 h-4 " />
-                    </Link>
-                    <article className="pb-6 prose dark:prose-invert">
-                        <header className="flex flex-col">
-                            <h1 className="mt-6 title-primary">{article.title}</h1>
-                            <div className="inline-flex gap-2 mt-4">
-                                {article.tags.map((tag) => (
-                                    <div key={tag} className="px-2 py-1 text-xs rounded-md box-gen before:content-['#']">{tag}</div>
-                                ))}
-                            </div>
-                            <div className="flex items-center order-first text-base text-neutral-700 dark:text-zinc-400">
-                                <time dateTime={article.date} className="text-xs text-gray-600">
-                                    {format(parseISO(article.date), 'd, LLLL, yyyy',{locale: pt})}
-                                </time>
-                            </div>
-                        </header>
-                        <MdxProvider content={article.body.code} />
-                    </article>
-                    </div>
-                </div>
+                <header>
+                    <Link href="/articles" className='flex items-center gap-2'><ArrowLeftIcon className="size-4"/> Voltar</Link>
+                </header>
+                <section className="pb-6 space-y-4">
+                    <header className="contents py-4">
+                        <h1 className="text-lg md:text-4xl text-zinc-900 dark:text-zinc-200">{article.title}</h1>
+                        <time dateTime={article.date} title={article.date} className="text-xs text-neutral-700 dark:text-zinc-400">
+                            {format(parseISO(article.date), `d 'de' LLLL 'de' yyyy`,{locale: pt})}
+                        </time>
+                    </header>
+                    <MdxProvider content={article.body.code} />
+                    <footer className="inline-flex gap-2 mt-4">
+                        {article.tags.map((tag) => (
+                            <Tag key={tag} className="text-xs rounded-md">#{tag}</Tag>
+                        ))}
+                    </footer>
+                </section>
             </div>
         </div>
     )
 }
-
-/*
-
- <div className="mx-auto max-w-xl py-8">
-                    <div className="mb-8 text-center">
-                        <time dateTime={article.date} className="mb-1 text-xs text-gray-600">
-                        {format(parseISO(article.date), 'LLLL d, yyyy',{locale: pt})}
-                        </time>
-                        <h1 className="text-3xl font-bold">{article.title}</h1>
-                    </div>
-                </div>
-
-*/

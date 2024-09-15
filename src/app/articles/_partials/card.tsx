@@ -1,10 +1,10 @@
 "use client"
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Article } from '@/types'
 import React from 'react'
 import {motion as framer} from 'framer-motion';
 import Link from 'next/link'
+import { Article } from 'contentlayer/generated';
 
 type Props = {
     article: Article;

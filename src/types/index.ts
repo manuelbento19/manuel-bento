@@ -8,11 +8,3 @@ export type Project = {
     techs: string[];
     wallpalper: string;
 }
-
-export type Article = {
-    title: string;
-    date: Date | string;
-    description: string;
-    tags: string[];
-    url: string;
-}

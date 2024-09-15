@@ -8,7 +8,7 @@ export const Article = defineDocumentType(() => ({
     title: { type: 'string', required: true },
     description: { type: 'string', required: true },
     tags: { type: 'list', of:{type:"string"}, required: true },
-    date: { type: 'date', required: true },
+    date: { type: 'string', required: true },
   },
   computedFields: {
     url: { type: 'string', resolve: (post) => `/${post._raw.flattenedPath}` },
