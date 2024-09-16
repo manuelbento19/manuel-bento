@@ -5,6 +5,7 @@ import React from 'react'
 import {motion as framer} from 'framer-motion';
 import Link from 'next/link'
 import { Article } from 'contentlayer/generated';
+import { formatDate } from '@/lib/utils';
 
 type Props = {
     article: Article;
@@ -22,7 +23,7 @@ export default function ArticleCard({article}:Props) {
     >
         <Link href={article.url}>
             <CardHeader className="px-0 py-3 relative flex flex-row items-center gap-0 text-sm pl-2 before:absolute before:inset-y-0 before:my-auto before:left-0 before:h-5 before:w-[.2rem] before:bg-zinc-400 before:rounded-sm">
-                <span className='text-xs text-zinc-500 dark:text-zinc-200'>14 de Setembro de 2024</span>
+                <span className='text-xs text-zinc-500 dark:text-zinc-200'>{formatDate(article.date)}</span>
             </CardHeader>
             <CardContent className="px-0 space-y-2">
                 <CardTitle className="text-zinc-800 dark:text-zinc-200">{article.title}</CardTitle>

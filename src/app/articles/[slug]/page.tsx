@@ -1,10 +1,9 @@
-import { format, parseISO } from 'date-fns'
 import { allArticles } from 'contentlayer/generated'
-import { pt } from 'date-fns/locale'
 import { MdxProvider } from '@/components/providers/mdx'
 import Link from 'next/link'
 import { ArrowLeftIcon } from '@radix-ui/react-icons'
 import Tag from '@/components/ui/tag'
+import { formatDate } from '@/lib/utils'
 
 type Params = {
     slug: string
@@ -36,7 +35,7 @@ export default function Page({ params }: { params: { slug: string } }){
                     <header className="contents py-4">
                         <h1 className="text-lg md:text-4xl text-zinc-900 dark:text-zinc-200">{article.title}</h1>
                         <time dateTime={article.date} title={article.date} className="text-xs text-neutral-700 dark:text-zinc-400">
-                            {format(parseISO(article.date), `d 'de' LLLL 'de' yyyy`,{locale: pt})}
+                            {formatDate(article.date)}
                         </time>
                     </header>
                     <MdxProvider content={article.body.code} />
