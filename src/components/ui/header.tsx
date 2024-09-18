@@ -5,19 +5,19 @@ import LanguageSelector from './language-selector'
 
 const links = [
   {
-    label: 'About',
+    label: 'Sobre',
     link: '/about'
   },
   {
-    label: 'Projects',
+    label: 'Projectos',
     link: '/projects'
   },
   {
-    label: 'Articles',
+    label: 'Artigos',
     link: '/articles'
   },
   {
-    label: 'Contact',
+    label: 'Contacto',
     link: '/contact'
   }
 ]
