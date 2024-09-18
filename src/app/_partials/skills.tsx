@@ -3,11 +3,15 @@ import { Constants } from '@/lib'
 import { Card, CardContent } from '@/components/ui/card'
 import Tag from '@/components/ui/tag'
 import { Icon } from '@iconify/react'
+import { TranslateDTO } from '@/types'
+import { useMessages } from 'next-intl'
 
 export default function Skills() {
+  const {about: {headings}} = useMessages() as TranslateDTO;
+  
   return (
     <section className="space-y-2">
-    <h2 className="text-lg font-semibold">Skills</h2>
+    <h2 className="text-lg font-semibold">{headings[0]}</h2>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4">
     {Constants.skills.map((category) => (
       <Card key={category.name}>

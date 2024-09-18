@@ -26,7 +26,42 @@
  "about": {
     "hero": {
       "title": "Software Developer",
-      "description": "Passionate about technology, specialized in Frontend Development."
-    }
+      "description": "Passionate about technology, specialized in Frontend Development.",
+      "data": [
+        "My activities are quite diverse. I work on creating applications, both for web and mobile.",
+        "With each project, I try to use best practices and gain new learning. In addition to writing code, I also participate in requirements analysis, implementation and maintenance of applications (well, I don't just deal with the Frontend lol).",
+        "Currently, I am focused on my personal and professional development, always seeking to learn new technologies and improve my skills. Additionally, I have a strong interest in helping other people enter the world of software development. To this end, I write articles sharing my knowledge, experiences and practical tips for those who are starting out or already have some experience in the area."
+      ]
+    },
+    "headings": ["Skills","Education","Work"],
+    "work": [
+      {
+        "title": "Frontend Developer",
+        "company": "ETIC - Solutions & Technology",
+        "started_date": "2023",
+        "due_date": "Present",
+        "description": "As a Frontend Developer at ETIC, I create intuitive and engaging digital experiences using modern technologies. My expertise includes:",
+        "list": [
+          "Updated technologies and frontend frameworks, such as React.js and Next.js",
+          "Elegant and intuitive UI/UX design.",
+          "Performance optimization for fast loading.",
+          "Innovative collaboration and effective communication.",
+          "Adaptation and continuous learning."
+        ]
+      },
+      {
+        "title": "Fullstack Developer",
+        "company": "Novagrolider",
+        "started_date": "2021",
+        "due_date": "2023",
+        "description": "As a Fullstack Developer at Novagrolider, I had the following responsibilities:",
+        "list": [
+          "<strong>Frontend:</strong> developed dynamic interfaces with React.js, created mobile applications with React Native, and applied Tailwind CSS, Bootstrap, and CSS for responsive and advanced styling; built desktop applications using C# WinForm.",
+          "<strong>Backend:</strong> developed fast and efficient APIs with Node.js (Express and Fastify), built scalable web services with C# and .NET Core, and implemented communication between services using WCF.",
+          "<strong>Versioning and Collaboration:</strong> used Git for version control and collaboration.",
+          "<strong>Packaging and Distribution:</strong> facilitated application distribution with Docker."
+        ]
+      }
+    ]
   }
 }

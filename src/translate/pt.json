@@ -26,7 +26,42 @@
   "about": {
     "hero": {
       "title": "Desenvolvedor de Software",
-      "description": "Apaixonado por tecnologia, especializado em Desenvolvimento Frontend."
-    }
+      "description": "Apaixonado por tecnologia, especializado em Desenvolvimento Frontend.",
+      "data": [
+        "Minhas atividades são bastante diversificadas. Trabalho na criação de aplicativos, tanto para web quanto para mobile.",
+        "A cada projeto, procuro usar as melhores práticas e obter um novo aprendizado. Além de escrever código, também participo na análise de requisitos, implementação e manutenção das aplicações (bom, não trato apenas do Frontend kkkk).",
+        "Atualmente, estou focado no meu desenvolvimento pessoal e profissional, sempre buscando aprender novas tecnologias e aprimorar minhas habilidades. Além disso, tenho um grande interesse em ajudar outras pessoas a entrarem no mundo do desenvolvimento de software. Para isso, escrevo artigos compartilhando meu conhecimento, experiências e dicas práticas para quem está começando ou já possui alguma experiência na área."
+      ]
+    },
+    "headings": ["Habilidades","Educação","Trabalho"],
+    "work": [
+      {
+        "title": "Fronted Developer",
+        "company": "ETIC - Soluções & Tecnologia",
+        "started_date": "2023",
+        "due_date": "Presente",
+        "description": "Como Frontend Developer na ETIC, crio experiências digitais intuitivas e envolventes usando tecnologias modernas. Minha expertise inclui:",
+        "list": [
+          "Tecnologias atualizadas e frameworks de frontend, como React.js e Next.js",
+          "Design de UI/UX elegante e intuitivo.",
+          "Otimização de desempenho para carregamento rápido.",
+          "Colaboração inovadora e comunicação eficaz.",
+          "Adaptação e aprendizado contínuos."
+        ]
+      },
+      {
+        "title": "Fullstack Developer",
+        "company": "Novagrolider",
+        "started_date": "2021",
+        "due_date": "2023",
+        "description": "Como Fullstack Developer na Novagrolider, tive as seguintes responsabilidades:",
+        "list": [
+          "<strong>Frontend:</strong> desenvolvi interfaces dinâmicas com React.js, criei aplicativos móveis com React Native, e apliquei Tailwind CSS, Bootstrap, e CSS para estilização responsiva e avançada, construi aplicativos desktop utilizando C# WinForm.",
+          "<strong>Backend:</strong> desenvolvi APIs rápidas e eficientes com Node.js (Express e Fastfy), construi serviços web escaláveis com C# e .NET Core e implementei comunicação entre serviços utilizando WCF.",
+          "<strong>Versionamento e Colaboração:</strong> utilizei Git para controle de versão e colaboração.",
+          "<strong>Empacotamento e Distribuição:</strong> facilitei a distribuição de aplicativos com Docker."
+        ]
+      }
+    ]
   }
 }

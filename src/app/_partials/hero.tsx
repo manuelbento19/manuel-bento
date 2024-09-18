@@ -52,7 +52,7 @@ export default function Hero() {
           alt='My picture'
           width={300}
           height={300}
-          loading='lazy'
+          priority
           className='size-full object-cover'
         />
       </div>
