@@ -23,7 +23,10 @@
       }
     ]
   },
-  "Home": {
-    "title": "Olá!"
+ "about": {
+    "hero": {
+      "title": "Software Developer",
+      "description": "Passionate about technology, specialized in Frontend Development."
+    }
   }
 }

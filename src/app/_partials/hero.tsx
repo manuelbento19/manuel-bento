@@ -6,6 +6,7 @@ import {
   TwitterLogoIcon,
   InstagramLogoIcon
 } from '@radix-ui/react-icons'
+import { useTranslations } from 'next-intl'
 
 const links = [
   {
@@ -27,14 +28,14 @@ const links = [
 ]
 
 export default function Hero() {
+  const translation = useTranslations("about");
+
   return (
     <section className='flex w-full flex-col items-center justify-center gap-5 pb-4 md:flex-row md:justify-between'>
       <div className=''>
         <h1 className='text-4xl font-semibold'>Manuel Bento</h1>
-        <h2 className='mt-1 text-xl font-medium'>Software Developer</h2>
-        <p className='mt-4 max-w-md text-xs font-normal md:text-sm'>
-          Apaixonado por tecnologia, especializado em Desenvolvimento Frontend.
-        </p>
+        <h2 className='mt-1 text-xl font-medium'>{translation("hero.title")}</h2>
+        <p className='mt-4 max-w-md text-xs font-normal md:text-sm'>{translation("hero.description")}</p>
         <div className='mt-5 flex items-center gap-1.5'>
           {links.map(({ link, icon: Icon }) => (
             <Button size='sm' variant='ghost' asChild key={link}>
