@@ -1,29 +1,30 @@
 "use client"
-import React from 'react';
+import React, { useMemo } from 'react';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuTrigger } from './dropdown-menu';
 import {LanguagesIcon} from 'lucide-react';
 import { Button } from './button';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { setUserLocale } from '@/services/locale';
 import { Locale } from '@/i18n/config';
 
-const locales = [
-  {
-    key: "pt",
-    name: "Português"
-  },
-  {
-    key: "en",
-    name: "Inglês"
-  }
-]
-
 export default function LanguageSelector() {
+  const translation = useTranslations('locales');
   const locale = useLocale();
 
   const changeLocale = (value: string) => {
     setUserLocale(value as Locale);
   }
+
+  const locales = useMemo(()=>[
+    {
+      key: "pt",
+      name: translation("pt")
+    },
+    {
+      key: "en",
+      name: translation("en")
+    }
+  ],[translation])
 
   return (
     <DropdownMenu>

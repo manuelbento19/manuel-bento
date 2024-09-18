@@ -1,5 +1,29 @@
 {
-    "Home": {
-      "title": "Hello world!"
-    }
+  "locales": {
+    "pt": "Portuguese",
+    "en": "English"
+  },
+  "layout": {
+    "header": [
+      {
+        "label": "About",
+        "link": "/about"
+      },
+      {
+        "label": "Projects",
+        "link": "/projects"
+      },
+      {
+        "label": "Articles",
+        "link": "/articles"
+      },
+      {
+        "label": "Contact",
+        "link": "/contact"
+      }
+    ]
+  },
+  "Home": {
+    "title": "Olá!"
+  }
 }
