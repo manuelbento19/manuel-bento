@@ -1,6 +1,7 @@
 import React from 'react'
 import ThemeSwitcher from './theme-switcher'
 import Link from 'next/link'
+import LanguageSelector from './language-selector'
 
 const links = [
   {
@@ -28,14 +29,17 @@ export default function Header() {
           <Link href="/">MB</Link>
         </h1>
         <nav className='flex items-center gap-5 md:gap-10'>
-          <ul className='flex items-center gap-5 text-gray-700 dark:text-gray-200'>
+          <ul className='hidden md:flex items-center gap-5 text-gray-700 dark:text-gray-200'>
             {links.map((item) => (
               <li key={item.link} className='text-xs md:text-base'>
                 <Link href={item.link}>{item.label}</Link>
               </li>
             ))}
           </ul>
-          <ThemeSwitcher />
+          <div className="flex items-center gap-1">
+            <LanguageSelector/>
+            <ThemeSwitcher />
+          </div>
         </nav>
       </div>
     </header>
