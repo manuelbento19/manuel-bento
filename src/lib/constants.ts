@@ -15,7 +15,9 @@ export const skills = [
             { name: 'Expo', icon: 'file-icons:expo' },
             { name: 'Astro', icon: 'simple-icons:astro' },
             { name: 'Sass', icon: 'skill-icons:sass' },
-            { name: 'Styled Components', icon: 'skill-icons:styledcomponents'}
+            { name: 'Styled Components', icon: 'skill-icons:styledcomponents'},
+            { name: 'Storybook', icon: 'logos:storybook-icon'},
+            
         ],
     },
     {

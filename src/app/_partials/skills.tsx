@@ -18,7 +18,7 @@ export default function Skills() {
         <Tag icon={category.icon}>
           {category.name}
         </Tag>
-        <CardContent className='px-0 pt-2 grid grid-cols-2 md:grid-cols-4 gap-1'>
+        <CardContent className='px-0 pt-2 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1'>
           {category.list.map(({ name, icon }) => (
             <Button variant="ghost" title={name} key={name} className="text-lg">
               <Icon icon={icon} className="size-6" />
