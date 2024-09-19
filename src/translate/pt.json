@@ -64,5 +64,10 @@
         ]
       }
     ]
+  },
+  "projects": {
+    "title": "Projetos que definem minha trajetória profissional",
+    "description": "Ao longo da minha carreira como desenvolvedor, tenho desenvolvido muitos projetos. Muitos são de código aberto, então sinta-se à vontade para explorar o código e contribuir com suas próprias melhorias.",
+    "data": []   
   }
 }

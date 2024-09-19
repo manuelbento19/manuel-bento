@@ -37,5 +37,10 @@ export type TranslateDTO = AbstractIntlMessages & {
       description: string
       list: string[]
     }[]
+  },
+  projects: {
+    title: string;
+    description: string;
+    data: Project[]   
   }
 }
