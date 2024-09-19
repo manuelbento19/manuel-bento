@@ -73,6 +73,6 @@
   }
   .figure {
     background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
-    @apply size-full bg-slate-400 bg-[length:200%_100%] animate-skell;
+    @apply absolute inset-0 size-full bg-slate-400 bg-[length:200%_100%] animate-skell;
   }
 }
