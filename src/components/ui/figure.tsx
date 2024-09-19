@@ -1,10 +1,16 @@
+"use client"
 import { cn } from "@/lib/utils";
+import { ClassValue } from "clsx";
 import Image, { ImageProps } from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 
-export const LazyFigure = React.forwardRef<ImageProps,ImageProps>(({className,alt,...rest})=>{
+type Props = ImageProps & {
+    figureClass?: ClassValue;
+}
+
+export const LazyFigure = React.forwardRef<Props,Props>(({className, figureClass,alt,...rest})=>{
     const [visible,setVisibe] = useState(false);
-    const imageRef = useRef<HTMLImageElement | null>(null);
+    const figureRef = useRef<HTMLImageElement | null>(null);
 
     useEffect(()=>{
         const observer = new IntersectionObserver((observers)=>{
@@ -13,16 +19,17 @@ export const LazyFigure = React.forwardRef<ImageProps,ImageProps>(({className,al
             setVisibe(true) 
         })
         
-        if(imageRef.current){
-            observer.observe(imageRef.current);
+        if(figureRef.current){
+            observer.observe(figureRef.current);
         }
-        return () => observer.unobserve(imageRef.current!)
-
-    },[])
+        return () => observer.disconnect()
+    },[figureRef])
 
     return (
-        <figure>
-            {visible && <Image ref={imageRef} className={cn("bg-gray-200",className)} {...rest} alt={alt}/>}
+        <figure ref={figureRef} className={cn("relative",figureClass)}>
+            {visible ? <Image className={cn("size-full",className)} {...rest} alt={alt}/>: (
+                <div className="absolute inset-0 figure"/>
+            )}
         </figure>
     )
 });

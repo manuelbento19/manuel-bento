@@ -3,10 +3,10 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Project } from '@/types'
 import { Icon } from '@iconify/react'
-import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import {motion as framer} from 'framer-motion';
+import { LazyFigure } from '@/components/ui/figure'
 
 type Props = {
     project: Project;
@@ -23,7 +23,7 @@ export default function ProjectCard({project}:Props) {
         viewport={{ once: true }}
     >
         <CardHeader className="border rounded-md p-1 overflow-hidden max-h-40">
-            <Image src={project.wallpalper} alt={project.title} width={500} height={500} loading='lazy' className="rounded object-cover size-full"/>
+            <LazyFigure src={project.wallpalper} alt={project.title} width={500} height={500} loading='lazy' figureClass="max-h-40 h-40" className="rounded object-cover size-full"/>
         </CardHeader>
         <CardContent className="flex-1 space-y-3 py-4 px-0">
             <CardTitle className="font-medium">{project.title}</CardTitle>

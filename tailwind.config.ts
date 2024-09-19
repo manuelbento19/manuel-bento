@@ -61,6 +61,16 @@ const config: Config = {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)'
+      },
+      keyframes: {
+        skell:{
+          to: {
+            "background-position-x": "-200%"
+          }
+        }
+      },
+      animation: {
+        "skell": "1.5s skell linear infinite"
       }
     }
   },

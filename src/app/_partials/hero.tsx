@@ -1,5 +1,4 @@
 import { Button } from '@/components/ui/button'
-import Image from 'next/image'
 import {
   GitHubLogoIcon,
   LinkedInLogoIcon,
@@ -7,6 +6,7 @@ import {
   InstagramLogoIcon
 } from '@radix-ui/react-icons'
 import { useTranslations } from 'next-intl'
+import { LazyFigure } from '@/components/ui/figure'
 
 const links = [
   {
@@ -47,14 +47,7 @@ export default function Hero() {
         </div>
       </div>
       <div className='max-w-64 w-full h-64 p-0 shrink-0 rounded-lg overflow-hidden grayscale transition duration-500 hover:rotate-0 hover:scale-110 hover:grayscale-0 md:rotate-12'>
-        <Image
-          src="/MyPicture.jpeg"
-          alt='My picture'
-          width={300}
-          height={300}
-          priority
-          className='size-full object-cover'
-        />
+        <LazyFigure src="/MyPicture.jpeg" alt='My picture' width={300} height={300} priority figureClass="max-h-64 h-64" className="object-cover size-full"/>
       </div>
     </section>
   )
