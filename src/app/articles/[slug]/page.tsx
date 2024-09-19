@@ -26,26 +26,24 @@ export default function Page({ params }: { params: { slug: string } }){
     const article = getArticle(params);
 
     return (
-        <div className='flex w-full px-4'>
-            <div className='container flex flex-col pt-32 space-y-10'>
-                <header>
-                    <Link href="/articles" className='flex items-center gap-2'><ArrowLeftIcon className="size-4"/> Voltar</Link>
+        <div className="size-full space-y-10">
+            <header>
+                <Link href="/articles" className='flex items-center gap-2'><ArrowLeftIcon className="size-4"/> Voltar</Link>
+            </header>
+            <section className="pb-6 space-y-4">
+                <header className="contents py-4">
+                    <h1 className="text-lg md:text-4xl text-zinc-900 dark:text-zinc-200">{article.title}</h1>
+                    <time dateTime={article.date} title={article.date} className="text-xs text-neutral-700 dark:text-zinc-400">
+                        {formatDate(article.date)}
+                    </time>
                 </header>
-                <section className="pb-6 space-y-4">
-                    <header className="contents py-4">
-                        <h1 className="text-lg md:text-4xl text-zinc-900 dark:text-zinc-200">{article.title}</h1>
-                        <time dateTime={article.date} title={article.date} className="text-xs text-neutral-700 dark:text-zinc-400">
-                            {formatDate(article.date)}
-                        </time>
-                    </header>
-                    <MdxProvider content={article.body.code} />
-                    <footer className="inline-flex gap-2 mt-4">
-                        {article.tags.map((tag) => (
-                            <Tag key={tag} className="text-xs rounded-md">#{tag}</Tag>
-                        ))}
-                    </footer>
-                </section>
-            </div>
+                <MdxProvider content={article.body.code} />
+                <footer className="inline-flex gap-2 mt-4">
+                    {article.tags.map((tag) => (
+                        <Tag key={tag} className="text-xs rounded-md">#{tag}</Tag>
+                    ))}
+                </footer>
+            </section>
         </div>
     )
 }
