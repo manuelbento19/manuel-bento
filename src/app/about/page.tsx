@@ -16,12 +16,13 @@ export default function About() {
     <div className='flex w-full px-4 pb-4 text-zinc-900 dark:text-zinc-200'>
       <div className='container flex flex-col pt-32 space-y-10'>
         <Hero />
-        <section className="space-y-4">
-          {about.hero.data.map((item,index)=>(
+        <section className="space-y-2">
+          {about.hero.data.slice(0,about.hero.data.length-1).map((item,index)=>(
             <p key={index} className="text-xs md:block md:text-sm md:leading-relaxed">{item}</p>
           ))}
         </section>
         <Skills/>
+        <p className="text-xs md:block md:text-sm md:leading-relaxed">{about.hero.data[3]}</p>
         <section className="space-y-2">
           <h2 className="text-lg font-semibold my-1.5 pb-2 border-0 border-b">{about.headings[1]}</h2>
           <div className="space-y-2 divide-y">
