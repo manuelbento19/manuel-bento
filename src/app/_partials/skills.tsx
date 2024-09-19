@@ -11,7 +11,7 @@ export default function Skills() {
   
   return (
     <section className="space-y-2">
-    <h2 className="text-lg font-semibold">{headings[0]}</h2>
+    <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-200">{headings[0]}</h2>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4">
     {Constants.skills.map((category) => (
       <Card key={category.name}>

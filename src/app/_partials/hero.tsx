@@ -31,7 +31,7 @@ export default function Hero() {
   const translation = useTranslations("about");
 
   return (
-    <section className='flex w-full flex-col items-center justify-center gap-5 pb-4 md:flex-row md:justify-between'>
+    <section className='flex w-full flex-col items-center justify-center gap-5 pb-4 md:flex-row md:justify-between text-zinc-900 dark:text-zinc-200'>
       <div className=''>
         <h1 className='text-4xl font-semibold'>Manuel Bento</h1>
         <h2 className='mt-1 text-xl font-medium'>{translation("hero.title")}</h2>
