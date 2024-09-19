@@ -8,7 +8,7 @@ type Props = ImageProps & {
     figureClass?: ClassValue;
 }
 
-export const LazyFigure = React.forwardRef<Props,Props>(({className, figureClass,alt,...rest})=>{
+export const LazyFigure = (({className, figureClass,alt,...rest}:Props) =>{
     const [visible,setVisibe] = useState(false);
     const figureRef = useRef<HTMLImageElement | null>(null);
 
@@ -33,5 +33,3 @@ export const LazyFigure = React.forwardRef<Props,Props>(({className, figureClass
         </figure>
     )
 });
-
-LazyFigure.displayName = "LazyFigure"

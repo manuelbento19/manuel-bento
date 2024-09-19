@@ -13,7 +13,7 @@ export default function About() {
   const {about} = useMessages() as TranslateDTO;
   
   return (
-    <div className='flex w-full px-4'>
+    <div className='flex w-full px-4 pb-4'>
       <div className='container flex flex-col pt-32 space-y-10'>
         <Hero />
         <section className="space-y-4">

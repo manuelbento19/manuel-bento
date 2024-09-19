@@ -8,7 +8,7 @@ export const metadata:Metadata = {
 
 export default function Articles() {
   return (
-    <div className='flex w-full px-4'>
+    <div className='flex w-full px-4 pb-4'>
       <div className='container flex flex-col pt-32 space-y-10'>
         <div className="">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">Artigos que fornecem dicas e conhecimentos</h2>
