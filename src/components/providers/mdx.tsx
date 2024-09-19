@@ -1,15 +1,17 @@
-"use client"
+'use client'
 import { useMDXComponent } from 'next-contentlayer/hooks'
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from 'next/image'
+import Link from 'next/link'
 
 const components = {
   Image,
-  a: ({ href, children }:React.ComponentProps<"a">) => <Link href={href!}>{children}</Link>,
+  a: ({ href, children }: React.ComponentProps<'a'>) => (
+    <Link href={href!}>{children}</Link>
+  )
 }
 
 type Props = {
-  content: string;
+  content: string
 }
 
 export function MdxProvider({ content }: Props) {

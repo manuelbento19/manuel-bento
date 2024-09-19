@@ -63,20 +63,17 @@ const config: Config = {
         sm: 'calc(var(--radius) - 4px)'
       },
       keyframes: {
-        skell:{
+        skell: {
           to: {
-            "background-position-x": "-200%"
+            'background-position-x': '-200%'
           }
         }
       },
       animation: {
-        "skell": "1.5s skell linear infinite"
+        skell: '1.5s skell linear infinite'
       }
     }
   },
-  plugins: [
-    require('tailwindcss-animate'),
-    require('@tailwindcss/typography')
-  ]
+  plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')]
 }
 export default config

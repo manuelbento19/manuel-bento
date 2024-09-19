@@ -23,7 +23,7 @@
       }
     ]
   },
- "about": {
+  "about": {
     "hero": {
       "title": "Software Developer",
       "description": "Passionate about technology, specialized in Frontend Development.",
@@ -34,7 +34,7 @@
         "Although I have some preferred tools, I always try to choose the best tool for the job, even if it’s not on my usual list. My goal is to find the right solution for each project."
       ]
     },
-    "headings": ["Skills","Education","Work"],
+    "headings": ["Skills", "Education", "Work"],
     "work": [
       {
         "title": "Frontend Developer",

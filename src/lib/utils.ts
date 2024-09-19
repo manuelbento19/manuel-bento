@@ -7,7 +7,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export function formatDate(date: string){
-  const isoDate = parseISO(date);
-  return format(isoDate,`d 'de' LLLL 'de' yyyy`,{locale: pt});
+export function formatDate(date: string) {
+  const isoDate = parseISO(date)
+  return format(isoDate, `d 'de' LLLL 'de' yyyy`, { locale: pt })
 }

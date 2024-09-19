@@ -26,18 +26,16 @@ export const metadata: Metadata = {
   description: 'Welcome to my portfolio'
 }
 
-export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  const locale = await getLocale();
-  const messages = await getMessages();
+export default async function RootLayout({
+  children
+}: Readonly<{ children: React.ReactNode }>) {
+  const locale = await getLocale()
+  const messages = await getMessages()
 
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
-        className={cn(
-          geistSans.variable,
-          geistMono.variable,
-          'antialiased'
-        )}
+        className={cn(geistSans.variable, geistMono.variable, 'antialiased')}
       >
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
