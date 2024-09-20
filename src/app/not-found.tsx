@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export default function Notfound() {
   return (
-    <div className='h-full bg-[--background]'>
+    <div className='h-full bg-[--background] text-zinc-900 dark:text-zinc-200'>
       <div className='container grid h-full place-content-center'>
         <div className='space-y-6 text-center'>
           <Image
