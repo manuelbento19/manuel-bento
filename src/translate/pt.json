@@ -69,5 +69,11 @@
     "title": "Projetos que definem minha trajetória profissional",
     "description": "Ao longo da minha carreira como desenvolvedor, tenho desenvolvido muitos projetos. Muitos são de código aberto, então sinta-se à vontade para explorar o código e contribuir com suas próprias melhorias.",
     "data": []   
+  },
+  "articles": {
+    "title": "Artigos que fornecem dicas e conhecimentos",
+    "description": "Ao longo da minha carreira como desenvolvedor, tenho escrito alguns artigos para ajudar novos desenvolvedores a se destacarem no setor de software.",
+    "data": []
   }
+  
 }

@@ -69,5 +69,10 @@
     "title": "Projects that define my professional journey",
     "description": "Throughout my career as a developer, I have worked on many projects. Many are open source, so feel free to explore the code and contribute your own improvements.",
     "data": []
+  },
+  "articles": {
+    "title": "Articles that provide tips and knowledge",
+    "description": "Throughout my career as a developer, I have written several articles to help new developers stand out in the software industry.",
+    "data": []
   }
 }

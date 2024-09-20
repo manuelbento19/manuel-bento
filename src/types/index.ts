@@ -1,3 +1,4 @@
+import { Article } from 'contentlayer/generated'
 import { AbstractIntlMessages } from 'next-intl'
 
 export type Project = {
@@ -42,5 +43,10 @@ export type TranslateDTO = AbstractIntlMessages & {
     title: string;
     description: string;
     data: Project[]   
+  },
+  articles: {
+    title: string;
+    description: string;
+    data: Article[]
   }
 }
