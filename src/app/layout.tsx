@@ -20,10 +20,33 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: 'MB',
-    template: 'MB | %s'
+    default: 'Manuel Bento - Software Developer',
+    template: '%s | MB'
   },
-  description: 'Welcome to my portfolio'
+  description: 'Apaixonado por tecnologia, especializado em Desenvolvimento Frontend.',
+  keywords: ["developer","portfolio","frontend","manuelbento19","Manuel Bento"],
+  openGraph: {
+    title: 'Manuel Bento',
+    description: 'Apaixonado por tecnologia, especializado em Desenvolvimento Frontend.',
+    url: 'https://manuel-bento.vercel.com/og.png',
+    siteName: 'Manuel Bento',
+    images: [
+      {
+        url: 'https://manuel-bento.vercel.com/og.png',
+        width: 1920,
+        height: 1080,
+      },
+    ],
+    locale: 'pt-PT',
+    type: 'website',
+  },
+  twitter: {
+    title: "Manuel Bento",
+    card: "summary_large_image"
+  },
+  icons: {
+    shortcut: '/favicon.ico',
+  },
 }
 
 export default async function RootLayout({
