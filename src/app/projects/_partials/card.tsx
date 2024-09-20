@@ -13,7 +13,8 @@ import { Icon } from '@iconify/react'
 import Link from 'next/link'
 import React from 'react'
 import { motion as framer } from 'framer-motion'
-import { LazyFigure } from '@/components/ui/figure'
+import {LazyComponent} from '@bentoo/react-lazy';
+import Image from 'next/image'
 
 type Props = {
   project: Project
@@ -29,16 +30,10 @@ export default function ProjectCard({ project }: Props) {
       whileInView={{ opacity: 1, scale: 1, translateY: 0 }}
       viewport={{ once: true }}
     >
-      <CardHeader className='max-h-40 overflow-hidden rounded-md border p-1'>
-        <LazyFigure
-          src={project.wallpalper}
-          alt={project.title}
-          width={500}
-          height={500}
-          loading='lazy'
-          figureClass='max-h-40 h-40'
-          className='size-full rounded object-cover'
-        />
+      <CardHeader className='max-h-40 h-40 overflow-hidden rounded-md border p-1 relative'>
+        <LazyComponent fallback={<div className='figure absolute inset-0' />}>
+          <Image src={project.wallpalper} alt={project.title} width={500} height={500} loading='lazy' className='size-full rounded object-cover'/>
+        </LazyComponent>
       </CardHeader>
       <CardContent className='flex-1 space-y-3 px-0 py-4'>
         <CardTitle className='font-medium'>{project.title}</CardTitle>

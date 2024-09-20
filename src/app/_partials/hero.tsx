@@ -6,7 +6,7 @@ import {
   InstagramLogoIcon
 } from '@radix-ui/react-icons'
 import { useTranslations } from 'next-intl'
-import { LazyFigure } from '@/components/ui/figure'
+import HeroImage from './hero-image'
 
 const links = [
   {
@@ -50,17 +50,7 @@ export default function Hero() {
           ))}
         </div>
       </div>
-      <div className='h-64 w-full max-w-64 shrink-0 overflow-hidden rounded-lg p-0 grayscale transition duration-500 hover:rotate-0 hover:scale-110 hover:grayscale-0 md:rotate-12'>
-        <LazyFigure
-          src='/MyPicture.jpeg'
-          alt='My picture'
-          width={300}
-          height={300}
-          priority
-          figureClass='max-h-64 h-64'
-          className='size-full object-cover'
-        />
-      </div>
+      <HeroImage/>
     </section>
   )
 }
