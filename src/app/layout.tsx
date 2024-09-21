@@ -28,11 +28,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Manuel Bento',
     description: 'Apaixonado por tecnologia, especializado em Desenvolvimento Frontend.',
-    url: 'https://manuel-bento.vercel.com/og.png',
+    url: 'https://bentooo.vercel.app/og.png',
     siteName: 'Manuel Bento',
     images: [
       {
-        url: 'https://manuel-bento.vercel.com/og.png',
+        url: 'https://bentooo.vercel.app/og.png',
         width: 1920,
         height: 1080,
       },
