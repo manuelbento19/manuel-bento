@@ -3,8 +3,10 @@ import React from 'react'
 import image from '@/../public/404.png'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 
 export default function Notfound() {
+  const translation = useTranslations("notFound");
   return (
     <div className='h-full bg-[--background] text-zinc-900 dark:text-zinc-200'>
       <div className='container grid h-full place-content-center'>
@@ -17,14 +19,10 @@ export default function Notfound() {
             loading='lazy'
             className='w-full max-w-md drop-shadow-[0_5px_5px_rgba(0,0,0,.5)] dark:drop-shadow-none'
           />
-          <h1 className='text-xl font-bold md:text-3xl'>
-            Porquê que estás aqui?
-          </h1>
-          <h2 className='text-sm font-medium md:text-base'>
-            Você não deveria estar aqui.
-          </h2>
+          <h1 className='text-xl font-bold md:text-3xl'>{translation("title")}</h1>
+          <h2 className='text-sm font-medium md:text-base'>{translation("subtitle")}</h2>
           <Button size='lg' asChild>
-            <Link href='/'>Volte</Link>
+            <Link href='/'>{translation("action")}</Link>
           </Button>
         </div>
       </div>

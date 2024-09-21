@@ -74,6 +74,10 @@
     "title": "Artigos que fornecem dicas e conhecimentos",
     "description": "Ao longo da minha carreira como desenvolvedor, tenho escrito alguns artigos para ajudar novos desenvolvedores a se destacarem no setor de software.",
     "data": []
+  },
+  "notFound": {
+    "title": "Porquê que estás aqui?",
+    "subtitle": "Você não deveria estar aqui.",
+    "action": "Volte"
   }
-  
 }

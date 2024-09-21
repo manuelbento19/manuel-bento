@@ -74,5 +74,10 @@
     "title": "Articles that provide tips and knowledge",
     "description": "Throughout my career as a developer, I have written several articles to help new developers stand out in the software industry.",
     "data": []
+  },
+  "notFound": {
+    "title": "Why are you here?",
+    "subtitle": "You shouldn't be here.",
+    "action": "Come back"
   }
 }

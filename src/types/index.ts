@@ -48,5 +48,10 @@ export type TranslateDTO = AbstractIntlMessages & {
     title: string;
     description: string;
     data: Article[]
+  },
+  notFound: {
+    title: string;
+    subtitle: string;
+    action: string;
   }
 }
