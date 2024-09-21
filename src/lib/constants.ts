@@ -63,6 +63,16 @@ export const skills = [
 
 export const projects: Project[] = [
   {
+    title: '@bentoo/react-lazy',
+    wallpalper: '/projects/react-lazy.png',
+    description: 'Uma biblioteca criada para facilitar a implementação de Lazy Loading em aplicações React. Ela permite que os componentes sejam carregados apenas quando se tornam visíveis na tela, oferecendo uma maneira para monitorar a entrada dos elementos na viewport.',
+    link: {
+      repo: 'https://github.com/manuelbento19/react-lazy',
+      host: 'https://www.npmjs.com/package/@bentoo/react-lazy'
+    },
+    techs: ['mdi:react','bxl:typescript',"mdi:npm"]
+  },
+  {
     title: 'MyFolio',
     wallpalper: '/projects/myfolio.png',
     description:
