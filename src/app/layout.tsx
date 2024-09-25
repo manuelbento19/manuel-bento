@@ -23,11 +23,11 @@ export const metadata: Metadata = {
     default: 'Manuel Bento - Software Developer',
     template: '%s | MB'
   },
-  description: 'Apaixonado por tecnologia, especializado em Desenvolvimento Frontend.',
+  description: 'Passionate about technology, specialized in Frontend Development.',
   keywords: ["developer","portfolio","frontend","manuelbento19","Manuel Bento"],
   openGraph: {
     title: 'Manuel Bento',
-    description: 'Apaixonado por tecnologia, especializado em Desenvolvimento Frontend.',
+    description: 'Passionate about technology, specialized in Frontend Development.',
     url: 'https://bentooo.vercel.app/og.png',
     siteName: 'Manuel Bento',
     images: [
@@ -42,7 +42,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: "Manuel Bento",
-    card: "summary_large_image"
+    card: "summary_large_image",
+    images: [
+      {
+        url: 'https://bentooo.vercel.app/og.png',
+        width: 1920,
+        height: 1080,
+      },
+    ],
   },
   icons: {
     shortcut: '/favicon.ico',
