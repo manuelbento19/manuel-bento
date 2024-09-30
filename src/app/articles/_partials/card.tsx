@@ -37,7 +37,7 @@ export default function ArticleCard({ article }: Props) {
           <CardTitle className='text-zinc-800 dark:text-zinc-200'>
             {article.title}
           </CardTitle>
-          <div className='my-2 inline-flex gap-2 md:flex-nowrap flex-wrap'>
+          <div className='my-2 inline-flex gap-2 flex-wrap'>
             {article.tags.map((tag) => (
               <Button size='sm' variant='outline' key={tag} className='text-xs'>
                 #{tag}

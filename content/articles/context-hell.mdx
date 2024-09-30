@@ -1,0 +1,65 @@
+---
+title: Context Hell - O pesadelo dos React Devs
+description:
+  Este artigo analisa os desafios da Context API no React, 
+  abordando problemas como performance e legibilidade do código. O artigo oferece insights para ajudar desenvolvedores a superar as complexidades e melhorar a gestão de estado em suas aplicações.
+date: 2024-09-20
+tags: ['context-api','state-management','development','reactjs',"webdevelopment"]
+---
+
+Imagine que você está desenvolvendo uma aplicação usando React que requer um monte de funcionalidades, como temas, autenticação, idiomas, etc; você talvez decida usar [**Context API**](https://react.dev/learn/passing-data-deeply-with-context) para simplificar a comunicação entre os componentes, o que é uma ótima estratégia. Pois usar Context API ajuda a evitar o "[**prop drilling**](https://www.freecodecamp.org/news/prop-drilling-in-react-explained-with-examples/)" (passar dados de um componente pai para um filho distante através de vários níveis).
+À medida que sua aplicação vai crescendo, você adiciona novos contextos. O que levará a uma estrutura parecida com essa daqui:
+
+<Image
+  className='w-full h-50'
+  src='/articles/context.png'
+  alt='Context Hell'
+  width={600}
+  height={600}
+  priority
+/>
+
+Assustador, né? 😶 Embora a imagem pareça ser “meramente ilustrativa”, ela não é tão “ilustrativa” assim, pois é um cenário real. Pode não parecer real, mas é.
+
+Segundo a imagem, a aplicação está usando uma estrutura complexa de providers. O que implica dizer que cada provider adiciona uma nova camada de contexto, o que pode resultar em:
+
+- **Re-renderizações desnecessárias:** as actualizações em um contexto causam re-renderizações em componentes não afectados, prejudicando a performance.
+- **Confusão no código:** olhando para a imagem, parece bastante óbvio esse ponto. O código torna-se menos legível, mais difícil de manter e refatorar quando existem muitos contextos. O que pode vir a causar uma grande dificuldade em identificar quais contextos afetam quais componentes, pois as mudanças em um contexto afetam outros contextos e componentes de forma inesperada.
+
+Embora a Context API ofereça uma solução elegante para compartilhar estados e funções globalmente, o uso inadequado pode levar ao temido e aclamado:
+
+## Context Hell
+Context Hell refere-se à complexidade e confusão que podem surgir ao usar a Context API de forma excessiva.
+Em alguns casos, isso pode tornar o sistema difícil de entender e manipular, o que não difere de outros problemas em desenvolvimento de software, como:
+
+- [Callback Hell](https://dev.to/trinitypath/entendendo-sobre-callback-hell-em-javascript-blh)
+- [Dependency Hell](https://en.wikipedia.org/wiki/Dependency_hell)
+- [Tutorial Hell](https://mariovarela99.medium.com/tutorial-hell-a-fase-do-copy-past-9ca9c7b92793) (devia estar no topo, pois é aqui é onde tudo começa)
+
+### Causas
+1. Uso excessivo da Context API
+2. Existem inúmeras, mas iremos nos focar apenas no ponto 1.
+
+### Soluções
+
+1. Dividir os contextos de forma que cada um tenha uma responsabilidade única e bem definida.
+2. Use contextos apenas para dados que realmente precisam ser compartilhados globalmente.
+3. Use hooks como `useMemo` e `useCallback` para otimizar componentes e evitar re-renderizações desnecessárias.
+4. Utilize ferramentas para gerenciamento de estados como a [Zustand](https://github.com/pmndrs/zustand) e a [@bentoo/state-man](https://www.npmjs.com/package/@bentoo/state-man).
+
+Talvez estejas se perguntados: **como identificar se o meu componente está sendo afectado pelo uso de contextos?**
+
+Uma solução ideal seria usar a [React DevTools](https://react.dev/learn/react-developer-tools), que é uma ferramenta de análise de desempenho e monitoramento. Essa ferramenta pode te ajudar a visualizar quais componentes estão sendo re-renderizados e porquê.
+
+### Conclusão
+O **Context Hell** é um desafio real que pode impactar a manutenção e o desempenho da sua aplicação. Mas é possível minimizar esses problemas usando uma abordagem cuidadosa, como:
+
+- Modularizar contextos e garantir que cada um tenha uma responsabilidade clara e bem definida para evitar sobrecarga e confusão.
+- Otimizar re-renderizações, usando alguns hooks como `useMemo` e `useCallback`.
+- Usar alternativas ao Context API, como o [Zustand](https://github.com/pmndrs/zustand) e a [@bentoo/state-man](https://www.npmjs.com/package/@bentoo/state-man).
+
+### Referências
+
+- [The React Context Hell](https://dev.to/alfredosalzillo/the-react-context-hell-7p4)
+- [Navigating reacts - Context Hell](https://medium.com/@ambrosekibet576/navigating-reacts-context-hell-f6f4fe5dc23a)
+- [ChatGPT](https://chatgpt.com/)
