@@ -3,8 +3,9 @@ import {
   GitHubLogoIcon,
   LinkedInLogoIcon,
   TwitterLogoIcon,
-  InstagramLogoIcon
+  InstagramLogoIcon,
 } from '@radix-ui/react-icons'
+import {Icon} from '@iconify/react';
 import { useTranslations } from 'next-intl'
 import HeroImage from './hero-image'
 
@@ -24,7 +25,16 @@ const links = [
   {
     link: 'https://www.instagram.com/manuelbento.mb/',
     icon: InstagramLogoIcon
+  },
+  {
+    link: "https://medium.com/@manuelbento19",
+    icon: () => <Icon icon="simple-icons:medium" className='size-5' /> 
+  },
+  {
+    link: "https://www.npmjs.com/~manuelbento19",
+    icon: () => <Icon icon="mdi:npm" className='size-8' /> 
   }
+  
 ]
 
 export default function Hero() {
@@ -40,9 +50,9 @@ export default function Hero() {
         <p className='mt-4 max-w-md text-xs font-normal md:text-sm'>
           {translation('hero.description')}
         </p>
-        <div className='mt-5 flex items-center gap-1.5'>
+        <div className='mt-5 flex items-center gap-1'>
           {links.map(({ link, icon: Icon }) => (
-            <Button size='sm' variant='ghost' asChild key={link}>
+            <Button size='sm' variant='ghost' className='px-1 py-1' asChild key={link}>
               <a href={link} target='_blank'>
                 <Icon className='size-5' />
               </a>
