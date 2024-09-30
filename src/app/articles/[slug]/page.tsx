@@ -18,8 +18,7 @@ function getArticle({ slug }: Params) {
   return article
 }
 
-export const generateStaticParams = async () =>
-  allArticles.map((article) => ({ slug: article._raw.flattenedPath }))
+export const generateStaticParams = async () => allArticles.map((article) => ({ slug: article._raw.flattenedPath }))
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const {title,description,wallpaper} = getArticle(params);
