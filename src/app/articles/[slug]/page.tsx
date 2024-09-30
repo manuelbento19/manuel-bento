@@ -21,38 +21,15 @@ function getArticle({ slug }: Params) {
 export const generateStaticParams = async () =>
   allArticles.map((article) => ({ slug: article._raw.flattenedPath }))
 
-export const generateMetadata = ({ params }: { params: { slug: string } }) : Metadata => {
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const {title,description,wallpaper} = getArticle(params);
   const ogImage = `https://bentooo.vercel.app${wallpaper ?? "/og.png"}`;
-
+  
   return { 
     title,
     description,
     openGraph: {
-      title,
-      description,
-      url: ogImage,
-      siteName: 'Manuel Bento',
-      images: [
-        {
-          url: ogImage,
-          width: 1920,
-          height: 1080,
-        },
-      ],
-      locale: 'pt-PT',
-      type: 'website',
-    },
-    twitter: {
-      title,
-      card: "summary_large_image",
-      images: [
-        {
-          url: ogImage,
-          width: 1920,
-          height: 1080,
-        },
-      ],
+      images: [ogImage]
     },
   }
 }
