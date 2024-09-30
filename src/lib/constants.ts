@@ -63,6 +63,16 @@ export const skills = [
 
 export const projects: Project[] = [
   {
+    title: '@bentoo/state-man',
+    wallpalper: '/projects/state-man.png',
+    description: 'Um pacote leve para gerenciamento de estado em aplicativos React, projetado como uma alternativa simplificada ao Zustand e a Context API',
+    link: {
+      repo: 'https://github.com/manuelbento19/state-man',
+      host: 'https://www.npmjs.com/package/@bentoo/state-man'
+    },
+    techs: ['mdi:react','bxl:typescript',"mdi:npm"]
+  },
+  {
     title: '@bentoo/react-lazy',
     wallpalper: '/projects/react-lazy.png',
     description: 'Uma biblioteca criada para facilitar a implementação de Lazy Loading em aplicações React. Ela permite que os componentes sejam carregados apenas quando se tornam visíveis na tela, oferecendo uma maneira para monitorar a entrada dos elementos na viewport.',
