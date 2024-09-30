@@ -8,7 +8,7 @@ date: 2024-09-30
 tags: ['context-api','state-management','development','reactjs',"webdevelopment"]
 ---
 
-Imagine que você está desenvolvendo uma aplicação usando React que requer um monte de funcionalidades, como temas, autenticação, idiomas, etc; você talvez decida usar [**Context API**](https://react.dev/learn/passing-data-deeply-with-context) para simplificar a comunicação entre os componentes, o que é uma ótima estratégia. Pois usar Context API ajuda a evitar o "[**prop drilling**](https://www.freecodecamp.org/news/prop-drilling-in-react-explained-with-examples/)" (passar dados de um componente pai para um filho distante através de vários níveis).
+Imagine que você está desenvolvendo uma aplicação usando React que requer um monte de funcionalidades, como temas, autenticação, idiomas, etc; você talvez decida usar [**Context API**](https://react.dev/learn/passing-data-deeply-with-context) para simplificar a comunicação entre os componentes, o que é uma ótima estratégia, pois usar Context API ajuda a evitar o "[**prop drilling**](https://www.freecodecamp.org/news/prop-drilling-in-react-explained-with-examples/)" (passar dados de um componente pai para um filho distante através de vários níveis).
 
 À medida que sua aplicação vai crescendo, você adiciona novos contextos. O que levará a uma estrutura parecida com essa daqui:
 
@@ -46,10 +46,10 @@ Em alguns casos, isso pode tornar o sistema difícil de entender e manipular, o 
 
 1. Dividir os contextos de forma que cada um tenha uma responsabilidade única e bem definida.
 2. Use contextos apenas para dados que realmente precisam ser compartilhados globalmente.
-3. Use hooks como `useMemo` e `useCallback` para otimizar componentes e evitar re-renderizações desnecessárias.
-4. Utilize ferramentas para gerenciamento de estados como a [Zustand](https://github.com/pmndrs/zustand) e a [@bentoo/state-man](https://www.npmjs.com/package/@bentoo/state-man).
+3. Use hooks como `useMemo` e `useCallback` para optimizar componentes e evitar re-renderizações desnecessárias.
+4. Use ferramentas para gerenciamento de estados como a [Zustand](https://github.com/pmndrs/zustand) e a [@bentoo/state-man](https://www.npmjs.com/package/@bentoo/state-man).
 
-Talvez estejas se perguntando: **como identificar se o meu componente está sendo afectado pelo uso de contextos?**
+Talvez esteja se perguntando: **Como identificar se o meu componente está sendo afectado pelo uso de contextos?**
 
 Uma solução ideal seria usar a [React DevTools](https://react.dev/learn/react-developer-tools), que é uma ferramenta de análise de desempenho e monitoramento. Essa ferramenta pode te ajudar a visualizar quais componentes estão sendo re-renderizados e porquê.
 
@@ -57,7 +57,7 @@ Uma solução ideal seria usar a [React DevTools](https://react.dev/learn/react-
 O **Context Hell** é um desafio real que pode impactar a manutenção e o desempenho da sua aplicação. Mas é possível minimizar esses problemas usando uma abordagem cuidadosa, como:
 
 - Modularizar contextos e garantir que cada um tenha uma responsabilidade clara e bem definida para evitar sobrecarga e confusão.
-- Otimizar re-renderizações, usando alguns hooks como `useMemo` e `useCallback`.
+- Optimizar re-renderizações, usando alguns hooks como `useMemo` e `useCallback`.
 - Usar alternativas ao Context API, como o [Zustand](https://github.com/pmndrs/zustand) e a [@bentoo/state-man](https://www.npmjs.com/package/@bentoo/state-man).
 
 ### Referências
