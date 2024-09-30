@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { ArrowLeftIcon } from '@radix-ui/react-icons'
 import Tag from '@/components/ui/tag'
 import { formatDate } from '@/lib/utils'
+import { Metadata } from 'next'
 
 type Params = {
   slug: string
@@ -20,9 +21,40 @@ function getArticle({ slug }: Params) {
 export const generateStaticParams = async () =>
   allArticles.map((article) => ({ slug: article._raw.flattenedPath }))
 
-export const generateMetadata = ({ params }: { params: { slug: string } }) => {
-  const article = getArticle(params)
-  return { title: article.title }
+export const generateMetadata = ({ params }: { params: { slug: string } }) : Metadata => {
+  const {title,description,wallpaper} = getArticle(params);
+  const ogImage = `https://bentooo.vercel.app${wallpaper ?? "/og.png"}`;
+
+  return { 
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: ogImage,
+      siteName: 'Manuel Bento',
+      images: [
+        {
+          url: ogImage,
+          width: 1920,
+          height: 1080,
+        },
+      ],
+      locale: 'pt-PT',
+      type: 'website',
+    },
+    twitter: {
+      title,
+      card: "summary_large_image",
+      images: [
+        {
+          url: ogImage,
+          width: 1920,
+          height: 1080,
+        },
+      ],
+    },
+  }
 }
 
 export default function Page({ params }: { params: { slug: string } }) {
@@ -49,7 +81,7 @@ export default function Page({ params }: { params: { slug: string } }) {
         <div className='prose max-w-full dark:prose-invert'>
           <MdxProvider content={article.body.code} />
         </div>
-        <footer className='mt-4 inline-flex gap-2'>
+        <footer className='mt-4 inline-flex flex-wrap gap-2'>
           {article.tags.map((tag) => (
             <Tag key={tag} className='rounded-md text-xs'>
               #{tag}

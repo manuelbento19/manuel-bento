@@ -1,9 +1,10 @@
 ---
 title: Context Hell - O pesadelo dos React Devs
+wallpaper: '/articles/context.png'
 description:
   Este artigo analisa os desafios da Context API no React, 
   abordando problemas como performance e legibilidade do código. O artigo oferece insights para ajudar desenvolvedores a superar as complexidades e melhorar a gestão de estado em suas aplicações.
-date: 2024-09-20
+date: 2024-09-30
 tags: ['context-api','state-management','development','reactjs',"webdevelopment"]
 ---
 
@@ -48,7 +49,7 @@ Em alguns casos, isso pode tornar o sistema difícil de entender e manipular, o 
 3. Use hooks como `useMemo` e `useCallback` para otimizar componentes e evitar re-renderizações desnecessárias.
 4. Utilize ferramentas para gerenciamento de estados como a [Zustand](https://github.com/pmndrs/zustand) e a [@bentoo/state-man](https://www.npmjs.com/package/@bentoo/state-man).
 
-Talvez estejas se perguntados: **como identificar se o meu componente está sendo afectado pelo uso de contextos?**
+Talvez estejas se perguntando: **como identificar se o meu componente está sendo afectado pelo uso de contextos?**
 
 Uma solução ideal seria usar a [React DevTools](https://react.dev/learn/react-developer-tools), que é uma ferramenta de análise de desempenho e monitoramento. Essa ferramenta pode te ajudar a visualizar quais componentes estão sendo re-renderizados e porquê.
 
