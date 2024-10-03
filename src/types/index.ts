@@ -30,6 +30,12 @@ export type TranslateDTO = AbstractIntlMessages & {
       data: string[]
     }
     headings: string[]
+    education: {
+      title: string
+      provider: string
+      started_date: string
+      due_date: string
+    }[],
     work: {
       title: string
       company: string

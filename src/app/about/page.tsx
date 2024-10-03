@@ -15,7 +15,7 @@ export default function About() {
 
   return (
     <div className='flex w-full px-4 pb-4 text-zinc-900 dark:text-zinc-200'>
-      <div className='container flex flex-col space-y-10 pt-32'>
+      <div className='container flex flex-col space-y-6 pt-32'>
         <Hero />
         <section className='space-y-2'>
           {about.hero.data
@@ -38,17 +38,17 @@ export default function About() {
             {about.headings[1]}
           </h2>
           <div className='space-y-2 divide-y'>
-            <div>
-              <h3 className='font-semibold'>
-                Instituto Politécnico Industrial de Luanda
-              </h3>
-              <h2 className='text-gray-600 dark:text-gray-300'>
-                Técnico de Sistemas Informático
-              </h2>
-              <span className='text-gray-500 dark:text-gray-200'>
-                2017 - 2021
-              </span>
-            </div>
+            {about.education.map((item) => (
+              <div key={item.provider}>
+                <header className='flex items-center justify-between gap-2 pt-2'>
+                  <h3 className='font-semibold'>{item.provider}</h3>
+                </header>
+                <h2 className='text-gray-600 dark:text-gray-300'>{item.title}</h2>
+                <footer>
+                  <span className='text-gray-500 dark:text-gray-200'>{item.started_date} - {item.due_date}</span>
+                </footer>
+              </div>
+            ))}
           </div>
         </section>
         <section className='space-y-2'>

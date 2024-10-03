@@ -35,6 +35,20 @@
       ]
     },
     "headings": ["Skills", "Education", "Work"],
+    "education": [
+      {
+        "provider": "Universidade Gregório Semedo",
+        "title": "Computer Engineering",
+        "started_date": "2024",
+        "due_date": "Present"
+      },
+      {
+        "provider": "Instituto Politécnico Industrial de Luanda",
+        "title": "Information Systems Technician",
+        "started_date": "2017",
+        "due_date": "2021"
+      }
+    ],
     "work": [
       {
         "title": "Frontend Developer",

@@ -35,6 +35,20 @@
       ]
     },
     "headings": ["Habilidades", "Educação", "Trabalho"],
+    "education": [
+      {
+        "provider": "Universidade Gregório Semedo",
+        "title": "Engenharia Informática",
+        "started_date": "2024",
+        "due_date": "Presente"
+      },
+      {
+        "provider": "Instituto Politécnico Industrial de Luanda",
+        "title": "Técnico de Sistemas Informático",
+        "started_date": "2017",
+        "due_date": "2021"
+      }
+    ],
     "work": [
       {
         "title": "Fronted Developer",
