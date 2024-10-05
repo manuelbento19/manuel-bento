@@ -4,12 +4,17 @@ import {
   LinkedInLogoIcon,
   TwitterLogoIcon,
   InstagramLogoIcon,
+  EnvelopeClosedIcon,
 } from '@radix-ui/react-icons'
 import {Icon} from '@iconify/react';
 import { useTranslations } from 'next-intl'
 import HeroImage from './hero-image'
 
 const links = [
+  {
+    link: 'mailto:manuelbentomb.223@gmail.com',
+    icon: EnvelopeClosedIcon
+  },
   {
     link: 'https://github.com/manuelbento19',
     icon: GitHubLogoIcon
