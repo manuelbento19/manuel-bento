@@ -110,6 +110,22 @@ export const projects: Project[] = [
     ]
   },
   {
+    title: 'Micro-frontend',
+    wallpalper: '/projects/microfrontend.png',
+    description:
+      'Este projeto demonstra uma aplicação de micro frontends onde temos três aplicativos independentes: react-components,vue-components e app. Dando a possibilidade de trabalhar com React e Vue.',
+    link: {
+      repo: 'https://github.com/manuelbento19/micro-frontend',
+    },
+    techs: [
+      'mdi:react',
+      'uim:vuejs',
+      'bxl:typescript',
+      'mdi:sass',
+      'simple-icons:vite'
+    ]
+  },
+  {
     title: 'Port Scanner',
     wallpalper: '/projects/portscanner.png',
     description:
