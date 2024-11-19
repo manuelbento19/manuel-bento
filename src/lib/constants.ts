@@ -13,6 +13,7 @@ export const skills = [
       { name: 'Tailwind CSS', icon: 'skill-icons:tailwindcss-light' },
       { name: 'React Native', icon: 'vscode-icons:file-type-reactts' },
       { name: 'Expo', icon: 'file-icons:expo' },
+      { name: 'Vue', icon: 'logos:vue' },
       { name: 'Astro', icon: 'simple-icons:astro' },
       { name: 'Sass', icon: 'skill-icons:sass' },
       { name: 'Styled Components', icon: 'skill-icons:styledcomponents' },
@@ -56,7 +57,8 @@ export const skills = [
       { name: 'OpenAI', icon: 'simple-icons:openai' },
       { name: 'Trello', icon: 'devicon:trello' },
       { name: 'VSCode', icon: 'vscode-icons:file-type-vscode' },
-      { name: 'Visual Studio', icon: 'devicon:visualstudio' }
+      { name: 'Visual Studio', icon: 'devicon:visualstudio' },
+      { name: 'Intellij', icon: 'devicon:intellij' }
     ]
   }
 ]
