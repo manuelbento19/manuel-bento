@@ -10,7 +10,6 @@ export async function GET(request: Request){
 
     const claps = (await redis.get<number>(`claps:${slug}`)) || 0;
     return Response.json({claps})
-
 }
 
 export async function POST(request: Request){

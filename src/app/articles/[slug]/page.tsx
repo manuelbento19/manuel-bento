@@ -65,7 +65,7 @@ export default function Page({ params }: { params: { slug: string } }) {
             </Tag>
           ))}
         </footer>
-        <Claps claps={30}/>
+        <Claps slug={params.slug}/>
       </section>
     </div>
   )
