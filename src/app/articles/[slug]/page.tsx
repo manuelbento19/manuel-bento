@@ -5,6 +5,7 @@ import { ArrowLeftIcon } from '@radix-ui/react-icons'
 import Tag from '@/components/ui/tag'
 import { formatDate } from '@/lib/utils'
 import { Metadata } from 'next'
+import { Claps } from '@/components/ui/claps'
 
 type Params = {
   slug: string
@@ -64,6 +65,7 @@ export default function Page({ params }: { params: { slug: string } }) {
             </Tag>
           ))}
         </footer>
+        <Claps claps={30}/>
       </section>
     </div>
   )
