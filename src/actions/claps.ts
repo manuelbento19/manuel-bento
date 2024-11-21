@@ -11,7 +11,7 @@ export async function getClaps(slug:string){
 }
 
 export async function clap(slug: string) {
-    const hash = getHash();
+    const hash = await getHash();
 
     const hours = 24, minutes = 60, seconds = 60;
    
