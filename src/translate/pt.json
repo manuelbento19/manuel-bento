@@ -34,7 +34,7 @@
         "Embora eu tenha algumas ferramentas preferidas, sempre procuro escolher a melhor ferramenta para o trabalho, mesmo que não esteja na minha lista habitual. Meu objetivo é encontrar a solução certa para cada projeto."
       ]
     },
-    "headings": ["Habilidades", "Educação", "Trabalho"],
+    "headings": ["Habilidades", "Educação","Licenças e certificados", "Trabalho"],
     "education": [
       {
         "provider": "Universidade Gregório Semedo",
@@ -47,6 +47,14 @@
         "title": "Técnico de Sistemas Informático",
         "started_date": "2017",
         "due_date": "2021"
+      }
+    ],
+    "license": [
+      {
+        "provider": "Meta Fronted Developer Professional",
+        "title": "Meta",
+        "link": "https://www.coursera.org/account/accomplishments/professional-cert/certificate/UBAITI7ZZUV8",
+        "due_date": "2024"
       }
     ],
     "work": [
