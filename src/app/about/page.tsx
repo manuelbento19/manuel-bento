@@ -56,6 +56,26 @@ export default function About() {
             {about.headings[2]}
           </h2>
           <div className='space-y-2 divide-y'>
+            {about.license.map((item) => (
+              <div key={item.provider}>
+                <header className='flex items-center justify-between gap-2 pt-2'>
+                  <a href={item.link ?? "#"} className='hover:underline' target='_blank'>
+                    <h3 className='font-semibold'>{item.title}</h3>
+                  </a>
+                </header>
+                <h2 className='text-gray-600 dark:text-gray-300'>{item.provider}</h2>
+                <footer>
+                  <span className='text-gray-500 dark:text-gray-200'>{item.due_date}</span>
+                </footer>
+              </div>
+            ))}
+          </div>
+        </section>
+        <section className='space-y-2'>
+          <h2 className='my-1.5 border-0 border-b pb-2 text-lg font-semibold'>
+            {about.headings[3]}
+          </h2>
+          <div className='space-y-2 divide-y'>
             {about.work.map((item) => (
               <div key={item.company}>
                 <header className='flex items-center justify-between gap-2 pt-2'>

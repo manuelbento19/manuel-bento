@@ -36,6 +36,12 @@ export type TranslateDTO = AbstractIntlMessages & {
       started_date: string
       due_date: string
     }[],
+    license: {
+      title: string
+      provider: string
+      due_date: string,
+      link?: string;
+    }[],
     work: {
       title: string
       company: string

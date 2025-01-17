@@ -34,7 +34,7 @@
         "Although I have some preferred tools, I always try to choose the best tool for the job, even if it’s not on my usual list. My goal is to find the right solution for each project."
       ]
     },
-    "headings": ["Skills", "Education", "Work"],
+    "headings": ["Skills", "Education", "Licenses and certificates", "Work"],
     "education": [
       {
         "provider": "Universidade Gregório Semedo",
@@ -47,6 +47,14 @@
         "title": "Information Systems Technician",
         "started_date": "2017",
         "due_date": "2021"
+      }
+    ],
+    "license": [
+      {
+        "provider": "Meta Fronted Developer Professional",
+        "title": "Meta",
+        "link": "https://www.coursera.org/account/accomplishments/professional-cert/certificate/UBAITI7ZZUV8",
+        "due_date": "2024"
       }
     ],
     "work": [
