@@ -12,8 +12,9 @@ import { getArticle, getArticleMeta, getArticles } from '@/lib/articles'
 export const generateStaticParams = async () =>
   getArticles().map((article) => ({ slug: article.slug }))
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const meta = getArticleMeta(params.slug)
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const meta = getArticleMeta(slug)
   if (!meta) notFound()
 
   const ogImage = `https://bentooo.vercel.app${meta.wallpaper ?? "/og.png"}`;
@@ -27,10 +28,11 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
-  const meta = getArticleMeta(params.slug)
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const meta = getArticleMeta(slug)
   if (!meta) notFound()
-  const article = await getArticle(params.slug)
+  const article = await getArticle(slug)
   if (!article) notFound()
   const locale = await getLocale()
   const t = await getTranslations('common')
@@ -63,7 +65,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
             </Tag>
           ))}
         </footer>
-        <Claps slug={params.slug}/>
+        <Claps slug={slug}/>
       </section>
     </div>
   )

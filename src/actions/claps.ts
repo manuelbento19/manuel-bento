@@ -34,13 +34,13 @@ export async function clap(slug: string): Promise<ClapResult> {
 
     const count = await getClaps(slug);
     return { status: "duplicate", count };
-  } catch (error) {
+  } catch {
     return { status: "error", message: "clap.error" };
   }
 }
 
 async function getHash() {
-  const header = headers();
+  const header = await headers();
   const ip = (header.get("x-forwarded-for") ?? "127.0.0.1").split(",")[0]
   const buffer = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(ip));
   const hash = Array.from(new Uint8Array(buffer)).map((b) => b.toString(16).padStart(2, "0")).join("");
