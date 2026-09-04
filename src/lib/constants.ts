@@ -228,6 +228,17 @@ export const projects: Project[] = [
     techs: ['mdi:react', 'mdi:tailwind', 'ph:phosphor-logo']
   },
   {
+    title: 'LinkLook',
+    wallpalper: '/projects/linklook.png',
+    description:
+      'Uma pequena app que permite capturar e mostrar uma pré-visualização de links fornecidos. Capaz de gerar uma visualização rápida e intuitiva do conteúdo da página, sem que seja necessário abrir o link diretamente.',
+    link: {
+      repo: 'https://github.com/manuelbento19/link-look',
+      host: 'https://link-look.vercel.app'
+    },
+    techs: ['mdi:react', 'ri:nextjs-fill', 'mdi:tailwind', 'bxl:typescript']
+  },
+  {
     title: 'Poupança',
     wallpalper: '/projects/poupanca.png',
     description:
