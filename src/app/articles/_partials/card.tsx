@@ -8,7 +8,7 @@ import {
   CardTitle
 } from '@/components/ui/card'
 import React, { useState } from 'react'
-import { motion as framer, motion, AnimatePresence } from 'framer-motion'
+import { motion as framer, motion } from 'framer-motion'
 import { createPortal } from 'react-dom'
 import Link from 'next/link'
 import { Article } from 'contentlayer/generated'
@@ -70,21 +70,19 @@ export default function ArticleCard({ article }: Props) {
         </CardContent>
       </Link>
 
-      <AnimatePresence>
-        {showPreview &&
-          createPortal(
-            <motion.div
-              className='pointer-events-none fixed z-50'
-              style={{ left: previewPos().left, top: previewPos().top }}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-            >
-              <ArticlePreview article={article} />
-            </motion.div>,
-            document.body
-          )}
-      </AnimatePresence>
+      {showPreview &&
+        typeof document !== 'undefined' &&
+        createPortal(
+          <motion.div
+            className='pointer-events-none fixed z-50 shadow-2xl'
+            style={{ left: previewPos().left, top: previewPos().top }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+          >
+            <ArticlePreview article={article} />
+          </motion.div>,
+          document.body
+        )}
     </MotionCard>
   )
 }
