@@ -9,51 +9,17 @@ import {
   EnvelopeClosedIcon,
 } from '@radix-ui/react-icons'
 import { Icon } from '@iconify/react'
+import { socials } from '@/lib/socials'
 
-const contacts = [
-  {
-    label: 'Email',
-    value: 'manuelbentomb.223@gmail.com',
-    link: 'mailto:manuelbentomb.223@gmail.com',
-    icon: EnvelopeClosedIcon,
-  },
-  {
-    label: 'GitHub',
-    value: 'manuelbento19',
-    link: 'https://github.com/manuelbento19',
-    icon: GitHubLogoIcon,
-  },
-  {
-    label: 'LinkedIn',
-    value: 'manuel-bento',
-    link: 'https://www.linkedin.com/in/manuel-bento/',
-    icon: LinkedInLogoIcon,
-  },
-  {
-    label: 'Twitter',
-    value: '@manuelbentomb',
-    link: 'https://twitter.com/manuelbentomb',
-    icon: TwitterLogoIcon,
-  },
-  {
-    label: 'Instagram',
-    value: '@manuelbento.mb',
-    link: 'https://www.instagram.com/manuelbento.mb/',
-    icon: InstagramLogoIcon,
-  },
-  {
-    label: 'Medium',
-    value: '@manuelbento19',
-    link: 'https://medium.com/@manuelbento19',
-    icon: () => <Icon icon="simple-icons:medium" className='size-5' />,
-  },
-  {
-    label: 'npm',
-    value: '~manuelbento19',
-    link: 'https://www.npmjs.com/~manuelbento19',
-    icon: () => <Icon icon="mdi:npm" className='size-5' />,
-  },
-]
+const icons = {
+  email: EnvelopeClosedIcon,
+  github: GitHubLogoIcon,
+  linkedin: LinkedInLogoIcon,
+  twitter: TwitterLogoIcon,
+  instagram: InstagramLogoIcon,
+  medium: () => <Icon icon="simple-icons:medium" className='size-5' />,
+  npm: () => <Icon icon="mdi:npm" className='size-5' />,
+}
 
 export default function Contact() {
   const translation = useMessages() as TranslateDTO
@@ -72,12 +38,12 @@ export default function Contact() {
         </section>
 
         <section className='space-y-3'>
-          {contacts.map((contact) => {
-            const IconComp = contact.icon
+          {socials.map((social) => {
+            const IconComp = icons[social.key as keyof typeof icons]
             return (
               <a
-                key={contact.label}
-                href={contact.link}
+                key={social.key}
+                href={social.url}
                 target='_blank'
                 rel='noopener noreferrer'
                 className='box flex items-center gap-4 p-4 transition-all hover:shadow-lg hover:brightness-105'
@@ -87,10 +53,10 @@ export default function Contact() {
                 </div>
                 <div className='flex flex-col'>
                   <span className='text-xs text-muted-foreground'>
-                    {contact.label}
+                    {social.label}
                   </span>
                   <span className='text-sm font-medium'>
-                    {contact.value}
+                    {social.handle}
                   </span>
                 </div>
               </a>

@@ -38,7 +38,7 @@ export default function LanguageSelector() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button size='sm' variant='ghost'>
+        <Button size='sm' variant='ghost' aria-label='Change language'>
           <LanguagesIcon className='size-5' />
         </Button>
       </DropdownMenuTrigger>

@@ -36,7 +36,7 @@ export default function Header() {
           <div className='md:hidden order-2'>
             <input type="checkbox" id="menu-toggle" className="peer hidden" />
             <Button size='sm' variant='ghost' asChild className='block md:hidden'>
-              <label htmlFor="menu-toggle" className='flex items-center cursor-pointer'>
+              <label htmlFor="menu-toggle" className='flex items-center cursor-pointer' aria-label='Open menu'>
                 <HamburgerMenuIcon className='size-4' />
               </label>
             </Button>

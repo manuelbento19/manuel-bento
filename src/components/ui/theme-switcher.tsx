@@ -11,7 +11,7 @@ export default function ThemeSwitcher() {
   }
 
   return (
-    <Button size='sm' variant='ghost' onClick={switchTheme}>
+    <Button size='sm' variant='ghost' onClick={switchTheme} aria-label='Toggle theme'>
       {resolvedTheme === 'light' ? (
         <MoonIcon className='size-4' />
       ) : (

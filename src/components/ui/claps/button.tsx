@@ -28,6 +28,7 @@ export function ClapButton({ claps, slug }:Props) {
             onClick={onClap} 
             variant={"secondary"} 
             disabled={loading}
+            aria-label="Clap for this article"
             className={`flex hover:-translate-y-1 hover:transition items-center gap-2 py-2 px-4 rounded-full shadow-lg fixed right-4 bottom-4 disabled:opacity-50 disabled:cursor-not-allowed`}
         >
             <span className="text-xl">👏</span>

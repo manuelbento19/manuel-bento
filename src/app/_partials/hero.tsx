@@ -9,38 +9,17 @@ import {
 import {Icon} from '@iconify/react';
 import { useTranslations } from 'next-intl'
 import HeroImage from './hero-image'
+import { socials } from '@/lib/socials'
 
-const links = [
-  {
-    link: 'mailto:manuelbentomb.223@gmail.com',
-    icon: EnvelopeClosedIcon
-  },
-  {
-    link: 'https://github.com/manuelbento19',
-    icon: GitHubLogoIcon
-  },
-  {
-    link: 'https://www.linkedin.com/in/manuel-bento/',
-    icon: LinkedInLogoIcon
-  },
-  {
-    link: 'https://twitter.com/manuelbentomb',
-    icon: TwitterLogoIcon
-  },
-  {
-    link: 'https://www.instagram.com/manuelbento.mb/',
-    icon: InstagramLogoIcon
-  },
-  {
-    link: "https://medium.com/@manuelbento19",
-    icon: () => <Icon icon="simple-icons:medium" className='size-5' /> 
-  },
-  {
-    link: "https://www.npmjs.com/~manuelbento19",
-    icon: () => <Icon icon="mdi:npm" className='size-8' /> 
-  }
-  
-]
+const icons = {
+  email: EnvelopeClosedIcon,
+  github: GitHubLogoIcon,
+  linkedin: LinkedInLogoIcon,
+  twitter: TwitterLogoIcon,
+  instagram: InstagramLogoIcon,
+  medium: () => <Icon icon="simple-icons:medium" className='size-5' />,
+  npm: () => <Icon icon="mdi:npm" className='size-8' />
+}
 
 export default function Hero() {
   const translation = useTranslations('about')
@@ -58,13 +37,16 @@ export default function Hero() {
           {translation('hero.description')}
         </p>
         <div className='flex items-center gap-2'>
-          {links.map(({ link, icon: Icon }) => (
-            <Button size='sm' variant='outline' className='px-2.5 py-2.5 transition-all hover:scale-110' asChild key={link}>
-              <a href={link} target='_blank'>
-                <Icon className='size-4' />
-              </a>
-            </Button>
-          ))}
+          {socials.map((social) => {
+            const Icon = icons[social.key as keyof typeof icons]
+            return (
+              <Button size='sm' variant='outline' className='px-2.5 py-2.5 transition-all hover:scale-110' asChild key={social.key}>
+                <a href={social.url} target='_blank' rel='noopener noreferrer' aria-label={social.label}>
+                  <Icon className='size-4' />
+                </a>
+              </Button>
+            )
+          })}
         </div>
       </div>
       <HeroImage/>

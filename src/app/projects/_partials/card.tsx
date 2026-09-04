@@ -44,7 +44,7 @@ export default function ProjectCard({ project }: Props) {
       <CardFooter className='mt-auto flex items-center justify-between p-0'>
         <div className='flex items-center gap-1 divide-x-2'>
           <Button size='sm' variant='link'>
-            <Link href={project.link.repo} target='_blank'>
+            <Link href={project.link.repo} target='_blank' rel='noopener noreferrer' aria-label={`${project.title} GitHub repository`}>
               <Icon icon='mdi:github' className='size-5' />
             </Link>
           </Button>
@@ -61,7 +61,7 @@ export default function ProjectCard({ project }: Props) {
         </div>
         {project.link.host && (
           <Button size='sm' variant='ghost'>
-            <Link href={project.link.host} target='_blank'>
+            <Link href={project.link.host} target='_blank' rel='noopener noreferrer' aria-label={`Visit ${project.title}`}>
               <Icon icon='ion:navigate-outline' className='size-5' />
             </Link>
           </Button>
