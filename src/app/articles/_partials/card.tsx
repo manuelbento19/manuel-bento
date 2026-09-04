@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle
 } from '@/components/ui/card'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion as framer, motion } from 'framer-motion'
 import { createPortal } from 'react-dom'
 import Link from 'next/link'
@@ -24,8 +24,13 @@ const MotionCard = framer.create(Card)
 
 export default function ArticleCard({ article }: Props) {
   const locale = useLocale()
+  const [canHover, setCanHover] = useState(false)
   const [showPreview, setShowPreview] = useState(false)
   const [pos, setPos] = useState({ x: 0, y: 0 })
+
+  useEffect(() => {
+    setCanHover(window.matchMedia('(hover: hover) and (pointer: fine)').matches)
+  }, [])
 
   const handleMouseMove = (e: React.MouseEvent) => {
     setPos({ x: e.clientX, y: e.clientY })
@@ -46,7 +51,7 @@ export default function ArticleCard({ article }: Props) {
       whileInView={{ opacity: 1, scale: 1, translateY: 0 }}
       viewport={{ once: true }}
       onMouseMove={handleMouseMove}
-      onMouseEnter={() => setShowPreview(true)}
+      onMouseEnter={() => canHover && setShowPreview(true)}
       onMouseLeave={() => setShowPreview(false)}
     >
       <Link href={article.url}>
