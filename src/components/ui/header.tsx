@@ -20,16 +20,16 @@ export default function Header() {
   const { header } = layout as LayoutProps
 
   return (
-    <header className='fixed inset-x-0 top-0 z-50 flex w-full items-center justify-between px-4 backdrop-blur-sm'>
+    <header className='fixed inset-x-0 top-0 z-50 flex w-full items-center justify-between px-4 backdrop-blur-md bg-background/80 border-b border-border/50'>
       <div className='container flex items-center justify-between py-4 relative'>
         <Link href='/' className='h-full'>
-          <Image src="/logo.png" alt='MB' title='MB' width={200} height={200} loading='lazy' className='w-12 invert dark:invert-0'/>
+          <Image src="/logo.png" alt='MB' title='MB' width={200} height={200} loading='lazy' className='w-10 invert dark:invert-0'/>
         </Link>
-        <nav className='flex items-center gap-5 md:gap-10'>
-          <ul className='hidden items-center gap-5 text-gray-700 dark:text-gray-200 md:flex'>
+        <nav className='flex items-center gap-5 md:gap-8'>
+          <ul className='hidden items-center gap-6 text-sm font-medium text-muted-foreground md:flex'>
             {header?.map((item) => (
-              <li key={item.label} className='text-xs md:text-base'>
-                <Link href={item.link}>{item.label}</Link>
+              <li key={item.label}>
+                <Link href={item.link} className='transition-colors hover:text-foreground'>{item.label}</Link>
               </li>
             ))}
           </ul>
@@ -40,16 +40,16 @@ export default function Header() {
                 <HamburgerMenuIcon className='size-4' />
               </label>
             </Button>
-            <div className="peer-checked:block hidden absolute z-20 px-2 bg-white shadow border dark:bg-zinc-800 mt-2 right-0 rounded-lg max-w-28 w-full transition ease-in-out duration-300">
+            <div className="peer-checked:block hidden absolute z-20 px-3 bg-background/95 backdrop-blur-md shadow-lg border border-border/50 dark:bg-zinc-900/95 mt-2 right-0 rounded-xl w-44 transition ease-in-out duration-300">
               <ul>
                 {header.map((item) => (
-                  <li key={item.label} className='text-xs block pl-4 py-3'>
+                  <li key={item.label} className='text-sm block pl-2 py-3 font-medium text-muted-foreground hover:text-foreground transition-colors'>
                     <Link href={item.link}>{item.label}</Link>
                   </li>
                 ))}
               </ul>
             </div>
-            <label htmlFor='menu-toggle' className='peer-checked:block hidden fixed z-10 inset-0 h-screen bg-black/20'/>
+            <label htmlFor='menu-toggle' className='peer-checked:block hidden fixed z-10 inset-0 h-screen bg-black/30 backdrop-blur-sm'/>
           </div>
           <div className='flex items-center gap-1'>
             <LanguageSelector />

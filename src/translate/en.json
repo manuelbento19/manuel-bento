@@ -59,10 +59,24 @@
     ],
     "work": [
       {
+        "title": "Frontend Lead",
+        "company": "Mountain Light Business",
+        "started_date": "2025",
+        "due_date": "Present",
+        "description": "Frontend Lead with experience leading teams and developing scalable web and mobile applications. Specialist in React, React Native, Next.js and TypeScript, with strong involvement in frontend architecture, code review, and development best practices.",
+        "list": [
+          "Frontend team leadership and web/mobile application architecture",
+          "Scalable application development with React, React Native, Next.js and TypeScript",
+          "Code review and development best practices definition",
+          "Focus on performance, user experience and high-quality solution delivery",
+          "Collaboration with multidisciplinary teams to transform business requirements into efficient digital products"
+        ]
+      },
+      {
         "title": "Frontend Developer",
         "company": "ETIC - Solutions & Technology",
         "started_date": "2023",
-        "due_date": "Present",
+        "due_date": "2025",
         "description": "As a Frontend Developer at ETIC, I create intuitive and engaging digital experiences using modern technologies. My expertise includes:",
         "list": [
           "Updated technologies and frontend frameworks, such as React.js and Next.js",
@@ -96,6 +110,10 @@
     "title": "Articles that provide tips and knowledge",
     "description": "Throughout my career as a developer, I have written several articles to help new developers stand out in the software industry.",
     "data": []
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Don't hesitate to reach out. I'm available for work opportunities, collaborations, or just to chat about technology and software development."
   },
   "notFound": {
     "title": "Why are you here?",

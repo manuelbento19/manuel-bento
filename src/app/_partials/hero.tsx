@@ -46,20 +46,22 @@ export default function Hero() {
   const translation = useTranslations('about')
 
   return (
-    <section className='flex w-full flex-col items-center justify-center gap-5 pb-4 text-zinc-900 dark:text-zinc-200 md:flex-row md:justify-between'>
-      <div className=''>
-        <h1 className='text-4xl font-semibold'>Manuel Bento</h1>
-        <h2 className='mt-1 text-xl font-medium'>
-          {translation('hero.title')}
-        </h2>
-        <p className='mt-4 max-w-md text-xs font-normal md:text-sm'>
+    <section className='flex w-full flex-col items-center justify-center gap-8 pb-4 text-zinc-900 dark:text-zinc-200 md:flex-row md:justify-between'>
+      <div className='space-y-4'>
+        <div>
+          <h1 className='text-4xl font-bold tracking-tight md:text-5xl'>Manuel Bento</h1>
+          <h2 className='mt-2 text-lg font-medium text-muted-foreground md:text-xl'>
+            {translation('hero.title')}
+          </h2>
+        </div>
+        <p className='max-w-md text-sm leading-relaxed md:text-base'>
           {translation('hero.description')}
         </p>
-        <div className='mt-5 flex items-center gap-1'>
+        <div className='flex items-center gap-2'>
           {links.map(({ link, icon: Icon }) => (
-            <Button size='sm' variant='ghost' className='px-1 py-1' asChild key={link}>
+            <Button size='sm' variant='outline' className='px-2.5 py-2.5 transition-all hover:scale-110' asChild key={link}>
               <a href={link} target='_blank'>
-                <Icon className='size-5' />
+                <Icon className='size-4' />
               </a>
             </Button>
           ))}

@@ -65,5 +65,9 @@ export type TranslateDTO = AbstractIntlMessages & {
     title: string;
     subtitle: string;
     action: string;
+  },
+  contact: {
+    title: string;
+    description: string;
   }
 }

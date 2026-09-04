@@ -71,7 +71,7 @@ export default async function RootLayout({
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
             <Header />
-            <main className='h-screen flex-1'>{children}</main>
+            <main className='min-h-screen flex-1'>{children}</main>
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

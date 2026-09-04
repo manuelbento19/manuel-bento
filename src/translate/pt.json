@@ -59,10 +59,24 @@
     ],
     "work": [
       {
-        "title": "Fronted Developer",
+        "title": "Frontend Lead",
+        "company": "Mountain Light Business",
+        "started_date": "2025",
+        "due_date": "Presente",
+        "description": "Frontend Lead com experiência na liderança de equipes e no desenvolvimento de aplicações web e mobile escaláveis. Especialista em React, React Native, Next.js e TypeScript, com forte atuação em arquitetura de frontend, revisão de código e definição de boas práticas de desenvolvimento.",
+        "list": [
+          "Liderança de equipa frontend e definição de arquitetura de aplicações web e mobile",
+          "Desenvolvimento de aplicações escaláveis com React, React Native, Next.js e TypeScript",
+          "Revisão de código e definição de boas práticas de desenvolvimento",
+          "Foco em performance, experiência do utilizador e entrega de soluções de alta qualidade",
+          "Colaboração com equipas multidisciplinares para transformar requisitos de negócio em produtos digitais eficientes"
+        ]
+      },
+      {
+        "title": "Frontend Developer",
         "company": "ETIC - Soluções & Tecnologia",
         "started_date": "2023",
-        "due_date": "Presente",
+        "due_date": "2025",
         "description": "Como Frontend Developer na ETIC, crio experiências digitais intuitivas e envolventes usando tecnologias modernas. Minha expertise inclui:",
         "list": [
           "Tecnologias atualizadas e frameworks de frontend, como React.js e Next.js",
@@ -96,6 +110,10 @@
     "title": "Artigos que fornecem dicas e conhecimentos",
     "description": "Ao longo da minha carreira como desenvolvedor, tenho escrito alguns artigos para ajudar novos desenvolvedores a se destacarem no setor de software.",
     "data": []
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "Não hesites em entrar em contacto comigo. Estou disponível para oportunidades de trabalho, colaborações ou apenas para trocar uma ideia sobre tecnologia e desenvolvimento de software."
   },
   "notFound": {
     "title": "Porquê que estás aqui?",

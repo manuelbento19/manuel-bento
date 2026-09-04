@@ -11,10 +11,10 @@ export default function Projects() {
 
   return (
     <div className='flex w-full px-4 pb-4'>
-      <div className='container flex flex-col space-y-10 pt-32'>
-        <div className=''>
-          <h2 className='text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-200 md:text-5xl'>{translation("title")}</h2>
-          <p className='mt-6 text-sm text-zinc-600 dark:text-zinc-400 md:text-base md:leading-relaxed'>{translation("description")}</p>
+      <div className='container flex flex-col space-y-10 pt-36'>
+        <div>
+          <h1 className='text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-200 md:text-4xl'>{translation("title")}</h1>
+          <p className='mt-4 text-sm text-muted-foreground md:text-base md:leading-relaxed'>{translation("description")}</p>
         </div>
         <ProjectList />
       </div>

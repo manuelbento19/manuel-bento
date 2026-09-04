@@ -69,10 +69,10 @@
 
 @layer components {
   .box {
-    @apply rounded-2xl border bg-card p-4 text-card-foreground shadow brightness-100 transition duration-700 hover:shadow-xl hover:brightness-105 dark:outline-[#1a1a1a];
+    @apply rounded-xl border bg-card p-4 text-card-foreground shadow-sm brightness-100 transition-all duration-300 hover:shadow-md hover:brightness-105 dark:outline-[#1a1a1a];
   }
   .figure {
     background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
-    @apply absolute inset-0 size-full animate-skell bg-slate-400 bg-[length:200%_100%];
+    @apply absolute inset-0 size-full animate-skell bg-slate-400 bg-[length:200%_100%] rounded-xl;
   }
 }
