@@ -1,4 +1,3 @@
-import { allArticles } from 'contentlayer/generated'
 import { MdxProvider } from '@/components/providers/mdx'
 import Link from 'next/link'
 import { ArrowLeftIcon } from '@radix-ui/react-icons'
@@ -8,31 +7,20 @@ import { Metadata } from 'next'
 import { Claps } from '@/components/ui/claps'
 import { notFound } from 'next/navigation'
 import { getLocale, getTranslations } from 'next-intl/server'
-
-type Params = {
-  slug: string
-}
-
-function getArticle({ slug }: Params) {
-  const article = allArticles.find(
-    (article) => article._raw.flattenedPath.replace('articles/', '') === slug
-  )
-  if (!article) notFound()
-  return article!
-}
+import { getArticle, getArticleMeta, getArticles } from '@/lib/articles'
 
 export const generateStaticParams = async () =>
-  allArticles.map((article) => ({
-    slug: article._raw.flattenedPath.replace('articles/', '')
-  }))
+  getArticles().map((article) => ({ slug: article.slug }))
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const {title,description,wallpaper} = getArticle(params);
-  const ogImage = `https://bentooo.vercel.app${wallpaper ?? "/og.png"}`;
-  
-  return { 
-    title,
-    description,
+  const meta = getArticleMeta(params.slug)
+  if (!meta) notFound()
+
+  const ogImage = `https://bentooo.vercel.app${meta.wallpaper ?? "/og.png"}`;
+
+  return {
+    title: meta.title,
+    description: meta.description,
     openGraph: {
       images: [ogImage]
     },
@@ -40,7 +28,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 export default async function Page({ params }: { params: { slug: string } }) {
-  const article = getArticle(params)
+  const meta = getArticleMeta(params.slug)
+  if (!meta) notFound()
+  const article = await getArticle(params.slug)
+  if (!article) notFound()
   const locale = await getLocale()
   const t = await getTranslations('common')
 
@@ -63,7 +54,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
           </time>
         </header>
         <div className='prose max-w-full dark:prose-invert'>
-          <MdxProvider content={article.body.code} />
+          <MdxProvider content={article.body!} />
         </div>
         <footer className='mt-4 inline-flex flex-wrap gap-2'>
           {article.tags.map((tag) => (

@@ -62,7 +62,7 @@ export default async function About() {
             {about.license.map((item) => (
               <div key={item.provider} className='box p-4'>
                 <header className='flex items-center justify-between gap-2'>
-                  <a href={item.link ?? "#"} className='hover:underline' target='_blank'>
+                  <a href={item.link ?? "#"} className='hover:underline' target='_blank' rel='noopener noreferrer'>
                     <h3 className='font-semibold'>{item.title}</h3>
                   </a>
                 </header>

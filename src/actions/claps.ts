@@ -5,31 +5,44 @@ import { headers } from "next/headers";
 
 const redis = Redis.fromEnv();
 
-export async function getClaps(slug:string){
-    const claps = (await redis.get<number>(`claps:${slug}`)) || 0;
-    return claps
+export type ClapResult =
+  | { status: "success"; count: number }
+  | { status: "duplicate"; count: number }
+  | { status: "error"; message: string };
+
+export async function getClaps(slug: string) {
+  const claps = (await redis.get<number>(`claps:${slug}`)) || 0;
+  return claps;
 }
 
-export async function clap(slug: string) {
+export async function clap(slug: string): Promise<ClapResult> {
+  try {
     const hash = await getHash();
 
     const hours = 24, minutes = 60, seconds = 60;
-   
-    const newClap = await redis.set(`deduplicate:claps:${hash}:${slug}`, true, {
-        nx: true, 
-        ex: hours * minutes * seconds
+
+    const isNewClap = await redis.set(`deduplicate:claps:${hash}:${slug}`, true, {
+      nx: true,
+      ex: hours * minutes * seconds
     });
-    
-    if (newClap) {
-        await redis.incr(`claps:${slug}`); 
-        revalidatePath(`/articles/${slug}`); 
+
+    if (isNewClap) {
+      const count = await redis.incr(`claps:${slug}`);
+      revalidatePath(`/articles/${slug}`);
+      return { status: "success", count };
     }
+
+    const count = await getClaps(slug);
+    return { status: "duplicate", count };
+  } catch (error) {
+    return { status: "error", message: "clap.error" };
+  }
 }
 
-async function getHash(){
-    const header = headers();
-    const ip = (header.get("x-forwarded-for") ?? "127.0.0.1").split(",")[0]
-    const buffer = await crypto.subtle.digest("SHA-256",new TextEncoder().encode(ip));
-    const hash = Array.from(new Uint8Array(buffer)).map((b) => b.toString(16).padStart(2, "0")).join("");
-    return hash;
+async function getHash() {
+  const header = headers();
+  const ip = (header.get("x-forwarded-for") ?? "127.0.0.1").split(",")[0]
+  const buffer = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(ip));
+  const hash = Array.from(new Uint8Array(buffer)).map((b) => b.toString(16).padStart(2, "0")).join("");
+  return hash;
 }

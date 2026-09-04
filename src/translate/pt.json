@@ -6,6 +6,13 @@
   "common": {
     "back": "Voltar"
   },
+  "claps": {
+    "ariaLabel": "Bater palmas neste artigo",
+    "clapping": "A registar...",
+    "clapped": "Clap registado!",
+    "alreadyClapped": "Já bateste palmas neste artigo.",
+    "error": "Não foi possível registar o clap. Tenta de novo."
+  },
   "layout": {
     "header": [
       {

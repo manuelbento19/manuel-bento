@@ -2,7 +2,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { Article } from 'contentlayer/generated'
+import { type Article } from '@/lib/articles'
 
 type Props = {
   article: Article

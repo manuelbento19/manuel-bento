@@ -6,6 +6,13 @@
   "common": {
     "back": "Back"
   },
+  "claps": {
+    "ariaLabel": "Clap for this article",
+    "clapping": "Registering...",
+    "clapped": "Clap registered!",
+    "alreadyClapped": "You already clapped for this article.",
+    "error": "Could not register your clap. Try again."
+  },
   "layout": {
     "header": [
       {

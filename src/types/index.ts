@@ -1,5 +1,5 @@
-import { Article } from 'contentlayer/generated'
 import { AbstractIntlMessages } from 'next-intl'
+import { type Article } from '@/lib/articles'
 
 export type Project = {
   title: string
@@ -72,5 +72,12 @@ export type TranslateDTO = AbstractIntlMessages & {
   },
   common: {
     back: string;
+  },
+  claps: {
+    ariaLabel: string;
+    clapping: string;
+    clapped: string;
+    alreadyClapped: string;
+    error: string;
   }
 }

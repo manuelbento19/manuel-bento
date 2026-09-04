@@ -1,4 +1,4 @@
-import { allArticles } from 'contentlayer/generated'
+import { getArticles } from '@/lib/articles'
 
 export default function sitemap() {
   const baseUrl = 'https://bentooo.vercel.app'
@@ -12,7 +12,7 @@ export default function sitemap() {
     })
   )
 
-  const articleRoutes = allArticles.map((article) => ({
+  const articleRoutes = getArticles().map((article) => ({
     url: `${baseUrl}${article.url}`,
     lastModified: new Date(article.date),
     changeFrequency: 'yearly' as const,

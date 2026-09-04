@@ -1,5 +1,6 @@
 'use client'
-import { useMDXComponent } from 'next-contentlayer/hooks'
+import { useMemo } from 'react'
+import { getMDXComponent } from 'mdx-bundler/client'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -15,7 +16,7 @@ type Props = {
 }
 
 export function MdxProvider({ content }: Props) {
-  const Component = useMDXComponent(content)
+  const Component = useMemo(() => getMDXComponent(content), [content])
 
   return <Component components={components} />
 }
