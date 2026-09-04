@@ -65,6 +65,17 @@ export const skills = [
 
 export const projects: Project[] = [
   {
+    title: 'RODIVA',
+    wallpalper: '/projects/rodiva.png',
+    description:
+      'O teu mecânico de bolso. Gestor pessoal de manutenção de veículos que permite registar serviços, combustível e documentos — tudo offline, sem contas e 100% no teu dispositivo. PWA instalável com assistente IA, alertas inteligentes e estatísticas de custos.',
+    link: {
+      repo: 'https://github.com/manuelbento19/rodiva',
+      host: 'https://rodiva.cc'
+    },
+    techs: ['mdi:react', 'bxl:typescript', 'simple-icons:vite', 'mdi:tailwind', 'simple-icons:zod']
+  },
+  {
     title: '@bentoo/state-man',
     wallpalper: '/projects/state-man.png',
     description: 'Um pacote leve para gerenciamento de estado em aplicativos React, projetado como uma alternativa simplificada ao Zustand e a Context API',
