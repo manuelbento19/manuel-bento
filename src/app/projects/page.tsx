@@ -1,13 +1,17 @@
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
 import ProjectList from './_partials/list'
-import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 
-export const metadata: Metadata = {
-  title: 'Projects'
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('projects')
+  return {
+    title: t('title'),
+    description: t('description')
+  }
 }
 
-export default function Projects() {
-  const translation = useTranslations("projects");
+export default async function Projects() {
+  const translation = await getTranslations('projects');
 
   return (
     <div className='flex w-full px-4 pb-4'>

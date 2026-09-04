@@ -9,7 +9,7 @@ export type Project = {
     host?: string
   }
   techs: string[]
-  wallpalper: string
+  wallpaper: string
 }
 
 export type TranslateDTO = AbstractIntlMessages & {
@@ -69,5 +69,8 @@ export type TranslateDTO = AbstractIntlMessages & {
   contact: {
     title: string;
     description: string;
+  },
+  common: {
+    back: string;
   }
 }

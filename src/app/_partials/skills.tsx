@@ -4,12 +4,13 @@ import { Card, CardContent } from '@/components/ui/card'
 import Tag from '@/components/ui/tag'
 import { Icon } from '@iconify/react'
 import { TranslateDTO } from '@/types'
-import { useMessages } from 'next-intl'
+import { getMessages } from 'next-intl/server'
 
-export default function Skills() {
+export default async function Skills() {
+  const messages = await getMessages()
   const {
     about: { headings }
-  } = useMessages() as TranslateDTO
+  } = messages as TranslateDTO
 
   return (
     <section className='space-y-2'>

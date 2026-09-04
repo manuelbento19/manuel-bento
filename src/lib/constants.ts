@@ -66,7 +66,7 @@ export const skills = [
 export const projects: Project[] = [
   {
     title: 'RODIVA',
-    wallpalper: '/projects/rodiva.png',
+    wallpaper: '/projects/rodiva.png',
     description:
       'O teu mecânico de bolso. Gestor pessoal de manutenção de veículos que permite registar serviços, combustível e documentos — tudo offline, sem contas e 100% no teu dispositivo. PWA instalável com assistente IA, alertas inteligentes e estatísticas de custos.',
     link: {
@@ -77,7 +77,7 @@ export const projects: Project[] = [
   },
   {
     title: '@bentoo/state-man',
-    wallpalper: '/projects/state-man.png',
+    wallpaper: '/projects/state-man.png',
     description: 'Um pacote leve para gerenciamento de estado em aplicativos React, projetado como uma alternativa simplificada ao Zustand e a Context API',
     link: {
       repo: 'https://github.com/manuelbento19/state-man',
@@ -87,7 +87,7 @@ export const projects: Project[] = [
   },
   {
     title: '@bentoo/react-lazy',
-    wallpalper: '/projects/react-lazy.png',
+    wallpaper: '/projects/react-lazy.png',
     description: 'Uma biblioteca criada para facilitar a implementação de Lazy Loading em aplicações React. Ela permite que os componentes sejam carregados apenas quando se tornam visíveis na tela, oferecendo uma maneira para monitorar a entrada dos elementos na viewport.',
     link: {
       repo: 'https://github.com/manuelbento19/react-lazy',
@@ -97,7 +97,7 @@ export const projects: Project[] = [
   },
   {
     title: 'LinkLook',
-    wallpalper: '/projects/linklook.png',
+    wallpaper: '/projects/linklook.png',
     description:
       'Uma pequena app que permite capturar e mostrar uma pré-visualização de links fornecidos. Capaz de gerar uma visualização rápida e intuitiva do conteúdo da página, sem que seja necessário abrir o link diretamente.',
     link: {
@@ -108,7 +108,7 @@ export const projects: Project[] = [
   },
   {
     title: 'MyFolio',
-    wallpalper: '/projects/myfolio.png',
+    wallpaper: '/projects/myfolio.png',
     description:
       'MyFolio é uma plataforma que permite criar portfólios personalizados sem precisar de habilidades de codificação. Com uma interface intuitiva, Shadcn UI e integração com Supabase, você pode facilmente montar um site profissional e destacar suas habilidades de forma rápida e simples.',
     link: {
@@ -119,7 +119,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Image4Text',
-    wallpalper: '/projects/image4text.png',
+    wallpaper: '/projects/image4text.png',
     description:
       'Uma app para conversão de imagem em texto. A app pemite extrair textos de imagens para automatizar o processamento de textos.',
     link: {
@@ -135,7 +135,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Micro-frontend',
-    wallpalper: '/projects/microfrontend.png',
+    wallpaper: '/projects/microfrontend.png',
     description:
       'Este projeto demonstra uma aplicação de micro frontends onde temos três aplicativos independentes: react-components,vue-components e app. Dando a possibilidade de trabalhar com React e Vue.',
     link: {
@@ -151,7 +151,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Port Scanner',
-    wallpalper: '/projects/portscanner.png',
+    wallpaper: '/projects/portscanner.png',
     description:
       'É um scanner de rede gratuito e de código aberto. É usado para descobrir hosts e serviços em uma rede de computadores, enviando pacotes e analisando as respostas.',
     link: {
@@ -161,7 +161,7 @@ export const projects: Project[] = [
   },
   {
     title: 'OllamaBot',
-    wallpalper: '/projects/ollama.png',
+    wallpaper: '/projects/ollama.png',
     description:
       'É uma aplicação inovadora que utiliza a imagem de contêiner Llama para implementar um assistente de conversação inteligente, semelhante ao GPT, capaz de compreender e gerar respostas coerentes em uma variedade de contextos, proporcionando uma experiência de interação natural e eficaz.',
     link: {
@@ -177,7 +177,7 @@ export const projects: Project[] = [
   },
   {
     title: 'DaBanda OSS',
-    wallpalper: '/projects/dabanda.png',
+    wallpaper: '/projects/dabanda.png',
     description:
       'É uma plataforma dedicada a promover e destacar projetos de código aberto de diversas áreas e temáticas. Oferece uma maneira fácil e acessível de descobrir e contribuir para projetos de código aberto, impulsionando a inovação e o compartilhamento de conhecimento.',
     link: {
@@ -188,7 +188,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Unsplash Angular',
-    wallpalper: '/projects/unangular.png',
+    wallpaper: '/projects/unangular.png',
     description:
       'Um aplicativo desenvolvido em angular para buscar imagens do unsplash.',
     link: {
@@ -198,7 +198,7 @@ export const projects: Project[] = [
   },
   {
     title: 'URL Shortener',
-    wallpalper: '/projects/url-shortner.png',
+    wallpaper: '/projects/url-shortner.png',
     description:
       'Um encurtador de URL é um site que reduz o comprimento do seu URL (Uniform Resource Locator). A ideia é minimizar o endereço da página da web em algo que seja mais fácil de lembrar e rastrear.',
     link: {
@@ -215,7 +215,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Nano Router',
-    wallpalper: '/projects/nanorouter.png',
+    wallpaper: '/projects/nanorouter.png',
     description:
       'Uma pequena app em react para demonstrar como fazer roteamento sem a necessidade do react-router-dom, usando apenas conceitos básicos do react.js. Serviu como prova de conceito de que com base de react podes fazer um monte de coisas, incluíndo roteamento.',
     link: {
@@ -225,7 +225,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Image Generator',
-    wallpalper: '/projects/image-generator.png',
+    wallpaper: '/projects/image-generator.png',
     description:
       'Aplicativo que se integra perfeitamente a API OpenAI DALL-E e gera imagens cativantes com base em solicitações textuais.',
     link: {
@@ -240,7 +240,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Studio SPA',
-    wallpalper: '/projects/studio-spa.png',
+    wallpaper: '/projects/studio-spa.png',
     description:
       'Um aplicativo React para mostrar como otimizar o desempenho usando carregamento lento (lazy loading)',
     link: {
@@ -251,7 +251,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Poupança',
-    wallpalper: '/projects/poupanca.png',
+    wallpaper: '/projects/poupanca.png',
     description:
       'Uma aplicação desenvolvida com o Reactjs com o objetivo de gerir as tuas contas/poupanças.',
     link: {

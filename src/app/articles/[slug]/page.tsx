@@ -6,6 +6,8 @@ import Tag from '@/components/ui/tag'
 import { formatDate } from '@/lib/utils'
 import { Metadata } from 'next'
 import { Claps } from '@/components/ui/claps'
+import { notFound } from 'next/navigation'
+import { getLocale, getTranslations } from 'next-intl/server'
 
 type Params = {
   slug: string
@@ -15,11 +17,14 @@ function getArticle({ slug }: Params) {
   const article = allArticles.find(
     (article) => article._raw.flattenedPath.replace('articles/', '') === slug
   )
-  if (!article) throw new Error('Article not found')
-  return article
+  if (!article) notFound()
+  return article!
 }
 
-export const generateStaticParams = async () => allArticles.map((article) => ({ slug: article._raw.flattenedPath }))
+export const generateStaticParams = async () =>
+  allArticles.map((article) => ({
+    slug: article._raw.flattenedPath.replace('articles/', '')
+  }))
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const {title,description,wallpaper} = getArticle(params);
@@ -34,14 +39,16 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-export default function Page({ params }: { params: { slug: string } }) {
+export default async function Page({ params }: { params: { slug: string } }) {
   const article = getArticle(params)
+  const locale = await getLocale()
+  const t = await getTranslations('common')
 
   return (
     <div className='size-full space-y-10'>
       <header>
         <Link href='/articles' className='flex items-center gap-2'>
-          <ArrowLeftIcon className='size-4' /> Voltar
+          <ArrowLeftIcon className='size-4' /> {t('back')}
         </Link>
       </header>
       <section className='space-y-4 pb-6 text-zinc-900 dark:text-zinc-200'>
@@ -52,7 +59,7 @@ export default function Page({ params }: { params: { slug: string } }) {
             title={article.date}
             className='text-xs text-neutral-700 dark:text-zinc-400'
           >
-            {formatDate(article.date)}
+            {formatDate(article.date, locale as 'pt' | 'en')}
           </time>
         </header>
         <div className='prose max-w-full dark:prose-invert'>

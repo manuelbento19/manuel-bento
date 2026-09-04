@@ -1,6 +1,6 @@
-'use client'
-import { useMessages } from 'next-intl'
+import { getMessages, getTranslations } from 'next-intl/server'
 import { TranslateDTO } from '@/types'
+import type { Metadata } from 'next'
 import {
   GitHubLogoIcon,
   LinkedInLogoIcon,
@@ -21,9 +21,17 @@ const icons = {
   npm: () => <Icon icon="mdi:npm" className='size-5' />,
 }
 
-export default function Contact() {
-  const translation = useMessages() as TranslateDTO
-  const contactPage = translation.contact
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('contact')
+  return {
+    title: t('title'),
+    description: t('description')
+  }
+}
+
+export default async function Contact() {
+  const messages = await getMessages()
+  const contactPage = (messages as TranslateDTO).contact
 
   return (
     <div className='flex w-full px-4 pb-4 text-zinc-900 dark:text-zinc-200'>

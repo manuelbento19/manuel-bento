@@ -2,22 +2,16 @@ import React from 'react'
 import ThemeSwitcher from './theme-switcher'
 import Link from 'next/link'
 import LanguageSelector from './language-selector'
-import { useMessages } from 'next-intl'
+import { getMessages } from 'next-intl/server'
 import Image from 'next/image'
 import { Button } from './button'
 import { HamburgerMenuIcon } from '@radix-ui/react-icons'
+import { TranslateDTO } from '@/types'
 
-type LayoutProps = {
-  header: {
-    label: string
-    link: string
-  }[]
-}
-
-export default function Header() {
-  const messages = useMessages()
-  const layout: unknown = messages.layout
-  const { header } = layout as LayoutProps
+export default async function Header() {
+  const messages = await getMessages()
+  const { layout } = messages as TranslateDTO
+  const header = layout.header
 
   return (
     <header className='fixed inset-x-0 top-0 z-50 flex w-full items-center justify-between px-4 backdrop-blur-md bg-background/80 border-b border-border/50'>

@@ -3,6 +3,9 @@
     "pt": "Portuguese",
     "en": "English"
   },
+  "common": {
+    "back": "Back"
+  },
   "layout": {
     "header": [
       {

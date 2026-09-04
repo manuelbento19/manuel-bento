@@ -7,7 +7,7 @@ import {
   EnvelopeClosedIcon,
 } from '@radix-ui/react-icons'
 import {Icon} from '@iconify/react';
-import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 import HeroImage from './hero-image'
 import { socials } from '@/lib/socials'
 
@@ -21,8 +21,8 @@ const icons = {
   npm: () => <Icon icon="mdi:npm" className='size-8' />
 }
 
-export default function Hero() {
-  const translation = useTranslations('about')
+export default async function Hero() {
+  const translation = await getTranslations('about')
 
   return (
     <section className='flex w-full flex-col items-center justify-center gap-8 pb-4 text-zinc-900 dark:text-zinc-200 md:flex-row md:justify-between'>

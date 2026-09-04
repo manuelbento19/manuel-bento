@@ -13,6 +13,7 @@ import { createPortal } from 'react-dom'
 import Link from 'next/link'
 import { Article } from 'contentlayer/generated'
 import { formatDate } from '@/lib/utils'
+import { useLocale } from 'next-intl'
 import ArticlePreview from '@/components/ui/article-preview'
 
 type Props = {
@@ -22,6 +23,7 @@ type Props = {
 const MotionCard = framer.create(Card)
 
 export default function ArticleCard({ article }: Props) {
+  const locale = useLocale()
   const [showPreview, setShowPreview] = useState(false)
   const [pos, setPos] = useState({ x: 0, y: 0 })
 
@@ -50,7 +52,7 @@ export default function ArticleCard({ article }: Props) {
       <Link href={article.url}>
         <CardHeader className='relative flex flex-row items-center gap-0 px-0 py-3 pl-2 text-sm before:absolute before:inset-y-0 before:left-0 before:my-auto before:h-5 before:w-[.2rem] before:rounded-sm before:bg-zinc-400'>
           <span className='text-xs text-zinc-500 dark:text-zinc-200'>
-            {formatDate(article.date)}
+            {formatDate(article.date, locale as 'pt' | 'en')}
           </span>
         </CardHeader>
         <CardContent className='space-y-2 px-0'>

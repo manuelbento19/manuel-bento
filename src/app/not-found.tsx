@@ -3,10 +3,10 @@ import React from 'react'
 import image from '@/../public/404.png'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 
-export default function Notfound() {
-  const translation = useTranslations("notFound");
+export default async function Notfound() {
+  const translation = await getTranslations("notFound");
   return (
     <div className='min-h-screen bg-[--background] text-zinc-900 dark:text-zinc-200'>
       <div className='container grid min-h-screen place-content-center'>

@@ -32,7 +32,7 @@ export default function ProjectCard({ project }: Props) {
     >
       <CardHeader className='max-h-40 h-40 overflow-hidden rounded-md border p-1 relative'>
         <LazyComponent fallback={<div className='figure absolute inset-0' />}>
-          <Image src={project.wallpalper} alt={project.title} width={500} height={500} loading='lazy' className='size-full rounded object-cover'/>
+          <Image src={project.wallpaper} alt={project.title} width={500} height={500} loading='lazy' className='size-full rounded object-cover'/>
         </LazyComponent>
       </CardHeader>
       <CardContent className='flex-1 space-y-3 px-0 py-4'>

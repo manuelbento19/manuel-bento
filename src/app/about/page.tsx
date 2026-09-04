@@ -1,17 +1,20 @@
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
 import Hero from '../_partials/hero'
 import Skills from '../_partials/skills'
-import { useMessages } from 'next-intl'
+import { getMessages, getTranslations } from 'next-intl/server'
 import { TranslateDTO } from '@/types'
 
-export const metadata: Metadata = {
-  title: 'About',
-  description:
-    'Software Developer apaixonado por tecnologia, especializado em Desenvolvimento Frontend.'
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('about.hero')
+  return {
+    title: t('title'),
+    description: t('description')
+  }
 }
 
-export default function About() {
-  const { about } = useMessages() as TranslateDTO
+export default async function About() {
+  const translations = await getMessages()
+  const { about } = translations as TranslateDTO
 
   return (
     <div className='flex w-full px-4 pb-4 text-zinc-900 dark:text-zinc-200'>

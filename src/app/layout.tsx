@@ -20,6 +20,7 @@ const geistMono = localFont({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://bentooo.vercel.app'),
   title: {
     default: 'Manuel Bento - Software Developer',
     template: '%s | MB'

@@ -3,6 +3,9 @@
     "pt": "Português",
     "en": "Inglês"
   },
+  "common": {
+    "back": "Voltar"
+  },
   "layout": {
     "header": [
       {
