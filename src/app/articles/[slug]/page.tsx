@@ -17,14 +17,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const meta = getArticleMeta(slug)
   if (!meta) notFound()
 
-  const ogImage = `https://bentooo.vercel.app${meta.wallpaper ?? "/og.png"}`;
-
   return {
     title: meta.title,
-    description: meta.description,
-    openGraph: {
-      images: [ogImage]
-    },
+    description: meta.description
   }
 }
 
