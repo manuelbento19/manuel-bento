@@ -99,12 +99,12 @@ export const projects: Project[] = [
     title: 'MyFolio',
     wallpalper: '/projects/myfolio.png',
     description:
-      'MyFolio é um projeto que permite criar portfólios personalizados sem precisar de habilidades de codificação. Com uma interface intuitiva, você pode facilmente montar um site profissional, adicionar seu trabalho e destacar suas habilidades de forma rápida e simples.',
+      'MyFolio é uma plataforma que permite criar portfólios personalizados sem precisar de habilidades de codificação. Com uma interface intuitiva, Shadcn UI e integração com Supabase, você pode facilmente montar um site profissional e destacar suas habilidades de forma rápida e simples.',
     link: {
-      repo: 'https://github.com/manuelbento19/my-folio',
-      host: 'https://my-folio-wheat.vercel.app/'
+      repo: 'https://github.com/manuelbento19/myfolio',
+      host: 'https://useportfolio.vercel.app/'
     },
-    techs: ['mdi:react', 'ri:nextjs-fill', 'mdi:tailwind', 'simple-icons:zod']
+    techs: ['mdi:react', 'ri:nextjs-fill', 'mdi:tailwind', 'simple-icons:zod', 'simple-icons:supabase']
   },
   {
     title: 'Image4Text',
