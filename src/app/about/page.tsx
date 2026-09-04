@@ -4,6 +4,16 @@ import Skills from '../_partials/skills'
 import { getMessages, getTranslations } from 'next-intl/server'
 import { TranslateDTO } from '@/types'
 
+function renderStrong(content: string) {
+  const parts = content.split(/(<strong>.*?<\/strong>)/g)
+
+  return parts.map((part, index) => {
+    const match = /^<strong>(.*?)<\/strong>$/.exec(part)
+    if (match) return <strong key={index}>{match[1]}</strong>
+    return <span key={index}>{part}</span>
+  })
+}
+
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('about.hero')
   return {
@@ -95,10 +105,9 @@ export default async function About() {
                 </p>
                 <ul className='mt-3 list-disc space-y-1.5 pl-5 text-sm leading-relaxed'>
                   {item.list.map((jobKey) => (
-                    <li
-                      key={jobKey}
-                      dangerouslySetInnerHTML={{ __html: jobKey }}
-                    />
+                    <li key={jobKey}>
+                      {renderStrong(jobKey)}
+                    </li>
                   ))}
                 </ul>
               </div>
