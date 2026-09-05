@@ -27,6 +27,11 @@ export const metadata: Metadata = {
   },
   description: 'Passionate about technology, specialized in Frontend Development.',
   keywords: ["developer","portfolio","frontend","manuelbento19","Manuel Bento"],
+  alternates: {
+    types: {
+      'application/rss+xml': 'https://bentooo.vercel.app/feed.xml'
+    }
+  },
   openGraph: {
     title: 'Manuel Bento',
     description: 'Passionate about technology, specialized in Frontend Development.',

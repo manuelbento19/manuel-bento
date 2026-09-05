@@ -4,12 +4,12 @@ import { getProjects } from '@/lib/projects'
 export default function sitemap() {
   const baseUrl = 'https://bentooo.vercel.app'
 
-  const staticRoutes = ['', '/about', '/projects', '/articles', '/contact'].map(
+  const staticRoutes = ['', '/about', '/projects', '/articles', '/contact', '/feed.xml'].map(
     (route) => ({
       url: `${baseUrl}${route}`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
-      priority: route === '' ? 1 : 0.8
+      priority: route === '' ? 1 : route === '/feed.xml' ? 0.3 : 0.8
     })
   )
 
