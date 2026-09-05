@@ -9,6 +9,7 @@ import {
   CardTitle
 } from '@/components/ui/card'
 import { Project } from '@/types'
+import { getProjectSlug } from '@/lib/projects'
 import { Icon } from '@iconify/react'
 import Link from 'next/link'
 import React from 'react'
@@ -23,6 +24,8 @@ type Props = {
 const MotionCard = framer.create(Card)
 
 export default function ProjectCard({ project }: Props) {
+  const slug = getProjectSlug(project.title)
+
   return (
     <MotionCard
       className='flex flex-col'
@@ -31,12 +34,16 @@ export default function ProjectCard({ project }: Props) {
       viewport={{ once: true }}
     >
       <CardHeader className='max-h-40 h-40 overflow-hidden rounded-md border p-1 relative'>
-        <LazyComponent fallback={<div className='figure absolute inset-0' />}>
-          <Image src={project.wallpaper} alt={project.title} width={500} height={500} loading='lazy' className='size-full rounded object-cover'/>
-        </LazyComponent>
+        <Link href={`/projects/${slug}`} aria-label={`${project.title} project page`}>
+          <LazyComponent fallback={<div className='figure absolute inset-0' />}>
+            <Image src={project.wallpaper} alt={project.title} width={500} height={500} loading='lazy' className='size-full rounded object-cover'/>
+          </LazyComponent>
+        </Link>
       </CardHeader>
       <CardContent className='flex-1 space-y-3 px-0 py-4'>
-        <CardTitle className='font-medium'>{project.title}</CardTitle>
+        <CardTitle className='font-medium hover:underline'>
+          <Link href={`/projects/${slug}`}>{project.title}</Link>
+        </CardTitle>
         <CardDescription className='text-pretty text-xs md:text-sm'>
           {project.description}
         </CardDescription>

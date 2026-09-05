@@ -4,6 +4,8 @@ import { type Article } from '@/lib/articles'
 export type Project = {
   title: string
   description: string
+  longDescription?: string
+  features?: string[]
   link: {
     repo: string
     host?: string
@@ -54,6 +56,7 @@ export type TranslateDTO = AbstractIntlMessages & {
   projects: {
     title: string;
     description: string;
+    features: string;
     data: Project[]   
   },
   articles: {
