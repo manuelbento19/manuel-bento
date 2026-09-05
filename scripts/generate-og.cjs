@@ -10,17 +10,6 @@ const articlesDir = path.join(root, 'content', 'articles')
 const fontPath = path.join(root, 'src', 'app', 'fonts', 'og', 'noto-sans-v27-latin-regular.ttf')
 const outDir = path.join(root, 'public', 'og', 'articles')
 
-const accent = '#34d399'
-const ptMonths = [
-  'janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho',
-  'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'
-]
-
-function formatDatePt(date) {
-  const d = new Date(`${date}T00:00:00Z`)
-  return `${d.getUTCDate()} ${ptMonths[d.getUTCMonth()]} ${d.getUTCFullYear()}`
-}
-
 function el(type, props, ...children) {
   return {
     type,
@@ -54,97 +43,26 @@ async function loadWallpaper(wallpaperPath) {
   }
 }
 
-function renderCard({ title, date, tags, wallpaper }) {
-  const shortTitle = title.length > 92 ? `${title.slice(0, 89)}…` : title
-  const shortTags = tags.slice(0, 5)
+function renderCard({ wallpaper }) {
+  if (!wallpaper) {
+    return el(
+      'div',
+      { style: { display: 'flex', width: '100%', height: '100%', background: 'linear-gradient(135deg, #18181b 0%, #09090b 60%)' } }
+    )
+  }
 
   return el(
     'div',
-    {
+    { style: { display: 'flex', width: '100%', height: '100%' } },
+    el('img', {
+      src: wallpaper,
       style: {
         display: 'flex',
-        position: 'relative',
         width: '100%',
         height: '100%',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        background: 'linear-gradient(135deg, #18181b 0%, #09090b 60%)',
-        padding: '72px 72px 64px',
-        color: '#fafafa',
-        fontFamily: 'Noto Sans'
+        objectFit: 'cover'
       }
-    },
-    wallpaper &&
-      el('img', {
-        src: wallpaper,
-        style: {
-          position: 'absolute',
-          display: 'flex',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover'
-        }
-      }),
-    el('div', {
-      style: {
-        position: 'absolute',
-        display: 'flex',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        background: 'linear-gradient(180deg, rgba(9,9,11,0.78) 0%, rgba(9,9,11,0.45) 45%, rgba(9,9,11,0.9) 100%)'
-      }
-    }),
-    el(
-      'div',
-      { style: { display: 'flex', alignItems: 'center', justifyContent: 'space-between' } },
-      el(
-        'div',
-        { style: { display: 'flex', alignItems: 'center', gap: '14px' } },
-        el('div', { style: { display: 'flex', width: '22px', height: '22px', borderRadius: 999, backgroundColor: accent } }),
-        el('div', { style: { display: 'flex', fontSize: '30px', fontWeight: 500, letterSpacing: '0.2em', color: '#d4d4d8' } }, 'BENTOOO')
-      ),
-      el('div', { style: { display: 'flex', fontSize: '28px', color: '#71717a' } }, formatDatePt(date))
-    ),
-    el(
-      'div',
-      { style: { display: 'flex', flexDirection: 'column', gap: '36px' } },
-      el(
-        'div',
-        { style: { display: 'flex', fontSize: '68px', lineHeight: 1.08, fontWeight: 800, maxWidth: '1000px' } },
-        shortTitle
-      ),
-      el(
-        'div',
-        { style: { display: 'flex', gap: '16px' } },
-        shortTags.map((tag) =>
-          el(
-            'div',
-            {
-              style: {
-                display: 'flex',
-                padding: '12px 28px',
-                borderRadius: 999,
-                border: '2px solid #3f3f46',
-                color: '#d4d4d8',
-                fontSize: '28px',
-                fontWeight: 500
-              }
-            },
-            `#${tag}`
-          )
-        )
-      )
-    ),
-    el(
-      'div',
-      { style: { display: 'flex', alignItems: 'center', gap: '12px' } },
-      el('div', { style: { display: 'flex', height: '2px', flex: 1, backgroundColor: '#27272a' } }),
-      el('div', { style: { display: 'flex', fontSize: '26px', color: '#a1a1aa', fontWeight: 500 } }, 'manuelbento.dev')
-    )
+    })
   )
 }
 
