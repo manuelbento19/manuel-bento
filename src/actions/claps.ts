@@ -3,7 +3,8 @@ import { Redis } from "@upstash/redis";
 import { revalidatePath } from "next/cache";
 import { headers } from "next/headers";
 
-const redis = Redis.fromEnv();
+const { URL: upstashUrl, TOKEN: upstashToken } = process.env;
+const redis = upstashUrl && upstashToken ? new Redis({ url: upstashUrl, token: upstashToken }) : null;
 
 export type ClapResult =
   | { status: "success"; count: number }
@@ -11,12 +12,17 @@ export type ClapResult =
   | { status: "error"; message: string };
 
 export async function getClaps(slug: string) {
+  if (!redis) return 0;
   const claps = (await redis.get<number>(`claps:${slug}`)) || 0;
   return claps;
 }
 
 export async function clap(slug: string): Promise<ClapResult> {
   try {
+    if (!redis) {
+      return { status: "error", message: "clap.error" };
+    }
+
     const hash = await getHash();
 
     const hours = 24, minutes = 60, seconds = 60;

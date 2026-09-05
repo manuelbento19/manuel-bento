@@ -123,6 +123,7 @@
   "articles": {
     "title": "Artigos que fornecem dicas e conhecimentos",
     "description": "Ao longo da minha carreira como desenvolvedor, tenho escrito alguns artigos para ajudar novos desenvolvedores a se destacarem no setor de software.",
+    "comments": "Comentários",
     "data": []
   },
   "contact": {

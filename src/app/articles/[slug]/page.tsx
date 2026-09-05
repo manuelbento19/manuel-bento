@@ -11,6 +11,11 @@ import { getArticle, getArticleMeta, getArticles } from '@/lib/articles'
 import { getArticleReadingTime } from '@/lib/article-content'
 import ReadingBar from '@/components/ui/reading-bar'
 import PrevNext from '@/app/articles/_partials/prev-next'
+import Giscus from '@/components/ui/giscus'
+
+const giscusEnabled = Boolean(
+  process.env.NEXT_PUBLIC_GISCUS_REPO_ID && process.env.NEXT_PUBLIC_GISCUS_CATEGORY_ID
+)
 
 export const generateStaticParams = async () =>
   getArticles().map((article) => ({ slug: article.slug }))
@@ -34,6 +39,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   if (!article) notFound()
   const locale = await getLocale()
   const t = await getTranslations('common')
+  const ta = await getTranslations('articles')
   const readingTime = await getArticleReadingTime(slug, locale as 'pt' | 'en')
 
   const articles = getArticles()
@@ -73,6 +79,14 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           ))}
         </footer>
         <Claps slug={slug}/>
+        {giscusEnabled && (
+          <section className='space-y-4 border-t border-border/50 pt-6'>
+            <h2 className='text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-200 md:text-2xl'>
+              {ta('comments')}
+            </h2>
+            <Giscus />
+          </section>
+        )}
         <PrevNext prev={prev} next={next} locale={locale as 'pt' | 'en'} />
       </section>
     </div>
