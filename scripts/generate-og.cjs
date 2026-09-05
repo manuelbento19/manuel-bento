@@ -37,7 +37,24 @@ async function loadFont(weight) {
   return { name: 'Noto Sans', data, weight }
 }
 
-function renderCard({ title, date, tags }) {
+function mimeOf(buffer) {
+  if (buffer[0] === 0xff && buffer[1] === 0xd8) return 'image/jpeg'
+  if (buffer[0] === 0x89 && buffer[1] === 0x50) return 'image/png'
+  if (buffer.toString('ascii', 0, 4) === 'RIFF') return 'image/webp'
+  return 'image/png'
+}
+
+async function loadWallpaper(wallpaperPath) {
+  if (!wallpaperPath) return null
+  try {
+    const file = await readFile(path.join(root, 'public', wallpaperPath))
+    return `data:${mimeOf(file)};base64,${file.toString('base64')}`
+  } catch {
+    return null
+  }
+}
+
+function renderCard({ title, date, tags, wallpaper }) {
   const shortTitle = title.length > 92 ? `${title.slice(0, 89)}…` : title
   const shortTags = tags.slice(0, 5)
 
@@ -46,6 +63,7 @@ function renderCard({ title, date, tags }) {
     {
       style: {
         display: 'flex',
+        position: 'relative',
         width: '100%',
         height: '100%',
         flexDirection: 'column',
@@ -56,6 +74,30 @@ function renderCard({ title, date, tags }) {
         fontFamily: 'Noto Sans'
       }
     },
+    wallpaper &&
+      el('img', {
+        src: wallpaper,
+        style: {
+          position: 'absolute',
+          display: 'flex',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover'
+        }
+      }),
+    el('div', {
+      style: {
+        position: 'absolute',
+        display: 'flex',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        background: 'linear-gradient(180deg, rgba(9,9,11,0.78) 0%, rgba(9,9,11,0.45) 45%, rgba(9,9,11,0.9) 100%)'
+      }
+    }),
     el(
       'div',
       { style: { display: 'flex', alignItems: 'center', justifyContent: 'space-between' } },
@@ -116,12 +158,16 @@ async function main() {
     const raw = await readFile(path.join(articlesDir, file), 'utf8')
     const { data } = matter(raw)
     const slug = file.replace(/\.mdx$/, '')
+    const wallpaper = await loadWallpaper(data.wallpaper)
 
-    const svg = await satori(renderCard({ title: data.title, date: data.date, tags: data.tags ?? [] }), {
-      width: 1200,
-      height: 630,
-      fonts
-    })
+    const svg = await satori(
+      renderCard({ title: data.title, date: data.date, tags: data.tags ?? [], wallpaper }),
+      {
+        width: 1200,
+        height: 630,
+        fonts
+      }
+    )
     const png = new Resvg(svg, { fitTo: { mode: 'width', value: 1200 } }).render().asPng()
     await writeFile(path.join(outDir, `${slug}.png`), png)
     console.log(`og: ${slug}.png (${(png.length / 1024).toFixed(0)} kB)`)
