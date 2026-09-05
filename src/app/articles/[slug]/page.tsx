@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const meta = getArticleMeta(slug)
   if (!meta) notFound()
 
-  const ogImage = `/articles/${slug}/opengraph-image`
+  const ogImage = `/og/articles/${slug}.png`
 
   return {
     title: meta.title,

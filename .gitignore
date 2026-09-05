@@ -38,3 +38,6 @@ next-env.d.ts
 .contentlayer
 # IDE
 /.idea/
+
+# Generated Open Graph images
+/public/og/
