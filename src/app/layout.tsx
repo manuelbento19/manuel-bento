@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Manuel Bento',
     description: 'Passionate about technology, specialized in Frontend Development.',
-    url: 'https://bentooo.vercel.app/og.png',
+    url: 'https://bentooo.vercel.app',
     siteName: 'Manuel Bento',
     images: [
       {

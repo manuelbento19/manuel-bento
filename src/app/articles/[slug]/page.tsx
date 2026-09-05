@@ -25,9 +25,29 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const meta = getArticleMeta(slug)
   if (!meta) notFound()
 
+  const ogImage = `/articles/${slug}/opengraph-image`
+
   return {
     title: meta.title,
-    description: meta.description
+    description: meta.description,
+    openGraph: {
+      title: meta.title,
+      description: meta.description,
+      type: 'article',
+      siteName: 'Manuel Bento',
+      locale: 'pt_PT',
+      url: `https://bentooo.vercel.app/articles/${slug}`,
+      publishedTime: new Date(meta.date).toISOString(),
+      authors: ['Manuel Bento'],
+      tags: meta.tags,
+      images: [{ url: ogImage, width: 1200, height: 630, alt: meta.title }]
+    },
+    twitter: {
+      title: meta.title,
+      description: meta.description,
+      card: 'summary_large_image',
+      images: [{ url: ogImage }]
+    }
   }
 }
 
