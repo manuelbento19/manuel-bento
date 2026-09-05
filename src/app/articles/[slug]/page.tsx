@@ -8,6 +8,9 @@ import { Claps } from '@/components/ui/claps'
 import { notFound } from 'next/navigation'
 import { getLocale, getTranslations } from 'next-intl/server'
 import { getArticle, getArticleMeta, getArticles } from '@/lib/articles'
+import { getArticleReadingTime } from '@/lib/article-content'
+import ReadingBar from '@/components/ui/reading-bar'
+import PrevNext from '@/app/articles/_partials/prev-next'
 
 export const generateStaticParams = async () =>
   getArticles().map((article) => ({ slug: article.slug }))
@@ -31,9 +34,16 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   if (!article) notFound()
   const locale = await getLocale()
   const t = await getTranslations('common')
+  const readingTime = await getArticleReadingTime(slug, locale as 'pt' | 'en')
+
+  const articles = getArticles()
+  const index = articles.findIndex((a) => a.slug === slug)
+  const prev = index > 0 ? articles[index - 1] : null
+  const next = index >= 0 && index < articles.length - 1 ? articles[index + 1] : null
 
   return (
     <div className='size-full space-y-10'>
+      <ReadingBar />
       <header>
         <Link href='/articles' className='flex items-center gap-2'>
           <ArrowLeftIcon className='size-4' /> {t('back')}
@@ -48,6 +58,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             className='text-xs text-neutral-700 dark:text-zinc-400'
           >
             {formatDate(article.date, locale as 'pt' | 'en')}
+            <span className='mx-2 text-zinc-300 dark:text-zinc-600'>•</span>
+            {readingTime} {t('readTime')}
           </time>
         </header>
         <div className='prose max-w-full dark:prose-invert'>
@@ -61,6 +73,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           ))}
         </footer>
         <Claps slug={slug}/>
+        <PrevNext prev={prev} next={next} locale={locale as 'pt' | 'en'} />
       </section>
     </div>
   )

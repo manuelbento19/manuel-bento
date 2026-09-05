@@ -61,3 +61,9 @@ export async function getArticle(slug: string): Promise<Article | null> {
 
   return { ...meta, body: code }
 }
+
+export async function getArticleContent(slug: string): Promise<string | null> {
+  const raw = fs.readFileSync(path.join(articlesDir, `${slug}.mdx`), 'utf8')
+  if (!raw) return null
+  return matter(raw).content
+}

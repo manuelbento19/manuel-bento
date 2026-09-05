@@ -72,6 +72,9 @@ export type TranslateDTO = AbstractIntlMessages & {
   },
   common: {
     back: string;
+    previous: string;
+    next: string;
+    readTime: string;
   },
   claps: {
     ariaLabel: string;

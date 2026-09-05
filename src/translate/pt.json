@@ -4,7 +4,10 @@
     "en": "Inglês"
   },
   "common": {
-    "back": "Voltar"
+    "back": "Voltar",
+    "previous": "Anterior",
+    "next": "Próximo",
+    "readTime": "min de leitura"
   },
   "claps": {
     "ariaLabel": "Bater palmas neste artigo",
