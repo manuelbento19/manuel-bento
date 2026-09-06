@@ -3,7 +3,7 @@ import { Redis } from "@upstash/redis";
 import { revalidatePath } from "next/cache";
 import { headers } from "next/headers";
 
-const { URL: upstashUrl, TOKEN: upstashToken } = process.env;
+const { UPSTASH_REDIS_REST_URL: upstashUrl, UPSTASH_REDIS_REST_TOKEN: upstashToken } = process.env;
 const redis = upstashUrl && upstashToken ? new Redis({ url: upstashUrl, token: upstashToken }) : null;
 
 export type ClapResult =

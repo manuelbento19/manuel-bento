@@ -7,6 +7,7 @@ import Header from '@/components/ui/header'
 import { getLocale, getMessages } from 'next-intl/server'
 import { NextIntlClientProvider } from 'next-intl'
 import {Analytics} from '@vercel/analytics/next';
+import { Toaster } from 'sonner';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -78,6 +79,7 @@ export default async function RootLayout({
           <NextIntlClientProvider messages={messages}>
             <Header />
             <main className='min-h-screen flex-1'>{children}</main>
+            <Toaster />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>
