@@ -25,7 +25,7 @@ export function ClapButton({ claps, slug }: Props) {
     try {
       const result: ClapResult = await clap(slug);
       if (result.status === "success") {
-        toast.success(t("clapped"));
+        // nothing to show on success
       } else if (result.status === "duplicate") {
         setCount(result.count);
         toast.info(t("alreadyClapped"));

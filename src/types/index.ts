@@ -82,8 +82,6 @@ export type TranslateDTO = AbstractIntlMessages & {
   },
   claps: {
     ariaLabel: string;
-    clapping: string;
-    clapped: string;
     alreadyClapped: string;
     error: string;
   }
