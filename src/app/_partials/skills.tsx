@@ -17,9 +17,9 @@ export default async function Skills() {
       <h2 className='text-lg font-semibold text-zinc-900 dark:text-zinc-200'>
         {headings[0]}
       </h2>
-      <div className='grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-4'>
+      <div className='grid auto-rows-fr grid-cols-1 gap-2 md:grid-cols-3 md:gap-4'>
         {Constants.skills.map((category) => (
-          <Card key={category.name}>
+          <Card key={category.name} className='h-full'>
             <Tag icon={category.icon}>{category.name}</Tag>
             <CardContent className='grid grid-cols-2 gap-1 px-0 pt-2 sm:grid-cols-3 md:grid-cols-4'>
               {category.list.map(({ name, icon }) => (

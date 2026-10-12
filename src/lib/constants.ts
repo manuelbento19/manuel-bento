@@ -7,21 +7,25 @@ export const skills = [
     list: [
       { name: 'JavaScript', icon: 'skill-icons:javascript' },
       { name: 'TypeScript', icon: 'skill-icons:typescript' },
+      { name: 'HTML', icon: 'skill-icons:html' },
       { name: 'CSS', icon: 'skill-icons:css' },
       { name: 'React', icon: 'skill-icons:react-dark' },
       { name: 'Next.js', icon: 'skill-icons:nextjs-light' },
-      { name: 'Tailwind CSS', icon: 'skill-icons:tailwindcss-light' },
       { name: 'React Native', icon: 'vscode-icons:file-type-reactts' },
       { name: 'Expo', icon: 'file-icons:expo' },
       { name: 'Vue', icon: 'logos:vue' },
       { name: 'Astro', icon: 'simple-icons:astro' },
+      { name: 'Tailwind CSS', icon: 'skill-icons:tailwindcss-light' },
+      { name: 'shadcn/ui', icon: 'simple-icons:shadcnui' },
+      { name: 'Radix UI', icon: 'simple-icons:radixui' },
+      { name: 'Framer Motion', icon: 'simple-icons:framer' },
       { name: 'Sass', icon: 'skill-icons:sass' },
       { name: 'Styled Components', icon: 'skill-icons:styledcomponents' },
       { name: 'Storybook', icon: 'logos:storybook-icon' }
     ]
   },
   {
-    name: 'Backend',
+    name: 'Backend & Data',
     icon: 'fluent-mdl2:server-enviroment',
     list: [
       { name: 'Node.js', icon: 'logos:nodejs-icon' },
@@ -29,36 +33,65 @@ export const skills = [
       { name: 'Nest.js', icon: 'logos:nestjs' },
       { name: 'Fastify', icon: 'simple-icons:fastify' },
       { name: 'Prisma', icon: 'skill-icons:prisma' },
-      { name: 'Jest', icon: 'skill-icons:jest' },
-      { name: 'Vitest', icon: 'skill-icons:vitest-light' },
-      { name: '.Net', icon: 'skill-icons:dotnet' },
-      { name: 'Rust', icon: 'skill-icons:rust' },
-      { name: 'MySQL', icon: 'skill-icons:mysql-light' },
+      { name: 'Supabase', icon: 'simple-icons:supabase' },
       { name: 'PostgreSQL', icon: 'skill-icons:postgresql-light' },
+      { name: 'MySQL', icon: 'skill-icons:mysql-light' },
+      { name: 'Redis', icon: 'devicon:redis' },
       { name: 'Firebase', icon: 'devicon:firebase' },
-      { name: 'Redis', icon: 'devicon:redis' }
+      { name: 'Zod', icon: 'simple-icons:zod' },
+      { name: '.NET', icon: 'skill-icons:dotnet' },
+      { name: 'Rust', icon: 'skill-icons:rust' }
     ]
   },
   {
-    name: 'Tools',
+    name: 'Tools & DevOps',
     icon: 'fluent:window-dev-tools-24-regular',
     list: [
       { name: 'Docker', icon: 'logos:docker-icon' },
       { name: 'Linux', icon: 'logos:linux-tux' },
       { name: 'Git', icon: 'logos:git-icon' },
-      { name: 'Github', icon: 'skill-icons:github-light' },
+      { name: 'GitHub', icon: 'skill-icons:github-light' },
+      { name: 'GitLab', icon: 'devicon:gitlab' },
       { name: 'Bitbucket', icon: 'devicon:bitbucket' },
       { name: 'Azure', icon: 'vscode-icons:file-type-azure' },
-      { name: 'Gitlab', icon: 'devicon:gitlab' },
+      { name: 'Vercel', icon: 'simple-icons:vercel' },
+      { name: 'Cloudflare', icon: 'simple-icons:cloudflare' },
       { name: 'Bash', icon: 'devicon-plain:bash' },
-      { name: 'Powershell', icon: 'vscode-icons:file-type-powershell' },
+      { name: 'PowerShell', icon: 'vscode-icons:file-type-powershell' },
+      { name: 'pnpm', icon: 'simple-icons:pnpm' },
+      { name: 'Vite', icon: 'simple-icons:vite' },
       { name: 'Jira', icon: 'devicon:jira' },
       { name: 'Notion', icon: 'devicon:notion' },
-      { name: 'OpenAI', icon: 'simple-icons:openai' },
       { name: 'Trello', icon: 'devicon:trello' },
-      { name: 'VSCode', icon: 'vscode-icons:file-type-vscode' },
+      { name: 'VS Code', icon: 'vscode-icons:file-type-vscode' },
       { name: 'Visual Studio', icon: 'devicon:visualstudio' },
-      { name: 'Intellij', icon: 'devicon:intellij' }
+      { name: 'IntelliJ', icon: 'devicon:intellij' }
+    ]
+  },
+  {
+    name: 'Testing',
+    icon: 'mdi:test-tube',
+    list: [
+      { name: 'Jest', icon: 'skill-icons:jest' },
+      { name: 'Vitest', icon: 'skill-icons:vitest-light' },
+      { name: 'Playwright', icon: 'simple-icons:playwright' },
+      { name: 'Testing Library', icon: 'simple-icons:testinglibrary' }
+    ]
+  },
+  {
+    name: 'AI',
+    icon: 'mdi:robot',
+    list: [
+      { name: 'OpenAI', icon: 'simple-icons:openai' },
+      { name: 'Claude', icon: 'simple-icons:claude' },
+      { name: 'Gemini', icon: 'simple-icons:googlegemini' },
+      { name: 'Cursor', icon: 'simple-icons:cursor' },
+      { name: 'GitHub Copilot', icon: 'simple-icons:githubcopilot' },
+      { name: 'opencode', icon: 'simple-icons:opencode' },
+      { name: 'Perplexity', icon: 'simple-icons:perplexity' },
+      { name: 'Ollama', icon: 'simple-icons:ollama' },
+      { name: 'v0', icon: 'simple-icons:v0' },
+      { name: 'DeepSeek', icon: 'simple-icons:deepseek' }
     ]
   }
 ]
