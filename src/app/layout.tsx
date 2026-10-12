@@ -41,8 +41,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://bentooo.vercel.app/og.png',
-        width: 1920,
-        height: 1080,
+        width: 1200,
+        height: 630,
       },
     ],
     locale: 'pt-PT',
@@ -54,8 +54,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://bentooo.vercel.app/og.png',
-        width: 1920,
-        height: 1080,
+        width: 1200,
+        height: 630,
       },
     ],
   },

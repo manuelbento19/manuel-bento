@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/generate-og.cjs && next build",
+    "build": "node scripts/generate-og.cjs && node scripts/generate-site-og.cjs && next build",
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write ."
