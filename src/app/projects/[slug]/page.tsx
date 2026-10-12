@@ -82,12 +82,14 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         </header>
 
         <footer className='flex flex-wrap items-center gap-3'>
-          <Button size='sm' asChild>
-            <Link href={project.link.repo} target='_blank' rel='noopener noreferrer'>
-              <GitHubLogoIcon className='mr-2 size-4' />
-              GitHub
-            </Link>
-          </Button>
+          {project.link.repo && (
+            <Button size='sm' asChild>
+              <Link href={project.link.repo} target='_blank' rel='noopener noreferrer'>
+                <GitHubLogoIcon className='mr-2 size-4' />
+                GitHub
+              </Link>
+            </Button>
+          )}
           {project.link.host && (
             <Button size='sm' variant='outline' asChild>
               <Link href={project.link.host} target='_blank' rel='noopener noreferrer'>

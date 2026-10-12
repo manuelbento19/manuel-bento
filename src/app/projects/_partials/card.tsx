@@ -50,12 +50,14 @@ export default function ProjectCard({ project }: Props) {
       </CardContent>
       <CardFooter className='mt-auto flex items-center justify-between p-0'>
         <div className='flex items-center gap-1 divide-x-2'>
-          <Button size='sm' variant='link'>
-            <Link href={project.link.repo} target='_blank' rel='noopener noreferrer' aria-label={`${project.title} GitHub repository`}>
-              <Icon icon='mdi:github' className='size-5' />
-            </Link>
-          </Button>
-          <ul className='flex items-center gap-1 pl-2'>
+          {project.link.repo && (
+            <Button size='sm' variant='link'>
+              <Link href={project.link.repo} target='_blank' rel='noopener noreferrer' aria-label={`${project.title} GitHub repository`}>
+                <Icon icon='mdi:github' className='size-5' />
+              </Link>
+            </Button>
+          )}
+          <ul className={`flex items-center gap-1${project.link.repo ? ' pl-2' : ''}`}>
             {project.techs.map((item) => (
               <li
                 key={item}

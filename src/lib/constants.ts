@@ -65,6 +65,38 @@ export const skills = [
 
 export const projects: Project[] = [
   {
+    title: 'Modullum',
+    wallpaper: '/projects/modullum.png',
+    description:
+      'Construtor de portfólios sem código. Cria, personaliza e publica um portfólio profissional em minutos com um editor visual drag-and-drop e o teu próprio endereço (nome.modullum.com).',
+    longDescription:
+      'O Modullum permite a qualquer pessoa criar e publicar um portfólio profissional sem escrever código. Um fluxo simples — entrar com GitHub/Google, personalizar com o editor visual e publicar num clique — substitui a montagem de templates, hosting e integrações. Inclui importação de projetos do GitHub, analytics de visitas, cartão de visita digital com QR code e tema claro/escuro, em PT e EN.',
+    features: [
+      'Editor visual drag-and-drop, 100% sem código',
+      'Publicação num clique com endereço próprio (nome.modullum.com)',
+      'Importação de projetos diretamente do GitHub',
+      'Analytics de visitas e interesse por projeto',
+      'Cartão de visita digital com QR code',
+      'Portfólio responsivo, tema claro/escuro e PT/EN',
+      'Planos Free e Pro com billing integrado'
+    ],
+    link: {
+      host: 'https://modullum.com'
+    },
+    techs: [
+      'ri:nextjs-fill',
+      'mdi:react',
+      'bxl:typescript',
+      'mdi:tailwind',
+      'simple-icons:zod',
+      'simple-icons:reacthookform',
+      'akar-icons:postgresql-fill',
+      'simple-icons:vercel',
+      'simple-icons:pnpm',
+      'simple-icons:radixui'
+    ]
+  },
+  {
     title: 'RODIVA',
     wallpaper: '/projects/rodiva.png',
     description:
@@ -138,25 +170,6 @@ export const projects: Project[] = [
       host: 'https://link-look.vercel.app'
     },
     techs: ['mdi:react', 'ri:nextjs-fill', 'mdi:tailwind', 'bxl:typescript']
-  },
-  {
-    title: 'MyFolio',
-    wallpaper: '/projects/myfolio.png',
-    description:
-      'MyFolio é uma plataforma que permite criar portfólios personalizados sem precisar de habilidades de codificação. Com uma interface intuitiva, Shadcn UI e integração com Supabase, você pode facilmente montar um site profissional e destacar suas habilidades de forma rápida e simples.',
-    longDescription:
-      'O MyFolio democratiza a criação de portfólios: em vez de escrever código, o utilizador monta o seu site através de uma interface intuitiva com componentes Shadcn UI prontos a usar. O Supabase trata da autenticação e dos dados, permitindo publicar um portfólio profissional em minutos.',
-    features: [
-      'Criação de portfólios personalizados sem código',
-      'Interface baseada em Shadcn UI',
-      'Autenticação e armazenamento com Supabase',
-      'Publicação rápida e simples do site final'
-    ],
-    link: {
-      repo: 'https://github.com/manuelbento19/myfolio',
-      host: 'https://useportfolio.vercel.app/'
-    },
-    techs: ['mdi:react', 'ri:nextjs-fill', 'mdi:tailwind', 'simple-icons:zod', 'simple-icons:supabase']
   },
   {
     title: 'Image4Text',

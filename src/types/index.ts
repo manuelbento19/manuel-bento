@@ -7,7 +7,7 @@ export type Project = {
   longDescription?: string
   features?: string[]
   link: {
-    repo: string
+    repo?: string
     host?: string
   }
   techs: string[]
