@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import { getMessages, getTranslations } from 'next-intl/server'
+import { getLocale, getMessages, getTranslations } from 'next-intl/server'
 import { Mail, MapPin, Phone, Globe, Github, Linkedin } from 'lucide-react'
 import { Constants } from '@/lib'
+import { getProjects } from '@/lib/projects'
 import { TranslateDTO } from '@/types'
 import PrintButton from './_partials/print-button'
 
@@ -82,6 +83,8 @@ export default async function CV() {
   const messages = await getMessages()
   const { about, cv } = messages as TranslateDTO
   const { cvContact } = Constants
+  const locale = await getLocale()
+  const projects = getProjects(locale)
 
   return (
     <div className='cv w-full px-4 pb-16 pt-32 text-zinc-800 dark:text-zinc-200'>
@@ -288,7 +291,7 @@ export default async function CV() {
         <div className='cv-sheet mt-6 break-before-page border bg-card p-6 text-[12px] leading-snug shadow-xs'>
           <Section title={cv.projects}>
             <div className='grid gap-x-8 gap-y-4 sm:grid-cols-2'>
-              {Constants.projects.map((project) => {
+              {projects.map((project) => {
                 const url = project.link.host ?? project.link.repo
                 return (
                   <article

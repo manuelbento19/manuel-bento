@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation'
 import { ArrowLeftIcon, GitHubLogoIcon, ExternalLinkIcon } from '@radix-ui/react-icons'
 import { Button } from '@/components/ui/button'
 import Tag from '@/components/ui/tag'
-import { getTranslations } from 'next-intl/server'
+import { getLocale, getTranslations } from 'next-intl/server'
 import { CheckIcon } from '@radix-ui/react-icons'
 import { getProjectBySlug, getProjects } from '@/lib/projects'
 
@@ -13,7 +13,8 @@ export const generateStaticParams = () => getProjects().map((project) => ({ slug
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params
-  const project = getProjectBySlug(slug)
+  const locale = await getLocale()
+  const project = getProjectBySlug(slug, locale)
   if (!project) notFound()
 
   return {
@@ -24,7 +25,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const project = getProjectBySlug(slug)
+  const locale = await getLocale()
+  const project = getProjectBySlug(slug, locale)
   if (!project) notFound()
 
   const t = await getTranslations('common')

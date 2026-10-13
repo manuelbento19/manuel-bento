@@ -1,4 +1,5 @@
 import { projects as data } from './constants'
+import { projectsEn } from './projects-en'
 import { type Project } from '@/types'
 
 export type ProjectWithSlug = Project & { slug: string }
@@ -13,10 +14,18 @@ export function getProjectSlug(title: string): string {
     .replace(/^-+|-+$/g, '')
 }
 
-export function getProjects(): ProjectWithSlug[] {
-  return data.map((project) => ({ ...project, slug: getProjectSlug(project.title) }))
+function localizeProject(project: Project, slug: string, locale: string): Project {
+  const translation = locale === 'en' ? projectsEn[slug] : undefined
+  return translation ? { ...project, ...translation } : project
 }
 
-export function getProjectBySlug(slug: string): ProjectWithSlug | null {
-  return getProjects().find((project) => project.slug === slug) ?? null
+export function getProjects(locale: string = 'pt'): ProjectWithSlug[] {
+  return data.map((project) => {
+    const slug = getProjectSlug(project.title)
+    return { ...localizeProject(project, slug, locale), slug }
+  })
+}
+
+export function getProjectBySlug(slug: string, locale: string = 'pt'): ProjectWithSlug | null {
+  return getProjects(locale).find((project) => project.slug === slug) ?? null
 }
