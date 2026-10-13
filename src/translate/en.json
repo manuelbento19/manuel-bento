@@ -42,7 +42,7 @@
     "title": "Resume",
     "print": "Download PDF",
     "profile": "Profile",
-    "bio": "Software developer specialized in Frontend, with experience building web and mobile applications. Passionate about technology, problem-solving and delivering impactful solutions, I constantly seek to grow professionally and sharpen my skills through new technologies and best practices.",
+    "bio": "Software developer with 5 years of experience, currently in a technical leadership role coordinating a team of 4 to 6 developers. Experienced in delivering web and mobile applications, defining architecture, code review and adopting engineering best practices, including automated testing and CI/CD. Focused on quality, system integration through REST APIs and translating business requirements into technical solutions.",
     "experience": "Experience",
     "projects": "Projects",
     "technologies": "Technologies",
@@ -98,13 +98,13 @@
         "company": "Mountain Light Business",
         "started_date": "2025",
         "due_date": "Present",
-        "description": "Frontend Lead with experience leading teams and developing scalable web and mobile applications. Specialist in React, React Native, Next.js and TypeScript, with strong involvement in frontend architecture, code review, and development best practices.",
+        "description": "Frontend Lead responsible for coordinating a team of 4 to 6 developers and delivering scalable web and mobile applications. Experienced in application architecture, code review, automated testing and CI/CD, with strong involvement in translating business requirements into technical solutions.",
         "list": [
-          "Frontend team leadership and web/mobile application architecture",
-          "Scalable application development with React, React Native, Next.js and TypeScript",
-          "Code review and development best practices definition",
-          "Focus on performance, user experience and high-quality solution delivery",
-          "Collaboration with multidisciplinary teams to transform business requirements into efficient digital products"
+          "Coordination of a team of 4 to 6 developers, managing deliveries, priorities and capacity",
+          "Definition of web and mobile application architecture and engineering best practices (code review, automated testing, CI/CD)",
+          "Translation of business requirements into technical specifications, supporting implementation, quality and maintenance",
+          "Scalable application development with React, React Native, Next.js, TypeScript and REST API integration",
+          "Focus on performance, observability and high-quality solution delivery"
         ]
       },
       {

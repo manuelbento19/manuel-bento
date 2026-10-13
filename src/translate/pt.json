@@ -42,7 +42,7 @@
     "title": "Currículo",
     "print": "Descarregar PDF",
     "profile": "Perfil",
-    "bio": "Desenvolvedor de software especializado em Frontend, com experiência na criação de aplicações web e mobile. Apaixonado por tecnologia, resolução de problemas e desenvolvimento de soluções impactantes, busco constantemente evoluir profissionalmente e aprimorar minhas habilidades através de novas tecnologias e boas práticas.",
+    "bio": "Desenvolvedor de software com 5 anos de experiência e atualmente em função de liderança técnica, coordenando uma equipa de 4 a 6 desenvolvedores. Experiência na entrega de aplicações web e mobile, definição de arquitetura, revisão de código e adoção de boas práticas de engenharia, incluindo testes automatizados e CI/CD. Foco em qualidade, integração de sistemas via APIs REST e tradução de requisitos de negócio em soluções técnicas.",
     "experience": "Experiência",
     "projects": "Projetos",
     "technologies": "Tecnologias",
@@ -98,13 +98,13 @@
         "company": "Mountain Light Business",
         "started_date": "2025",
         "due_date": "Presente",
-        "description": "Frontend Lead com experiência na liderança de equipes e no desenvolvimento de aplicações web e mobile escaláveis. Especialista em React, React Native, Next.js e TypeScript, com forte atuação em arquitetura de frontend, revisão de código e definição de boas práticas de desenvolvimento.",
+        "description": "Frontend Lead responsável pela coordenação de uma equipa de 4 a 6 desenvolvedores e pela entrega de aplicações web e mobile escaláveis. Experiência em arquitetura de aplicações, revisão de código, testes automatizados e CI/CD, com forte atuação na tradução de requisitos de negócio em soluções técnicas.",
         "list": [
-          "Liderança de equipa frontend e definição de arquitetura de aplicações web e mobile",
-          "Desenvolvimento de aplicações escaláveis com React, React Native, Next.js e TypeScript",
-          "Revisão de código e definição de boas práticas de desenvolvimento",
-          "Foco em performance, experiência do utilizador e entrega de soluções de alta qualidade",
-          "Colaboração com equipas multidisciplinares para transformar requisitos de negócio em produtos digitais eficientes"
+          "Coordenação de uma equipa de 4 a 6 desenvolvedores, com gestão de entregas, prioridades e capacidade",
+          "Definição de arquitetura de aplicações web e mobile e de boas práticas de engenharia (code review, testes automatizados, CI/CD)",
+          "Tradução de requisitos de negócio em especificações técnicas, com acompanhamento da implementação, qualidade e suporte",
+          "Desenvolvimento de aplicações escaláveis com React, React Native, Next.js, TypeScript e integração via APIs REST",
+          "Foco em performance, observabilidade e entrega de soluções de alta qualidade"
         ]
       },
       {
