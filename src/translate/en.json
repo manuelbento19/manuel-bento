@@ -31,7 +31,31 @@
       {
         "label": "Contact",
         "link": "/contact"
+      },
+      {
+        "label": "Resume",
+        "link": "/cv"
       }
+    ]
+  },
+  "cv": {
+    "title": "Resume",
+    "print": "Download PDF",
+    "profile": "Profile",
+    "bio": "Software developer specialized in Frontend, with experience building web and mobile applications. Passionate about technology, problem-solving and delivering impactful solutions, I constantly seek to grow professionally and sharpen my skills through new technologies and best practices.",
+    "experience": "Experience",
+    "projects": "Projects",
+    "technologies": "Technologies",
+    "education": "Education",
+    "skills": "Skills",
+    "certifications": "Certifications",
+    "languages": "Languages",
+    "contact": "Contact",
+    "present": "Present",
+    "location": "Luanda, Angola",
+    "languagesList": [
+      { "name": "Portuguese", "level": "Native" },
+      { "name": "English", "level": "Professional" }
     ]
   },
   "about": {

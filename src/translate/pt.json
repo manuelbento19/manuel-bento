@@ -31,7 +31,31 @@
       {
         "label": "Contacto",
         "link": "/contact"
+      },
+      {
+        "label": "CV",
+        "link": "/cv"
       }
+    ]
+  },
+  "cv": {
+    "title": "Currículo",
+    "print": "Descarregar PDF",
+    "profile": "Perfil",
+    "bio": "Desenvolvedor de software especializado em Frontend, com experiência na criação de aplicações web e mobile. Apaixonado por tecnologia, resolução de problemas e desenvolvimento de soluções impactantes, busco constantemente evoluir profissionalmente e aprimorar minhas habilidades através de novas tecnologias e boas práticas.",
+    "experience": "Experiência",
+    "projects": "Projetos",
+    "technologies": "Tecnologias",
+    "education": "Educação",
+    "skills": "Competências",
+    "certifications": "Certificações",
+    "languages": "Idiomas",
+    "contact": "Contacto",
+    "present": "Presente",
+    "location": "Luanda, Angola",
+    "languagesList": [
+      { "name": "Português", "level": "Nativo" },
+      { "name": "Inglês", "level": "Profissional" }
     ]
   },
   "about": {

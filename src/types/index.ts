@@ -84,5 +84,25 @@ export type TranslateDTO = AbstractIntlMessages & {
     ariaLabel: string;
     alreadyClapped: string;
     error: string;
+  },
+  cv: {
+    title: string;
+    print: string;
+    profile: string;
+    bio: string;
+    experience: string;
+    projects: string;
+    technologies: string;
+    education: string;
+    skills: string;
+    certifications: string;
+    languages: string;
+    contact: string;
+    present: string;
+    location: string;
+    languagesList: {
+      name: string;
+      level: string;
+    }[];
   }
 }

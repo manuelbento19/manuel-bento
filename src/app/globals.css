@@ -76,3 +76,44 @@
     @apply absolute inset-0 size-full animate-skell bg-slate-400 bg-[length:200%_100%] rounded-xl;
   }
 }
+
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+  }
+
+  header,
+  .no-print {
+    display: none !important;
+  }
+
+  .cv {
+    padding: 0 !important;
+    color: #18181b !important;
+  }
+
+  .cv-sheet {
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: #fff !important;
+    box-shadow: none !important;
+  }
+
+  .cv-sidebar {
+    background: #fff !important;
+    border-color: #e4e4e7 !important;
+  }
+
+  .cv,
+  .cv * {
+    color: #18181b !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+}

@@ -429,3 +429,13 @@ export const projects: Project[] = [
     techs: ['mdi:react', 'devicon-plain:css3', 'file-icons:styledcomponents']
   }
 ]
+
+export const cvContact = {
+  location: 'Luanda, Cazenga, Angola',
+  phone: '+244 943 454 709',
+  email: 'manuelbentomb.223@gmail.com',
+  emailAlt: 'manuelbentomb.223@hotmail.com',
+  website: 'https://bentooo.vercel.app',
+  github: 'https://github.com/manuelbento19',
+  linkedin: 'https://www.linkedin.com/in/manuel-bento/'
+}
