@@ -83,12 +83,17 @@
     margin: 10mm;
   }
 
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
   html,
   body {
     background: #fff !important;
+    color-scheme: light !important;
   }
 
-  header,
   .no-print {
     display: none !important;
   }
@@ -107,12 +112,12 @@
 
   .cv-sidebar {
     background: #fff !important;
-    border-color: #e4e4e7 !important;
   }
 
   .cv,
   .cv * {
     color: #18181b !important;
+    border-color: #a1a1aa !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }

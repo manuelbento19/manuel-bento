@@ -436,6 +436,7 @@ export const cvContact = {
   email: 'manuelbentomb.223@gmail.com',
   emailAlt: 'manuelbentomb.223@hotmail.com',
   website: 'https://bentooo.vercel.app',
+  websiteAlt: 'https://manuelbento.modullum.com/',
   github: 'https://github.com/manuelbento19',
   linkedin: 'https://www.linkedin.com/in/manuel-bento/'
 }

@@ -14,7 +14,7 @@ export default async function Header() {
   const header = layout.header
 
   return (
-    <header className='fixed inset-x-0 top-0 z-50 flex w-full items-center justify-between px-4 backdrop-blur-md bg-background/80 border-b border-border/50'>
+    <header className='no-print fixed inset-x-0 top-0 z-50 flex w-full items-center justify-between px-4 backdrop-blur-md bg-background/80 border-b border-border/50'>
       <div className='container flex items-center justify-between py-4 relative'>
         <Link href='/' className='h-full'>
           <Image src="/logo.png" alt='MB' title='MB' width={200} height={200} loading='lazy' className='w-10 invert dark:invert-0'/>

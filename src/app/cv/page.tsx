@@ -91,7 +91,7 @@ export default async function CV() {
         </div>
 
         <div className='cv-sheet overflow-hidden border bg-card p-6 text-[12px] leading-snug shadow-xs'>
-          <header className='grid gap-4 border-b pb-4 sm:grid-cols-[minmax(0,1fr)_auto]'>
+          <header className='grid gap-4 sm:grid-cols-[minmax(0,1fr)_auto]'>
             <div className='space-y-2'>
               <div className='flex items-center gap-4'>
                 <Image
@@ -150,6 +150,17 @@ export default async function CV() {
                   className='truncate hover:underline'
                 >
                   {trimUrl(cvContact.website)}
+                </a>
+              </li>
+              <li className='flex items-center gap-2'>
+                <Globe className='size-3.5 shrink-0 text-zinc-400' />
+                <a
+                  href={cvContact.websiteAlt}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='truncate hover:underline'
+                >
+                  {trimUrl(cvContact.websiteAlt)}
                 </a>
               </li>
               <li className='flex items-center gap-2'>

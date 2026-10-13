@@ -8,7 +8,7 @@ export default function PrintButton({ label }: { label: string }) {
     <Button
       variant='outline'
       size='sm'
-      className='no-print'
+      className='no-print gap-2'
       onClick={() => window.print()}
     >
       <Printer className='size-4' />
