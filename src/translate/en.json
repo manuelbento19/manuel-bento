@@ -98,13 +98,14 @@
         "company": "Mountain Light Business",
         "started_date": "2025",
         "due_date": "Present",
-        "description": "Frontend Lead responsible for coordinating a team of 4 to 6 developers and delivering scalable web and mobile applications. Experienced in application architecture, code review, automated testing and CI/CD, with strong involvement in translating business requirements into technical solutions.",
+        "description": "I lead a team of 4 to 6 developers delivering scalable web and mobile applications. I work on frontend architecture definition, technical decision-making, and the implementation of engineering practices that ensure quality and performance.",
         "list": [
-          "Coordination of a team of 4 to 6 developers, managing deliveries, priorities and capacity",
-          "Definition of web and mobile application architecture and engineering best practices (code review, automated testing, CI/CD)",
-          "Translation of business requirements into technical specifications, supporting implementation, quality and maintenance",
-          "Scalable application development with React, React Native, Next.js, TypeScript and REST API integration",
-          "Focus on performance, observability and high-quality solution delivery"
+          "Leading a team of 4 to 6 developers, managing deliveries, priorities, and capacity",
+          "Defining web and mobile application architecture and technical decisions aligned with business requirements",
+          "Promoting engineering best practices: code review, automated testing, and CI/CD",
+          "Translating business requirements into technical specifications, supporting implementation, quality, and maintenance",
+          "Building scalable applications with React, React Native, Next.js, TypeScript, and REST API integration",
+          "Focus on performance, observability, and high-quality solution delivery"
         ]
       },
       {
@@ -112,13 +113,13 @@
         "company": "ETIC - Solutions & Technology",
         "started_date": "2023",
         "due_date": "2025",
-        "description": "As a Frontend Developer at ETIC, I create intuitive and engaging digital experiences using modern technologies. My expertise includes:",
+        "description": "As a Frontend Developer at ETIC, I built interfaces and intuitive digital experiences with React.js and Next.js, focusing on UI/UX, performance, and team collaboration.",
         "list": [
-          "Updated technologies and frontend frameworks, such as React.js and Next.js",
-          "Elegant and intuitive UI/UX design.",
-          "Performance optimization for fast loading.",
-          "Innovative collaboration and effective communication.",
-          "Adaptation and continuous learning."
+          "Building interfaces with React.js and Next.js while keeping up with frontend technology developments",
+          "Implementing elegant and intuitive UI/UX design",
+          "Optimizing performance for fast application loading",
+          "Collaborating and communicating effectively throughout development",
+          "Continuously learning and adapting to new technologies and contexts"
         ]
       },
       {
@@ -126,12 +127,12 @@
         "company": "Novagrolider",
         "started_date": "2021",
         "due_date": "2023",
-        "description": "As a Fullstack Developer at Novagrolider, I had the following responsibilities:",
+        "description": "As a Fullstack Developer at Novagrolider, I worked across different layers of development, from web and mobile interfaces to APIs, services, and desktop applications.",
         "list": [
-          "<strong>Frontend:</strong> developed dynamic interfaces with React.js, created mobile applications with React Native, and applied Tailwind CSS, Bootstrap, and CSS for responsive and advanced styling; built desktop applications using C# WinForm.",
+          "<strong>Frontend:</strong> developed dynamic interfaces with React.js, mobile applications with React Native, and responsive styling with Tailwind CSS, Bootstrap, and CSS; built desktop applications using C# WinForm.",
           "<strong>Backend:</strong> developed fast and efficient APIs with Node.js (Express and Fastify), built scalable web services with C# and .NET Core, and implemented communication between services using WCF.",
-          "<strong>Versioning and Collaboration:</strong> used Git for version control and collaboration.",
-          "<strong>Packaging and Distribution:</strong> facilitated application distribution with Docker."
+          "<strong>Versioning and collaboration:</strong> used Git for version control and collaboration.",
+          "<strong>Packaging and distribution:</strong> distributed applications with Docker."
         ]
       }
     ]

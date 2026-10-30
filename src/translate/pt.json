@@ -98,10 +98,11 @@
         "company": "Mountain Light Business",
         "started_date": "2025",
         "due_date": "Presente",
-        "description": "Frontend Lead responsável pela coordenação de uma equipa de 4 a 6 desenvolvedores e pela entrega de aplicações web e mobile escaláveis. Experiência em arquitetura de aplicações, revisão de código, testes automatizados e CI/CD, com forte atuação na tradução de requisitos de negócio em soluções técnicas.",
+        "description": "Lidero uma equipa de 4 a 6 desenvolvedores na entrega de aplicações web e mobile escaláveis. Atuo na definição da arquitetura frontend, na tomada de decisões técnicas e na implementação de práticas de engenharia que garantem qualidade e desempenho.",
         "list": [
-          "Coordenação de uma equipa de 4 a 6 desenvolvedores, com gestão de entregas, prioridades e capacidade",
-          "Definição de arquitetura de aplicações web e mobile e de boas práticas de engenharia (code review, testes automatizados, CI/CD)",
+          "Liderança de uma equipa de 4 a 6 desenvolvedores, com gestão de entregas, prioridades e capacidade",
+          "Definição da arquitetura de aplicações web e mobile e de decisões técnicas alinhadas aos requisitos de negócio",
+          "Promoção de boas práticas de engenharia: code review, testes automatizados e CI/CD",
           "Tradução de requisitos de negócio em especificações técnicas, com acompanhamento da implementação, qualidade e suporte",
           "Desenvolvimento de aplicações escaláveis com React, React Native, Next.js, TypeScript e integração via APIs REST",
           "Foco em performance, observabilidade e entrega de soluções de alta qualidade"
@@ -112,13 +113,13 @@
         "company": "ETIC - Soluções & Tecnologia",
         "started_date": "2023",
         "due_date": "2025",
-        "description": "Como Frontend Developer na ETIC, crio experiências digitais intuitivas e envolventes usando tecnologias modernas. Minha expertise inclui:",
+        "description": "Como Frontend Developer na ETIC, desenvolvi interfaces e experiências digitais intuitivas com React.js e Next.js, com foco em UI/UX, desempenho e colaboração com a equipa.",
         "list": [
-          "Tecnologias atualizadas e frameworks de frontend, como React.js e Next.js",
-          "Design de UI/UX elegante e intuitivo.",
-          "Otimização de desempenho para carregamento rápido.",
-          "Colaboração inovadora e comunicação eficaz.",
-          "Adaptação e aprendizado contínuos."
+          "Desenvolvimento de interfaces com React.js e Next.js, acompanhando a evolução das tecnologias de frontend",
+          "Implementação de design de UI/UX elegante e intuitivo",
+          "Otimização de desempenho para um carregamento rápido das aplicações",
+          "Colaboração e comunicação eficaz ao longo do desenvolvimento",
+          "Aprendizagem contínua e adaptação a novas tecnologias e contextos"
         ]
       },
       {
@@ -126,12 +127,12 @@
         "company": "Novagrolider",
         "started_date": "2021",
         "due_date": "2023",
-        "description": "Como Fullstack Developer na Novagrolider, tive as seguintes responsabilidades:",
+        "description": "Como Fullstack Developer na Novagrolider, trabalhei em diferentes camadas do desenvolvimento, desde interfaces web e mobile até APIs, serviços e aplicações desktop.",
         "list": [
-          "<strong>Frontend:</strong> desenvolvi interfaces dinâmicas com React.js, criei aplicativos móveis com React Native, e apliquei Tailwind CSS, Bootstrap, e CSS para estilização responsiva e avançada, construi aplicativos desktop utilizando C# WinForm.",
-          "<strong>Backend:</strong> desenvolvi APIs rápidas e eficientes com Node.js (Express e Fastfy), construi serviços web escaláveis com C# e .NET Core e implementei comunicação entre serviços utilizando WCF.",
-          "<strong>Versionamento e Colaboração:</strong> utilizei Git para controle de versão e colaboração.",
-          "<strong>Empacotamento e Distribuição:</strong> facilitei a distribuição de aplicativos com Docker."
+          "<strong>Frontend:</strong> desenvolvimento de interfaces dinâmicas com React.js, aplicações móveis com React Native e estilização responsiva com Tailwind CSS, Bootstrap e CSS; construção de aplicações desktop com C# WinForm.",
+          "<strong>Backend:</strong> desenvolvimento de APIs rápidas e eficientes com Node.js (Express e Fastify), construção de serviços web escaláveis com C# e .NET Core e comunicação entre serviços com WCF.",
+          "<strong>Versionamento e colaboração:</strong> utilização de Git para controlo de versão e colaboração.",
+          "<strong>Empacotamento e distribuição:</strong> distribuição de aplicações com Docker."
         ]
       }
     ]
