@@ -14,33 +14,52 @@ export const skills = [
       { name: 'React Native', icon: 'vscode-icons:file-type-reactts' },
       { name: 'Expo', icon: 'file-icons:expo' },
       { name: 'Vue', icon: 'logos:vue' },
+      { name: 'Angular', icon: 'mdi:angular' },
       { name: 'Astro', icon: 'simple-icons:astro' },
-      { name: 'Tailwind CSS', icon: 'skill-icons:tailwindcss-light' },
-      { name: 'shadcn/ui', icon: 'simple-icons:shadcnui' },
-      { name: 'Radix UI', icon: 'simple-icons:radixui' },
-      { name: 'Framer Motion', icon: 'simple-icons:framer' },
-      { name: 'Sass', icon: 'skill-icons:sass' },
-      { name: 'Styled Components', icon: 'skill-icons:styledcomponents' },
-      { name: 'Storybook', icon: 'logos:storybook-icon' }
+      { name: 'Tailwind CSS', icon: 'skill-icons:tailwindcss-light' }
     ]
   },
   {
-    name: 'Backend & Data',
+    name: 'Backend',
     icon: 'fluent-mdl2:server-enviroment',
     list: [
       { name: 'Node.js', icon: 'logos:nodejs-icon' },
       { name: 'Express.js', icon: 'skill-icons:expressjs-light' },
-      { name: 'Nest.js', icon: 'logos:nestjs' },
+      { name: 'NestJS', icon: 'logos:nestjs' },
       { name: 'Fastify', icon: 'simple-icons:fastify' },
-      { name: 'Prisma', icon: 'skill-icons:prisma' },
-      { name: 'Supabase', icon: 'simple-icons:supabase' },
+      { name: '.NET', icon: 'skill-icons:dotnet' },
+      { name: 'Rust', icon: 'skill-icons:rust' },
+      { name: 'Zod', icon: 'simple-icons:zod' }
+    ]
+  },
+  {
+    name: 'Databases & Data',
+    icon: 'mdi:database',
+    list: [
       { name: 'PostgreSQL', icon: 'skill-icons:postgresql-light' },
       { name: 'MySQL', icon: 'skill-icons:mysql-light' },
       { name: 'Redis', icon: 'devicon:redis' },
       { name: 'Firebase', icon: 'devicon:firebase' },
-      { name: 'Zod', icon: 'simple-icons:zod' },
-      { name: '.NET', icon: 'skill-icons:dotnet' },
-      { name: 'Rust', icon: 'skill-icons:rust' }
+      { name: 'Supabase', icon: 'simple-icons:supabase' },
+      { name: 'Prisma', icon: 'skill-icons:prisma' }
+    ]
+  },
+  {
+    name: 'Architecture & Engineering',
+    icon: 'mdi:sitemap',
+    list: [
+      { name: 'Software Architecture', icon: 'mdi:vector-polyline' },
+      { name: 'Micro Frontends', icon: 'mdi:view-dashboard' },
+      { name: 'REST APIs', icon: 'mdi:api' },
+      { name: 'CI/CD', icon: 'mdi:source-branch-sync' },
+      { name: 'Code Review', icon: 'mdi:code-tags-check' },
+      { name: 'Code Quality', icon: 'mdi:check-decagram' },
+      {
+        name: 'Performance Optimization',
+        icon: 'mdi:speedometer'
+      },
+      { name: 'Technical Leadership', icon: 'mdi:account-supervisor' },
+      { name: 'System Integration', icon: 'mdi:connection' }
     ]
   },
   {
@@ -59,6 +78,7 @@ export const skills = [
       { name: 'Bash', icon: 'devicon-plain:bash' },
       { name: 'PowerShell', icon: 'vscode-icons:file-type-powershell' },
       { name: 'pnpm', icon: 'simple-icons:pnpm' },
+      { name: 'npm', icon: 'simple-icons:npm' },
       { name: 'Vite', icon: 'simple-icons:vite' },
       { name: 'Jira', icon: 'devicon:jira' },
       { name: 'Notion', icon: 'devicon:notion' },
@@ -79,7 +99,20 @@ export const skills = [
     ]
   },
   {
-    name: 'AI',
+    name: 'Design & UI',
+    icon: 'mdi:palette',
+    list: [
+      { name: 'shadcn/ui', icon: 'simple-icons:shadcnui' },
+      { name: 'Radix UI', icon: 'simple-icons:radixui' },
+      { name: 'Framer Motion', icon: 'simple-icons:framer' },
+      { name: 'Storybook', icon: 'logos:storybook-icon' },
+      { name: 'Sass', icon: 'skill-icons:sass' },
+      { name: 'styled-components', icon: 'skill-icons:styledcomponents' },
+      { name: 'UI/UX Design', icon: 'mdi:palette-swatch' }
+    ]
+  },
+  {
+    name: 'AI & Developer Tools',
     icon: 'mdi:robot',
     list: [
       { name: 'OpenAI', icon: 'simple-icons:openai' },
