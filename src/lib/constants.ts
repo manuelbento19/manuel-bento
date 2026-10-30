@@ -134,16 +134,16 @@ export const projects: Project[] = [
     title: 'Modullum',
     wallpaper: '/projects/modullum.png',
     description:
-      'Construtor de portfólios sem código. Cria, personaliza e publica um portfólio profissional em minutos com um editor visual drag-and-drop e o teu próprio endereço (nome.modullum.com).',
+      'Plataforma no-code para criar, personalizar e publicar portfólios profissionais em minutos, com editor visual drag-and-drop e domínio próprio.',
     longDescription:
-      'O Modullum permite a qualquer pessoa criar e publicar um portfólio profissional sem escrever código. Um fluxo simples — entrar com GitHub/Google, personalizar com o editor visual e publicar num clique — substitui a montagem de templates, hosting e integrações. Inclui importação de projetos do GitHub, analytics de visitas, cartão de visita digital com QR code e tema claro/escuro, em PT e EN.',
+      'Como fundador da Modullum, desenvolvi uma plataforma que permite a qualquer pessoa publicar um portfólio profissional sem escrever código. O fluxo combina autenticação com GitHub/Google, um editor visual drag-and-drop e publicação num clique, substituindo a montagem manual de templates, hosting e integrações. A plataforma inclui importação de projetos do GitHub, analytics de visitas, cartão de visita digital com QR code, tema claro/escuro e suporte PT/EN, com planos Free e Pro e billing integrado.',
     features: [
-      'Editor visual drag-and-drop, 100% sem código',
+      'Editor visual drag-and-drop para criar portfólios sem código',
       'Publicação num clique com endereço próprio (nome.modullum.com)',
       'Importação de projetos diretamente do GitHub',
-      'Analytics de visitas e interesse por projeto',
+      'Analytics de visitas e de interesse por projeto',
       'Cartão de visita digital com QR code',
-      'Portfólio responsivo, tema claro/escuro e PT/EN',
+      'Portfólio responsivo com tema claro/escuro e suporte PT/EN',
       'Planos Free e Pro com billing integrado'
     ],
     link: {
@@ -166,16 +166,16 @@ export const projects: Project[] = [
     title: 'RODIVA',
     wallpaper: '/projects/rodiva.png',
     description:
-      'O teu mecânico de bolso. Gestor pessoal de manutenção de veículos que permite registar serviços, combustível e documentos — tudo offline, sem contas e 100% no teu dispositivo. PWA instalável com assistente IA, alertas inteligentes e estatísticas de custos.',
+      'Aplicativo PWA para gerir a manutenção do veículo de forma privada e offline, com registo de serviços, combustível, despesas e documentos, assistente de IA e estatísticas de custos.',
     longDescription:
-      'O RODIVA nasceu da necessidade de acompanhar a manutenção do próprio veículo sem depender de serviços na nuvem. Todo o histórico fica no dispositivo: intervenções, combustível, despesas e documentos, com privacidade total e utilização offline. Combina uma experiência PWA instalável com um assistente de IA que ajuda a perceber custos e a prever manutenções.',
+      'Desenvolvi o RODIVA para acompanhar a manutenção do veículo sem depender de serviços na nuvem. Todo o histórico — intervenções, combustível, despesas e documentos — fica no dispositivo, garantindo privacidade e utilização offline. A experiência inclui instalação como PWA, alertas inteligentes de prazos e revisões e um assistente de IA que ajuda a perceber custos e a prever manutenções.',
     features: [
       'Registo de serviços e manutenções por veículo',
       'Controlo de combustível e despesas com estatísticas de custos',
       'Gestão de documentos associados ao veículo',
-      'Assistente com IA para recomendações e análise de custos',
+      'Assistente de IA para recomendações e análise de custos',
       'Alertas inteligentes de prazos e revisões',
-      'PWA instalável, 100% offline e sem contas'
+      'PWA instalável, 100% offline e sem necessidade de conta'
     ],
     link: {
       repo: 'https://github.com/manuelbento19/rodiva',
@@ -186,13 +186,14 @@ export const projects: Project[] = [
   {
     title: '@bentoo/state-man',
     wallpaper: '/projects/state-man.png',
-    description: 'Um pacote leve para gerenciamento de estado em aplicativos React, projetado como uma alternativa simplificada ao Zustand e a Context API',
+    description:
+      'Biblioteca open-source e leve para gestão de estado em React, pensada como uma alternativa simples ao Zustand e à Context API.',
     longDescription:
-      'O @bentoo/state-man foi desenhado para quem quer gestão de estado sem o boilerplate da Context API e sem o peso de bibliotecas maiores. A API é pequena, previsível e totalmente tipada, ideal para aplicações que precisam de um store simples e direto.',
+      'Criei o @bentoo/state-man para simplificar a gestão de estado em aplicações React, sem o boilerplate da Context API e sem o peso de bibliotecas maiores. A API é pequena, previsível e totalmente tipada, tornando o store fácil de integrar em projetos existentes.',
     features: [
       'API mínima e previsível, inspirada em soluções leves do ecossistema React',
-      'Substitui a Context API sem boilerplate',
-      'Fully typed em TypeScript',
+      'Alternativa à Context API sem boilerplate',
+      'Totalmente tipada em TypeScript',
       'Fácil de integrar em projetos React existentes'
     ],
     link: {
@@ -204,14 +205,15 @@ export const projects: Project[] = [
   {
     title: '@bentoo/react-lazy',
     wallpaper: '/projects/react-lazy.png',
-    description: 'Uma biblioteca criada para facilitar a implementação de Lazy Loading em aplicações React. Ela permite que os componentes sejam carregados apenas quando se tornam visíveis na tela, oferecendo uma maneira para monitorar a entrada dos elementos na viewport.',
+    description:
+      'Biblioteca open-source para lazy loading em React, que carrega componentes apenas quando entram na viewport.',
     longDescription:
-      'O @bentoo/react-lazy resolve o lazy loading com base na visibilidade real na viewport, em vez de depender apenas de scroll. Os componentes são carregados de forma assíncrona quando entram no ecrã, mantendo o bundle inicial mais leve e a experiência mais fluida.',
+      'Criei o @bentoo/react-lazy para tornar o lazy loading mais simples em React. Em vez de depender apenas do scroll, a biblioteca carrega componentes de forma assíncrona quando estes ficam visíveis no ecrã, mantendo o bundle inicial mais leve e a experiência mais fluida. Integra-se com fallbacks e Suspense e está publicada no npm.',
     features: [
       'Componentes carregados apenas quando visíveis na viewport',
       'Monitorização da entrada dos elementos no ecrã',
       'Integração com fallbacks e Suspense',
-      'Biblioteca tipada em TypeScript, publicada no npm'
+      'Biblioteca tipada em TypeScript e publicada no npm'
     ],
     link: {
       repo: 'https://github.com/manuelbento19/react-lazy',
@@ -223,12 +225,12 @@ export const projects: Project[] = [
     title: 'LinkLook',
     wallpaper: '/projects/linklook.png',
     description:
-      'Uma pequena app que permite capturar e mostrar uma pré-visualização de links fornecidos. Capaz de gerar uma visualização rápida e intuitiva do conteúdo da página, sem que seja necessário abrir o link diretamente.',
+      'Ferramenta web para pré-visualizar links sem os abrir, mostrando título, imagem e descrição do destino.',
     longDescription:
-      'O LinkLook é uma ferramenta prática para obter uma pré-visualização de qualquer link sem ter de o abrir. Colas o URL, a app extrai o conteúdo e devolve uma visualização clara com título, imagem e descrição do destino, facilitando a decisão antes de entrar na página.',
+      'Desenvolvi o LinkLook para simplificar a pré-visualização de links antes de os abrir. Ao colar um URL, a aplicação extrai o conteúdo da página e devolve uma visualização clara com título, imagem e descrição do destino, tornando a decisão mais informada. A interface foi construída em React e Next.js.',
     features: [
-      'Pré-visualização rápida de links sem abrir o destino',
-      'Extração de título, imagem e descrição do conteúdo',
+      'Pré-visualização de links sem abrir o destino',
+      'Extração de título, imagem e descrição da página',
       'Interface simples e intuitiva em React + Next.js'
     ],
     link: {
@@ -241,12 +243,12 @@ export const projects: Project[] = [
     title: 'Image4Text',
     wallpaper: '/projects/image4text.png',
     description:
-      'Uma app para conversão de imagem em texto. A app pemite extrair textos de imagens para automatizar o processamento de textos.',
+      'Aplicação web para extrair texto de imagens, automatizando tarefas que dependem de transcrição manual.',
     longDescription:
-      'O Image4Text converte imagens em texto, permitindo extrair conteúdo de capturas, documentos e fotografias para agilizar processos que dependem de digitação manual. Uma ferramenta simples com um objetivo claro: automatizar a extração de texto.',
+      'Desenvolvi o Image4Text para converter imagens em texto e simplificar a extração de conteúdo de capturas, documentos e fotografias. A aplicação reduz a dependência de transcrição manual e oferece uma interface direta para automatizar o processamento de texto, com React, TypeScript e styled-components.',
     features: [
       'Conversão de imagens em texto',
-      'Extração de conteúdo de capturas e fotografias',
+      'Extração de conteúdo de capturas, documentos e fotografias',
       'Interface direta em React + TypeScript'
     ],
     link: {
@@ -264,12 +266,12 @@ export const projects: Project[] = [
     title: 'Micro-frontend',
     wallpaper: '/projects/microfrontend.png',
     description:
-      'Este projeto demonstra uma aplicação de micro frontends onde temos três aplicativos independentes: react-components,vue-components e app. Dando a possibilidade de trabalhar com React e Vue.',
+      'Prova de conceito de arquitetura de micro frontends com três aplicações independentes, combinando React e Vue no mesmo produto.',
     longDescription:
-      'Este projeto é uma prova de conceito de arquitetura de micro frontends: três aplicações independentes (duas com React e uma com Vue) que vivem no mesmo produto e se comunicam entre si. Uma demonstração prática de equipas independentes a partilhar um shell comum.',
+      'Desenvolvi este projeto para explorar, na prática, uma arquitetura de micro frontends. O produto é composto por três aplicações independentes — duas em React e uma em Vue — que coexistem no mesmo shell e comunicam entre si. A build e o deploy são feitos por aplicação com Vite, demonstrando como equipas independentes podem partilhar um produto comum.',
     features: [
       'Arquitetura de micro frontends com três aplicações independentes',
-      'React e Vue a coabitarem no mesmo produto',
+      'React e Vue a coexistir no mesmo produto',
       'Comunicação entre aplicações independentes',
       'Build e deploy por aplicação com Vite'
     ],
@@ -288,9 +290,9 @@ export const projects: Project[] = [
     title: 'Port Scanner',
     wallpaper: '/projects/portscanner.png',
     description:
-      'É um scanner de rede gratuito e de código aberto. É usado para descobrir hosts e serviços em uma rede de computadores, enviando pacotes e analisando as respostas.',
+      'Scanner de rede open-source para descobrir hosts e serviços ativos através do envio e análise de pacotes.',
     longDescription:
-      'Um scanner de rede clássico e open source, escrito em Node.js e TypeScript: envia pacotes para a rede e analisa as respostas para descobrir hosts e serviços ativos. Uma ferramenta útil para diagnóstico e segurança em ambientes locais.',
+      'Desenvolvi o Port Scanner como uma ferramenta open-source de diagnóstico de rede. Escrito em Node.js e TypeScript, o CLI envia pacotes e analisa as respostas para identificar hosts e serviços ativos, apoiando tarefas de diagnóstico e segurança em ambientes locais.',
     features: [
       'Descoberta de hosts e serviços numa rede',
       'Envio e análise de pacotes',
@@ -306,12 +308,12 @@ export const projects: Project[] = [
     title: 'OllamaBot',
     wallpaper: '/projects/ollama.png',
     description:
-      'É uma aplicação inovadora que utiliza a imagem de contêiner Llama para implementar um assistente de conversação inteligente, semelhante ao GPT, capaz de compreender e gerar respostas coerentes em uma variedade de contextos, proporcionando uma experiência de interação natural e eficaz.',
+      'Assistente de conversação local que utiliza modelos Llama via Ollama e Docker para responder de forma coerente em diferentes contextos.',
     longDescription:
-      'O OllamaBot traz um assistente de conversação estilo ChatGPT para o próprio ambiente: via container Llama/Ollama, responde de forma coerente a uma variedade de contextos com os modelos corridos localmente. O backend Node.js + Docker expõe o modelo e a interface React consome a API.',
+      'Desenvolvi o OllamaBot para trazer uma experiência de conversação semelhante à do ChatGPT para o próprio ambiente. Através de um container Llama/Ollama, a aplicação responde a diferentes contextos com modelos executados localmente. O backend em Node.js e Docker expõe o modelo, e a interface React consome a API para uma interação fluida.',
     features: [
       'Assistente de conversação inteligente estilo ChatGPT',
-      'Modelos Llama via container Docker/Ollama',
+      'Modelos Llama executados localmente via Docker/Ollama',
       'Backend em Node.js + TypeScript',
       'Interface React fluida para a conversa'
     ],
@@ -330,11 +332,11 @@ export const projects: Project[] = [
     title: 'DaBanda OSS',
     wallpaper: '/projects/dabanda.png',
     description:
-      'É uma plataforma dedicada a promover e destacar projetos de código aberto de diversas áreas e temáticas. Oferece uma maneira fácil e acessível de descobrir e contribuir para projetos de código aberto, impulsionando a inovação e o compartilhamento de conhecimento.',
+      'Plataforma para descobrir e destacar projetos open-source por área e temática, facilitando a contribuição da comunidade.',
     longDescription:
-      'O DaBanda OSS é um agregador de projetos open source organizado por áreas e temáticas. O objetivo é dar visibilidade a projetos que merecem atenção, facilitando a descoberta e a contribuição da comunidade, em vez de depender apenas de redes sociais.',
+      'Desenvolvi o DaBanda OSS para dar visibilidade a projetos open-source que merecem atenção. A plataforma organiza projetos por área e temática, tornando mais fácil descobrir iniciativas relevantes e encontrar formas de contribuir, sem depender apenas de redes sociais.',
     features: [
-      'Catálogo de projetos open source por área e temática',
+      'Catálogo de projetos open-source por área e temática',
       'Descoberta fácil de projetos para contribuir',
       'Plataforma web em Next.js + Tailwind'
     ],
@@ -348,13 +350,13 @@ export const projects: Project[] = [
     title: 'Unsplash Angular',
     wallpaper: '/projects/unangular.png',
     description:
-      'Um aplicativo desenvolvido em angular para buscar imagens do unsplash.',
+      'Aplicação Angular para pesquisar e explorar imagens do Unsplash através da respetiva API.',
     longDescription:
-      'Uma aplicação Angular que consome a API do Unsplash para pesquisar imagens. Um exemplo limpo de integração com API externa, gestão de estado de pesquisa e renderização de galerias, tudo escrito em Angular + TypeScript.',
+      'Desenvolvi esta aplicação em Angular para explorar a integração com a API do Unsplash. O projeto permite pesquisar imagens e apresentar os resultados numa galeria, com gestão do estado de pesquisa e renderização dinâmica, utilizando Angular e TypeScript.',
     features: [
       'Integração com a API do Unsplash',
       'Pesquisa de imagens em tempo real',
-      'App 100% Angular + TypeScript'
+      'Aplicação em Angular + TypeScript'
     ],
     link: {
       repo: 'https://github.com/manuelbento19/unsplash-angular'
@@ -365,14 +367,14 @@ export const projects: Project[] = [
     title: 'URL Shortener',
     wallpaper: '/projects/url-shortner.png',
     description:
-      'Um encurtador de URL é um site que reduz o comprimento do seu URL (Uniform Resource Locator). A ideia é minimizar o endereço da página da web em algo que seja mais fácil de lembrar e rastrear.',
+      'Encurtador de URLs com API própria, persistência em PostgreSQL e execução simplificada com Docker.',
     longDescription:
-      'Um encurtador de URLs completo, do frontend ao backend: a API em Node.js/Express com Prisma e PostgreSQL trata da criação e reencaminhamento dos links, enquanto o Docker simplifica a execução. Links longos viram aliases curtos e fáceis de partilhar.',
+      'Desenvolvi um encurtador de URLs completo, do frontend ao backend. A API em Node.js e Express, com Prisma e PostgreSQL, é responsável pela criação e reencaminhamento dos links, enquanto o Docker simplifica a execução do projeto. O resultado são aliases curtos e fáceis de partilhar.',
     features: [
       'Encurtamento de URLs longas em aliases curtos',
       'API backend em Node.js + Express + Prisma',
       'Persistência com PostgreSQL',
-      'Containerizado com Docker'
+      'Aplicação containerizada com Docker'
     ],
     link: {
       repo: 'https://github.com/manuelbento19/url-shortener'
@@ -390,12 +392,12 @@ export const projects: Project[] = [
     title: 'Nano Router',
     wallpaper: '/projects/nanorouter.png',
     description:
-      'Uma pequena app em react para demonstrar como fazer roteamento sem a necessidade do react-router-dom, usando apenas conceitos básicos do react.js. Serviu como prova de conceito de que com base de react podes fazer um monte de coisas, incluíndo roteamento.',
+      'Prova de conceito de um router em React construído apenas com conceitos base, sem react-router-dom.',
     longDescription:
-      'O Nano Router é uma prova de conceito: um router funcional construído apenas com conceitos base do React, sem react-router-dom. Demonstra que com o essencial do React dá para implementar navegação, servindo como estudo de como os routers funcionam internamente.',
+      'Desenvolvi o Nano Router como um exercício prático sobre o funcionamento interno dos routers. A aplicação implementa navegação usando apenas conceitos base do React, sem react-router-dom, e serve como estudo sobre como a navegação pode ser construída de forma simples e educativa.',
     features: [
       'Roteamento sem react-router-dom',
-      'Implementado com conceitos base do React',
+      'Implementação com conceitos base do React',
       'Projeto educativo sobre o funcionamento de routers'
     ],
     link: {
@@ -407,12 +409,12 @@ export const projects: Project[] = [
     title: 'Image Generator',
     wallpaper: '/projects/image-generator.png',
     description:
-      'Aplicativo que se integra perfeitamente a API OpenAI DALL-E e gera imagens cativantes com base em solicitações textuais.',
+      'Aplicação Next.js que transforma descrições textuais em imagens através da API OpenAI DALL-E.',
     longDescription:
-      'O Image Generator liga-se à API OpenAI DALL-E para transformar texto em imagens. Basta descrever o que queres e a app devolve a imagem gerada, numa experiência simples construída com Next.js, Tailwind e a API oficial da OpenAI.',
+      'Desenvolvi o Image Generator para explorar a geração de imagens a partir de texto com a API OpenAI DALL-E. Basta descrever a ideia pretendida para receber a imagem gerada, numa experiência simples construída com Next.js, Tailwind e a API oficial da OpenAI.',
     features: [
       'Geração de imagens com OpenAI DALL-E a partir de texto',
-      'Fonte de dados real via API oficial da OpenAI',
+      'Integração com a API oficial da OpenAI',
       'Interface Next.js + Tailwind'
     ],
     link: {
@@ -429,9 +431,9 @@ export const projects: Project[] = [
     title: 'Studio SPA',
     wallpaper: '/projects/studio-spa.png',
     description:
-      'Um aplicativo React para mostrar como otimizar o desempenho usando carregamento lento (lazy loading)',
+      'SPA React que demonstra, na prática, como o lazy loading melhora o desempenho através do carregamento sob demanda.',
     longDescription:
-      'O Studio SPA é um exemplo prático de otimização de desempenho: uma SPA React que demonstra lazy loading na real — componentes e rotas carregados só quando necessários, reduzindo o bundle inicial e melhorando o tempo de interação.',
+      'Desenvolvi o Studio SPA como um exemplo prático de otimização de desempenho em React. A aplicação demonstra lazy loading de componentes e rotas, carregando cada parte apenas quando é necessária, com o objetivo de reduzir o bundle inicial e melhorar o tempo de interação.',
     features: [
       'Demonstração prática de lazy loading',
       'Redução do bundle inicial com carregamento sob demanda',
@@ -447,9 +449,9 @@ export const projects: Project[] = [
     title: 'Poupança',
     wallpaper: '/projects/poupanca.png',
     description:
-      'Uma aplicação desenvolvida com o Reactjs com o objetivo de gerir as tuas contas/poupanças.',
+      'Aplicação React para gerir contas e poupanças, com registo de movimentos e acompanhamento de saldo.',
     longDescription:
-      'O Poupança é um gestor simples e direto para as tuas contas e poupanças: registar movimentos, acompanhar o saldo e manter o controlo financeiro pessoal num só lugar. Desenvolvido com React e styled-components.',
+      'Desenvolvi o Poupança para oferecer uma forma simples de acompanhar contas e poupanças. A aplicação permite registar movimentos, consultar o saldo e manter uma visão organizada das finanças pessoais num só lugar, com uma interface construída em React e styled-components.',
     features: [
       'Gestão de contas e poupanças',
       'Registo de movimentos e acompanhamento de saldo',
