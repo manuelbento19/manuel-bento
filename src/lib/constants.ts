@@ -120,7 +120,7 @@ export const skills = [
       { name: 'Gemini', icon: 'simple-icons:googlegemini' },
       { name: 'Cursor', icon: 'simple-icons:cursor' },
       { name: 'GitHub Copilot', icon: 'simple-icons:githubcopilot' },
-      { name: 'opencode', icon: 'simple-icons:opencode' },
+      { name: 'OpenCode', icon: 'simple-icons:opencode' },
       { name: 'Perplexity', icon: 'simple-icons:perplexity' },
       { name: 'Ollama', icon: 'simple-icons:ollama' },
       { name: 'v0', icon: 'simple-icons:v0' },
@@ -178,7 +178,6 @@ export const projects: Project[] = [
       'PWA instalável, 100% offline e sem necessidade de conta'
     ],
     link: {
-      repo: 'https://github.com/manuelbento19/rodiva',
       host: 'https://rodiva.cc'
     },
     techs: ['mdi:react', 'bxl:typescript', 'simple-icons:vite', 'mdi:tailwind', 'simple-icons:zod']

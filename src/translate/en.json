@@ -60,8 +60,8 @@
   },
   "about": {
     "hero": {
-      "title": "Software Developer",
-      "description": "Passionate about technology, specialized in Frontend Development.",
+      "title": "Software Developer, Frontend Lead & Product Builder",
+      "description": "I build web, mobile, and desktop applications with a focus on architecture, code quality, and product.",
       "data": [
         "I am a Software Developer and Frontend Lead with experience building web, mobile, and desktop applications.",
         "I have a particular interest in software architecture, code quality, performance, and technical leadership. I enjoy working across different layers of development, tackling technical challenges, and collaborating with teams to build scalable solutions.",
@@ -86,8 +86,8 @@
     ],
     "license": [
       {
-        "provider": "Meta Fronted Developer Professional",
-        "title": "Meta",
+        "provider": "Meta",
+        "title": "Meta Front-End Developer Professional Certificate",
         "link": "https://www.coursera.org/account/accomplishments/professional-cert/certificate/UBAITI7ZZUV8",
         "due_date": "2024"
       }
